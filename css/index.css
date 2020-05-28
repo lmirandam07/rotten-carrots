@@ -72,13 +72,14 @@ body{
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
     width: 65%;
-    height: 90%;
-    padding-top: 2rem;
+    height: 80%;
+    padding-top: 1rem;
 }
 
 .containerRegistro h2{
     color: var(--main-orange);
     font-size: 30px;
+    margin: 1rem 0 0 0;
 }
 
 .containerRegistro label{
@@ -102,7 +103,11 @@ body{
     height: 47px;
     background-color: var(--main-orange);
     border-style: none;
-    margin: 3% 0;
+    margin: 6% 0 5% 0;
+}
+.registrar button:hover{
+    cursor: pointer;
+
 }
 .registar label{
     vertical-align: middle;
@@ -113,6 +118,7 @@ body{
     width:13px;
     text-align: center;
 }
+
 .terminos2{
     height:10px;
     width:13px;
@@ -134,7 +140,7 @@ body{
 .forma{
     width: 50%;
     height: 40%;
-    margin: 2rem 0 0;
+    margin: 2rem 0;
 
     /* border-color: aliceblue;
     border-style: dotted; */
@@ -147,7 +153,7 @@ body{
     height:20%;
 }
 .forma2{
-    margin: 2rem 0 0;
+    margin: 2rem 0;
     float:right;
     width: 50%;
     height: 40%;
@@ -157,16 +163,24 @@ body{
 }
 
 .forma2 input{
-    margin-right: 5%;
+
     width:90%;
-    height:20
+    height:20%
 }
 .checkboxes{
-    width: 50%;
-    height: 40%;
+    position:absolute;
+    width: 60%;
+    height: 10%;
     margin-left: 20%;
+    margin-top:3%;
+    top:47%;
+    text-align: justify;
+
+
 
 }
+
+
 
 
 
