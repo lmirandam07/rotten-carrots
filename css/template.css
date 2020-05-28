@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --main-orange: #FF9F1C;
+    --main-black: #000000;
+    --main-grey: #C4C4C4;
+    --hover-grey: rgba(196, 196, 196, 0.445);
+    --active-grey: rgba(196, 196, 196, 0.589);
+    --main-white: #ffffff;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    color: var(--main-orange);
+}
+
+.wrapper {
+    display: flex;
+    position: relative;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.wrapper .navbar {
+    margin-left: 20%;
+    width: 100%;
+    height: 15%;
+    background-image: url('../img/peliculas-bg.jpg');
+    border-bottom: 2px solid var(--main-orange);
+}
+
+.navbar .searchbar-container {
+    width: 70%;
+    height: 65%;
+    transform: translateY(50%);
+}
+
+.searchbar-container .searchbar {
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 15px;
+    border: 1px solid var(--main-black);
+    background-color: var(--main-white);
+}
+
+.searchbar .search-input {
+    width: 85%;
+    height: 40%;
+    padding: 0 10px;
+    appearance: none;
+    border: none;
+    border-radius: 10px;
+
+}
+
+.searchbar .search-btn {
+    height: 40%;
+    width: 10%;
+    padding-left: 10%;
+    cursor: pointer;
+}
+
+
+.wrapper .sidebar {
+    display: block;
+    width: 20%;
+    height: 100%;
+    background: var(--main-black);
+    border-right: 2px solid var(--main-orange);
+    position: fixed;
+}
+
+.sidebar .sb-logo {
+    display: flex;
+    width: 100%;
+    height: 25%;
+}
+
+.sb-logo .logo {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
+.sb-items  .sb-item {
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #bdb8d7;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.sb-items  .sb-item:hover {
+    background-color: var(--hover-grey);
+}
+
+.sb-items  .sb-item:active {
+    background-color: var(--active-grey);
+}
+
+.sb-item .sb-text {
+    padding-left: .5rem;
+    vertical-align: 5px;
+}

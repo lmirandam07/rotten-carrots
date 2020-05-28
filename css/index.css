@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --main-orange: #FF9F1C;
+    --main-black: #000000;
+    --main-grey: #C4C4C4;
+    --main-white: #ffffff;
+}
+body{
+    background: url('../img/peliculas-bg.jpg');
+    font-family: 'Fira Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container{
+    /* position: absolute; */
+    width: 50%;
+    height: 385px;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding-top: 2rem;
+
+}
+.container h2{
+    font-size: 30px;
+    color: var(--main-orange);
+}
+.container a{
+    color: var(--main-orange);
+}
+.container p{
+    color: var(--main-white);
+    margin: 1rem 0;
+
+}
+.iniciar{
+    margin-top: 2rem;
+
+}
+.iniciar input{
+    background-color: var(--main-grey);
+    border-style: none;
+    width: 50%;
+    height: 57px;
+    padding: 1rem 1rem;
+    color: var(--main-white);
+    margin: 1rem 0;
+}
+.iniciar button{
+    width: 25%;
+    height: 47px;
+    background-color: var(--main-orange);
+    border-style: none;
+}
+.iniciar button:hover{
+    cursor: pointer;
+}
+.containerRegistro {
+    background: var(--main-black);
+    display: block;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    width: 65%;
+    height: 90%;
+    padding-top: 2rem;
+}
+
+.containerRegistro h2{
+    color: var(--main-orange);
+    font-size: 30px;
+}
+
+.containerRegistro label{
+    color:var(--main-white);
+}
+
+.containerRegistro a{
+    color: var(--main-orange);
+}
+.containerRegistro p{
+    color:var(--main-white);
+
+}
+.registrar input{
+    background-color: var(--main-grey);
+    border-style: none;
+    color: var(--main-white);
+}
+.registrar button{
+    width: 25%;
+    height: 47px;
+    background-color: var(--main-orange);
+    border-style: none;
+    margin: 3% 0;
+}
+.registar label{
+    vertical-align: middle;
+}
+
+.terminos{
+    height:10px;
+    width:13px;
+    text-align: center;
+}
+.terminos2{
+    height:10px;
+    width:13px;
+}
+
+.textbox{
+    width: 44%;
+    height: 10%;
+
+    margin: 1rem 0;
+    padding: 1rem 1rem;
+}
+
+#terminos{
+    margin-left: 10%;
+}
+
+
+.forma{
+    width: 50%;
+    height: 40%;
+    margin: 2rem 0 0;
+
+    /* border-color: aliceblue;
+    border-style: dotted; */
+
+    float: left;
+}
+.forma input{
+
+    width:90%;
+    height:20%;
+}
+.forma2{
+    margin: 2rem 0 0;
+    float:right;
+    width: 50%;
+    height: 40%;
+
+    /* border-color: aliceblue;
+    border-style: dotted; */
+}
+
+.forma2 input{
+    margin-right: 5%;
+    width:90%;
+    height:20
+}
+.checkboxes{
+    width: 50%;
+    height: 40%;
+    margin-left: 20%;
+
+}
+
+
+
