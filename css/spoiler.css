@@ -1,0 +1,33 @@
+.post{
+    position: absolute;
+    width: 80%;
+    height: 60%;
+    left: 13%;
+    top: 10%;
+
+    background: linear-gradient(180deg, #7A7A7A 0%, rgba(126, 126, 126, 0) 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.img_spoiler{
+    position: absolute;
+    width: 15%;
+    height: 42%;
+    top: 4%;
+    left: 2%;
+
+    background: url(https://upload.wikimedia.org/wikipedia/en/5/50/Suicide_Squad_%28film%29_Poster.png);
+}
+
+.tag{
+    position: absolute;
+    width: 97.57px;
+    height: 19.76px;
+    left: 20%;
+    top: 146.18px;
+
+    background: #FF9F1C;
+    border: 1px solid #FFFFFF;
+    border-radius: 15px;
+}

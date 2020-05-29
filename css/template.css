@@ -26,13 +26,14 @@ body {
     display: flex;
     position: relative;
     margin: 0;
-    height: 100vh;
     width: 100%;
+    height: 15%;
 }
 
 .wrapper .navbar {
+    position: fixed;
     margin-left: 20%;
-    width: 100%;
+    width: 80%;
     height: 15%;
     background-image: url('../img/peliculas-bg.jpg');
     border-bottom: 2px solid var(--main-orange);
@@ -49,7 +50,7 @@ body {
     width: 75%;
     margin: 0 auto;
     border-radius: 15px;
-    border: 1px solid var(--main-black);
+    border: 2px solid var(--main-black);
     background-color: var(--main-white);
 }
 
@@ -63,13 +64,19 @@ body {
 
 }
 
+.searchbar .search-input:hover {
+    outline: none;
+}
+
 .searchbar .search-btn {
     height: 40%;
     width: 10%;
     padding-left: 10%;
-    cursor: pointer;
 }
 
+.search-btn i {
+    cursor: pointer;
+}
 
 .wrapper .sidebar {
     display: block;
@@ -96,8 +103,8 @@ body {
 .sb-items  .sb-item {
     display: block;
     cursor: pointer;
-    text-align: center;
-    padding: 20px;
+    text-align: justify;
+    padding: 7% 25%;
     border-bottom: 1px solid #bdb8d7;
     border-bottom: 1px solid rgba(0,0,0,0.05);
     border-top: 1px solid rgba(255,255,255,0.05);
@@ -114,4 +121,40 @@ body {
 .sb-item .sb-text {
     padding-left: .5rem;
     vertical-align: 5px;
+}
+
+.navbar .profile-container {
+    width: 30%;
+    height: 65%;
+}
+
+.main-container {
+    background: #232526;
+    background: -webkit-linear-gradient(to bottom, #414345, #232526);
+    background: linear-gradient(to bottom, #414345, #232526);
+    width: 80%;
+    height: 85%;
+    position: fixed;
+    margin-left: 20%;
+}
+
+.navbar .profile-container {
+    margin-left: 70%;
+    height: 100%;
+    transform: translateY(-40%);
+    color: var(--main-black);
+}
+
+.profile {
+    background-color: var(--main-grey);
+    display: inline;
+}
+
+.profile i{
+    display: block;
+}
+
+.profile small {
+    font-weight: bold;
+    text-align: center;
 }
