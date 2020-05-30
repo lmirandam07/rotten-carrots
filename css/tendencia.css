@@ -115,7 +115,7 @@
 
 .tendencia1 .titulo{
     position: absolute;
-    width: 30%;
+    width: 35%;
     top: 40%;
     left: 40%;
     color: var(--main-white);
@@ -182,7 +182,7 @@
 }
 .tendencia2 .titulo{
     position: absolute;
-    width: 30%;
+    width: 35%;
     top: 40%;
     left: 40%;
     text-align: center;
@@ -248,7 +248,7 @@
 }
 .tendencia3 .titulo{
     position: absolute;
-    width: 30%;
+    width: 35%;
     top: 40%;
     left: 40%;
     text-align: center;
@@ -314,7 +314,7 @@
 }
 .tendencia4 .titulo{
     position: absolute;
-    width: 30%;
+    width: 35%;
     top: 40%;
     left: 40%;
     text-align: center;
