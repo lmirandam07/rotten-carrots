@@ -1,0 +1,448 @@
+*{
+    overflow: hidden;
+}
+
+.f_comments{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    left: 5.2%;
+    top: 5%;
+    
+    background: linear-gradient(180deg, #7A7A7A 0%, rgba(126, 126, 126, 0) 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+
+/*PRIMER COMMENT*/
+.pp_user_1{
+    position: absolute;
+    width: 45px;
+    height: 36px;
+    left: 4%;
+    top: 5%;
+    
+    border-radius: 314px;
+}
+
+.tag_1{
+    position: absolute;
+    width: 97.57px;
+    height: 19.76px;
+    left: 10%;
+    top: 4%;
+    
+    background: #FF9F1C;
+    border: 1px solid #FFFFFF;
+    border-radius: 15px;
+
+    z-index: 1;
+}
+
+.t_tag_1{
+    color: #000000;
+    z-index: 2;
+    font-size: small;
+    text-align: center;
+    padding-top: 1.5%;
+
+    cursor: pointer;
+}
+
+.tiempo_1{
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 30%;
+    top: 5%;
+    
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    
+    color: #FFFFFF;
+    
+    opacity: 0.7;
+}
+
+.user_1{
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 10%;
+    top: 9%;
+    
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    
+    color: #FFFFFF;
+
+    cursor: pointer;
+}
+
+.comentario_1{
+    position: absolute;
+    width: 90%;
+    height: 12%;
+    left: 5%;
+    top: 15%;
+
+    background: rgba(61, 61, 61, 0.82);
+    border: 1px solid #FF9F1C;
+    box-sizing: border-box;
+
+    z-index: 1;
+}
+
+.t_comentario_1{
+    position: absolute;
+    width: 90%;
+    height: auto;
+    left: 2%;
+    top: 10%;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #FFFFFF;
+
+    z-index: 2;
+}
+
+.carrots_1{
+    position: absolute;
+    width: 88.83px;
+    height: 30.3px;
+    left: 5%;
+    top: 29%;
+
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #FF9F1C;
+
+    cursor: pointer;
+}
+
+.comments_1{
+    position: absolute;
+    width: 81px;
+    height: 20px;
+    left: 18%;
+    top: 29%;
+    
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
+    
+    color: #FF9F1C;
+
+    cursor: pointer;
+}
+
+.share_1{
+    position: absolute;
+    width: 108px;
+    height: 21px;
+    left: 86.5%;
+    top: 29%;
+    
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
+    
+    color: #FF9F1C;
+
+    cursor: pointer;
+}
+
+#icono{
+    padding-right: 8%;
+}
+
+/*SEGUNDO COMMENT*/
+.pp_user_2{
+    position: absolute;
+    width: 47px;
+    height: 36px;
+    left: 17%;
+    top: 36%;
+    
+    border-radius: 314px;
+
+}
+
+.user_2{
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 22%;
+    top: 38%;
+    
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    
+    color: #FFFFFF;
+
+    cursor: pointer;
+}
+
+.tiempo_2{
+    position: absolute;
+    width: 117px;
+    height: 18px;
+    left: 42%;
+    top: 38%;
+    
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    
+    color: #FFFFFF;
+    
+    opacity: 0.7;
+}
+
+.comentario_2{
+    position: absolute;
+    width: 77%;
+    height: 12%;
+    left: 18%;
+    top: 44%;
+    
+    background: rgba(61, 61, 61, 0.82);
+    border: 1px solid #FF9F1C;
+    box-sizing: border-box;
+}
+
+.t_comentario_2{
+    position: absolute;
+    width: 90%;
+    height: auto;
+    left: 2%;
+    top: 10%;
+    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    
+    color: #FFFFFF;
+}
+
+.carrots_2{
+    position: absolute;
+    width: 88.83px;
+    height: 30.3px;
+    left: 18%;
+    top: 58%;
+
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #FF9F1C;
+
+    cursor: pointer;
+}
+
+.comments_2{
+    position: absolute;
+    width: 81px;
+    height: 20px;
+    left: 31%;
+    top: 58%;
+    
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
+    
+    color: #FF9F1C;
+
+    cursor: pointer;
+}
+
+.share_2{
+    position: absolute;
+    width: 108px;
+    height: 21px;
+    left: 86.5%;
+    top: 58%;
+    
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
+    
+    color: #FF9F1C;
+
+    cursor: pointer;
+}
+
+
+/*TERCER COMMENT*/
+.pp_user_3{
+    position: absolute;
+    width: 45px;
+    height: 36px;
+    left: 4%;
+    top: 68%;
+    
+    border-radius: 314px; 
+    
+}
+
+.tag_3{
+    position: absolute;
+    width: 97.57px;
+    height: 19.76px;
+    left: 10%;
+    top: 67%;
+    
+    background: #FF9F1C;
+    border: 1px solid #FFFFFF;
+    border-radius: 15px;
+
+    z-index: 1;
+}
+
+.t_tag_3{
+    color: #000000;
+    z-index: 2;
+    font-size: small;
+    text-align: center;
+    padding-top: 1.5%;
+
+    cursor: pointer;
+}
+
+.comentario_3{
+    position: absolute;
+    width: 90%;
+    height: 12%;
+    left: 5%;
+    top: 78%;
+
+    background: rgba(61, 61, 61, 0.82);
+    border: 1px solid #FF9F1C;
+    box-sizing: border-box;
+
+    z-index: 1;
+}
+
+.t_comentario_3{
+    position: absolute;
+    width: 90%;
+    height: auto;
+    left: 2%;
+    top: 10%;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #FFFFFF;
+
+    z-index: 2;
+}
+
+.user_3{
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 10%;
+    top: 72%;
+    
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    
+    color: #FFFFFF;
+
+    cursor: pointer;
+}
+
+.tiempo_3{
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 30%;
+    top: 68%;
+    
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    
+    color: #FFFFFF;
+    
+    opacity: 0.7;
+}
+
+.carrots_3{
+    position: absolute;
+    width: 88.83px;
+    height: 30.3px;
+    left: 5%;
+    top: 92%;
+
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #FF9F1C;
+
+    cursor: pointer;
+}
+
+.comments_3{
+    position: absolute;
+    width: 81px;
+    height: 20px;
+    left: 18%;
+    top: 92%;
+    
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
+    
+    color: #FF9F1C;
+
+    cursor: pointer;
+}
+
+.share_3{
+    position: absolute;
+    width: 108px;
+    height: 21px;
+    left: 86.5%;
+    top: 92%;
+    
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
+    
+    color: #FF9F1C;
+
+    cursor: pointer;
+}
