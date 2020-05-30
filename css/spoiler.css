@@ -2,22 +2,20 @@
     position: absolute;
     width: 80%;
     height: 60%;
-    left: 13%;
+    left: 11%;
     top: 10%;
 
     background: linear-gradient(180deg, #7A7A7A 0%, rgba(126, 126, 126, 0) 100%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .img_spoiler{
     position: absolute;
     width: 15%;
     height: 42%;
-    top: 4%;
+    top: 5%;
     left: 2%;
-
-    background: url(https://upload.wikimedia.org/wikipedia/en/5/50/Suicide_Squad_%28film%29_Poster.png);
 }
 
 .tag{
@@ -25,9 +23,181 @@
     width: 97.57px;
     height: 19.76px;
     left: 20%;
-    top: 146.18px;
+    top: 5%;
 
     background: #FF9F1C;
     border: 1px solid #FFFFFF;
     border-radius: 15px;
+    z-index: 1;
+}
+
+.t_tag{
+    color: #FFFFFF;
+    z-index: 2;
+    font-size: small;
+    text-align: center;
+    padding-top: 1.5%;
+}
+
+.tiempo{
+    position: absolute;
+    width: 117px;
+    height: 18px;
+    left: 88%;
+    top: 5%;
+ 
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #FFFFFF;
+
+    opacity: 0.7;
+}
+
+.pp_user{
+    position: absolute;
+    width: 53.88px;
+    height: 36.89px;
+    left: 20%;
+    top: 15%;
+
+    border-radius: 314px;
+}
+
+.user{
+    position: absolute;
+    width: 205px;
+    height: 21px;
+    left: 27%;
+    top: 16.5%;
+
+    font-style: normal; 
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #FFFFFF;
+}
+
+.titulo{
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 20%;
+    top: 34%;
+ 
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+}
+
+.comentario{
+    position: absolute;
+    width: 85%;
+    height: 25%;
+    left: 7%;
+    top: 52%;
+
+    background: rgba(61, 61, 61, 0.82);
+    border: 1px solid #FF9F1C;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.t_comentario{
+    position: absolute;
+    width: 95%;
+    height: auto;
+    left: 2%;
+    top: 5%;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: large;
+
+    color: #FFFFFF;
+    z-index: 2;
+}
+
+.carrots{
+    position: absolute;
+    width: 20%;
+    height: auto;
+    left: 2%;
+    top: 90%;
+
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #FF9F1C;
+
+}
+
+.comments{
+    position: absolute;
+    width: 20%;
+    height: auto;
+    left: 15%;
+    top: 90%;
+
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #FF9F1C;
+}
+
+.share{
+    position: absolute;
+    width: 20%;
+    height: auto;
+    left: 82%;
+    top: 90%;
+
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #FF9F1C;
+}
+
+#icono{
+    padding-right: 8%;
+}
+
+.t_more{
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 37%;
+    top: 78%;
+
+    font-style: normal;
+    font-weight: bold;
+
+    color: #FF9F1C;
+}
+
+#i_more{
+    position: absolute;
+    width: 42px;
+    height: 30px;
+    left: 60%;
+    top: 78.5%;
+    
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    
+    color: #FF9F1C;
 }
