@@ -13,6 +13,7 @@
 }
 
 .posts-container .post {
+    position: relative;
     width: 80%;
     height: 30%;
     display: flex;
@@ -23,6 +24,15 @@
     overflow: hidden;
     transition: transform .2s linear ;
     cursor: pointer;
+}
+
+.post .post-content .link-span {
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    z-index: 1;
 }
 
 .posts-container .post:hover {
@@ -128,6 +138,7 @@
     cursor: pointer;
     transform: scale(1.1);
 }
+
 
 .trend-container {
     width: 30%;

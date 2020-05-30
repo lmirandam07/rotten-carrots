@@ -115,6 +115,10 @@ body {
     color: var(--main-orange);
 }
 
+.sb-item .sb-links:visited {
+    color: var(--main-orange);
+}
+
 .sb-items  .sb-item:hover {
     background-color: var(--hover-grey);
 }
