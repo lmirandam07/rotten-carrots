@@ -118,8 +118,10 @@
     top: 5%;
     left: 5%;
     background: url('../img/inception.jpg');
+    background-size: 100%;
     background-repeat: no-repeat;
 }
+
 
 .tendencia1 .titulo{
     position: absolute;
@@ -191,6 +193,7 @@
     top: 5%;
     left: 5%;
     background: url('../img/fight-club.jpg');
+    background-size: 100%;
     background-repeat: no-repeat;
 
 }
@@ -262,6 +265,7 @@
     top: 5%;
     left: 5%;
     background: url('../img/after.jpg');
+    background-size: 100%;
     background-repeat: no-repeat;
 
 }
@@ -333,6 +337,7 @@
     top: 5%;
     left: 5%;
     background: url('../img/black-swan.jpg');
+    background-size: 100%;
     background-repeat: no-repeat;
 
 }
