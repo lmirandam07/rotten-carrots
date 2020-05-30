@@ -86,8 +86,9 @@
 
 .post-content .post-info {
     display: flex;
-    height: 20%;
+    height: 15%;
     height: 100%;
+    align-items: flex-end;
 }
 
 .post-info .post-carrots {
