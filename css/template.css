@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -18,7 +18,7 @@
 }
 
 body {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Istok Web', sans-serif;
     color: var(--main-orange);
 }
 
@@ -141,20 +141,33 @@ body {
 .navbar .profile-container {
     margin-left: 70%;
     height: 100%;
-    transform: translateY(-40%);
+    transform: translateY(-50%);
     color: var(--main-black);
 }
 
 .profile {
-    background-color: var(--main-grey);
-    display: inline;
+    width: 20%;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid var(--main-orange);
+    border-radius: 2.5rem;
+    padding: .5rem;
+    background-color: rgb(32, 32, 32);
 }
 
-.profile i{
-    display: block;
+.profile .user-img{
+    text-decoration: none;
+}
+
+.user-img .far {
+    color: var(--main-white);
+
 }
 
 .profile small {
-    font-weight: bold;
+    display: block;
+    margin-top: .5rem;
+    color: var(--main-white);
     text-align: center;
 }
