@@ -1,0 +1,135 @@
+:root {
+    --main-orange: #FF9F1C;
+    --main-black: #000000;
+    --main-grey: #C4C4C4;
+    --hover-grey: rgba(196, 196, 196, 0.445);
+    --active-grey: rgba(196, 196, 196, 0.589);
+    --main-white: #ffffff;
+}
+.main-container .tendencia1{
+    position: absolute;
+    width: 40%;
+    height: 35%;
+    left:5%;
+    top: 10%;
+    background: linear-gradient(180deg, #7A7A7A 0%, rgba(126, 126, 126, 0) 100%);
+    border-color: aliceblue;
+    border-style: dotted;
+}
+.tendencia1 .imagen{
+    position: relative;
+    width: 30%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    border-color: aliceblue;
+    border-style: dotted;
+}
+.tendencia1 .titulo{
+    position: absolute;
+    width: 30%;
+    top: 40%;
+    left: 50%;
+    color: var(--main-white);
+    -ms-word-break: break-all;
+    word-break: break-all;
+}
+.tendencia1 .categoria{
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    top: 5%;
+    left: 45%;
+    background-color: var(--main-orange);
+    color: var(--main-black);
+    border-color: aliceblue;
+    border-radius: 15px;
+    font-size: 15px;
+    text-align: center;
+    -ms-word-break: break-all;
+    word-break: break-all;
+}
+.main-container .tendencia2{
+    position: absolute;
+    width: 40%;
+    height: 35%;
+    left: 55%;
+    top: 10%;
+    background: linear-gradient(180deg, #7A7A7A 0%, rgba(126, 126, 126, 0) 100%);
+    border-color: aliceblue;
+    border-style: dotted;
+}
+.tendencia2 .imagen{
+    position: relative;
+    width: 30%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    border-color: aliceblue;
+    border-style: dotted;
+}
+.tendencia2 .titulo{
+    position: absolute;
+    width: 30%;
+    top: 40%;
+    left: 50%;
+    color: var(--main-white);
+    -ms-word-break: break-all;
+    word-break: break-all;
+}
+.main-container .tendencia3{
+    position: absolute;
+    width: 40%;
+    height: 35%;
+    left:5%;
+    top: 60%;
+    background: linear-gradient(180deg, #7A7A7A 0%, rgba(126, 126, 126, 0) 100%);
+    border-color: aliceblue;
+    border-style: dotted;
+}
+.tendencia3 .imagen{
+    position: relative;
+    width: 30%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    border-color: aliceblue;
+    border-style: dotted;
+}
+.tendencia3 .titulo{
+    position: absolute;
+    width: 30%;
+    top: 40%;
+    left: 50%;
+    color: var(--main-white);
+    -ms-word-break: break-all;
+    word-break: break-all;
+}
+.main-container .tendencia4{
+    position: absolute;
+    width: 40%;
+    height: 35%;
+    left: 55%;
+    top: 60%;
+    background: linear-gradient(180deg, #7A7A7A 0%, rgba(126, 126, 126, 0) 100%);
+    border-color: aliceblue;
+    border-style: dotted;
+}
+.tendencia4 .imagen{
+    position: relative;
+    width: 30%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    border-color: aliceblue;
+    border-style: dotted;
+}
+.tendencia4 .titulo{
+    position: absolute;
+    width: 30%;
+    top: 40%;
+    left: 50%;
+    color: var(--main-white);
+    -ms-word-break: break-all;
+    word-break: break-all;
+}
