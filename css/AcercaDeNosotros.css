@@ -8,27 +8,28 @@ body{
 .logoFondo {
     opacity: 30%;
     position: fixed;
-    left: 25%;
+    z-index: -2;
+    left: 30%;
 }
 
 h1.AcercaNosotros{
     text-align: center;
-    position: absolute;
-    left: 46%;
+    position: fixed;
+    left: 48%;
     top: 45%;
     font-family: Istok Web;
     font-weight: bold;
     font-size: 400%;
     text-align: center;
-    opacity: 70%;
+    opacity: 75%;
     color: white;
 }
 
 p.AcercaNosotros {
     text-align: center;
     width: 40%;
-    position: absolute;
-    left: 41%;
+    position: fixed;
+    left: 42%;
     top: 65%;
     font-family: Roboto;
     font-size: 100%;
