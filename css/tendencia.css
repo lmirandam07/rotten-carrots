@@ -103,6 +103,10 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
+.tendencia1:hover{
+    cursor: pointer;
+    border-style: outset;
+}
 .tendencia1 .imagen{
     position: relative;
     width: 30%;
@@ -110,7 +114,7 @@
     top: 5%;
     left: 5%;
     background: url('../img/inception.jpg');
-
+    background-repeat: no-repeat;
 }
 
 .tendencia1 .titulo{
@@ -170,6 +174,11 @@
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+
+}
+.tendencia2:hover{
+    cursor: pointer;
+    border-style: outset;
 }
 .tendencia2 .imagen{
     position: relative;
@@ -178,6 +187,7 @@
     top: 5%;
     left: 5%;
     background: url('../img/fight-club.jpg');
+    background-repeat: no-repeat;
 
 }
 .tendencia2 .titulo{
@@ -237,6 +247,10 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
+.tendencia3:hover{
+    cursor: pointer;
+    border-style: outset;
+}
 .tendencia3 .imagen{
     position: relative;
     width: 30%;
@@ -244,6 +258,7 @@
     top: 5%;
     left: 5%;
     background: url('../img/after.jpg');
+    background-repeat: no-repeat;
 
 }
 .tendencia3 .titulo{
@@ -303,6 +318,10 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
+.tendencia4:hover{
+    cursor: pointer;
+    border-style: outset;
+}
 .tendencia4 .imagen{
     position: relative;
     width: 30%;
@@ -310,6 +329,7 @@
     top: 5%;
     left: 5%;
     background: url('../img/black-swan.jpg');
+    background-repeat: no-repeat;
 
 }
 .tendencia4 .titulo{
