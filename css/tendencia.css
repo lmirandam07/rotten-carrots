@@ -6,15 +6,110 @@
     --active-grey: rgba(196, 196, 196, 0.589);
     --main-white: #ffffff;
 }
+.main-container .escoger{
+    position: absolute;
+    width: 20%;
+    height: 6%;
+    top: 2%;
+    left: 40%;
+
+    
+}
+.main-container .escoger select{
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+    border-radius: 5px;
+    background-color: var(--main-grey);
+}
+.escoger select:hover{
+    cursor: pointer;
+}
+.main-container .puesto1{
+    position: absolute;
+    width: 5%;
+    height: 9%;
+    left: 2%;
+    top: 10%;
+    border-radius: 100%;
+    background-color: var(--main-orange);
+    z-index: 1;
+    color: var(--main-black);
+    text-align: center;
+}
+.puesto1 p{
+    position: relative;
+    top: 30%;
+    font-size: 20px;
+}
+.main-container .puesto2{
+    position: absolute;
+    width: 5%;
+    height: 9%;
+    left: 52%;
+    top: 10%;
+    border-radius: 100%;
+    background-color: var(--main-orange);
+    z-index: 1;
+    color: var(--main-black);
+    text-align: center;
+
+}
+.puesto2 p{
+    position: relative;
+    top: 30%;
+    font-size: 20px;
+}
+.main-container .puesto3{
+    position: absolute;
+    width: 5%;
+    height: 9%;
+    left: 2%;
+    top: 55%;
+    border-radius: 100%;
+    background-color: var(--main-orange);
+    z-index: 1;
+    color: var(--main-black);
+    text-align: center;
+}
+.puesto3 p{
+    position: relative;
+    top: 30%;
+    font-size: 20px;
+}
+.main-container .puesto4{
+    position: absolute;
+    width: 5%;
+    height: 9%;
+    left: 52%;
+    top: 55%;
+    border-radius: 100%;
+    background-color: var(--main-orange);
+    z-index: 1;
+    color: var(--main-black);
+    text-align: center;
+
+}
+.puesto4 p{
+    position: relative;
+    top: 30%;
+    font-size: 20px;
+}
+
 .main-container .tendencia1{
     position: absolute;
     width: 40%;
     height: 35%;
     left:5%;
-    top: 10%;
+    top: 15%;
     background: linear-gradient(180deg, #7A7A7A 0%, rgba(126, 126, 126, 0) 100%);
-    border-color: aliceblue;
-    border-style: dotted;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+.tendencia1:hover{
+    cursor: pointer;
+    border-style: outset;
 }
 .tendencia1 .imagen{
     position: relative;
@@ -22,15 +117,17 @@
     height: 90%;
     top: 5%;
     left: 5%;
-    border-color: aliceblue;
-    border-style: dotted;
+    background: url('../img/inception.jpg');
+    background-repeat: no-repeat;
 }
+
 .tendencia1 .titulo{
     position: absolute;
-    width: 30%;
+    width: 35%;
     top: 40%;
-    left: 50%;
+    left: 40%;
     color: var(--main-white);
+    text-align: center;
     -ms-word-break: break-all;
     word-break: break-all;
 }
@@ -39,25 +136,53 @@
     width: 30%;
     height: 10%;
     top: 5%;
-    left: 45%;
+    left: 40%;
     background-color: var(--main-orange);
     color: var(--main-black);
     border-color: aliceblue;
     border-radius: 15px;
-    font-size: 15px;
+    font-size: 13px;
     text-align: center;
     -ms-word-break: break-all;
     word-break: break-all;
 }
+.tendencia1 .puntaje{
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    top: 80%;
+    left: 40%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    -ms-word-break: break-all;
+    word-break: break-all;
+
+}
+.tendencia1 .trend{
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    top: 80%;
+    left: 90%;
+}
+
 .main-container .tendencia2{
     position: absolute;
     width: 40%;
     height: 35%;
     left: 55%;
-    top: 10%;
+    top: 15%;
     background: linear-gradient(180deg, #7A7A7A 0%, rgba(126, 126, 126, 0) 100%);
-    border-color: aliceblue;
-    border-style: dotted;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+}
+.tendencia2:hover{
+    cursor: pointer;
+    border-style: outset;
 }
 .tendencia2 .imagen{
     position: relative;
@@ -65,17 +190,55 @@
     height: 90%;
     top: 5%;
     left: 5%;
-    border-color: aliceblue;
-    border-style: dotted;
+    background: url('../img/fight-club.jpg');
+    background-repeat: no-repeat;
+
 }
 .tendencia2 .titulo{
     position: absolute;
-    width: 30%;
+    width: 35%;
     top: 40%;
-    left: 50%;
+    left: 40%;
+    text-align: center;
     color: var(--main-white);
     -ms-word-break: break-all;
     word-break: break-all;
+}
+.tendencia2 .categoria{
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    top: 5%;
+    left: 40%;
+    background-color: var(--main-orange);
+    color: var(--main-black);
+    border-color: aliceblue;
+    border-radius: 15px;
+    font-size: 13px;
+    text-align: center;
+    -ms-word-break: break-all;
+    word-break: break-all;
+}
+.tendencia2 .puntaje{
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    top: 80%;
+    left: 40%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    -ms-word-break: break-all;
+    word-break: break-all;
+
+}
+.tendencia2 .trend{
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    top: 80%;
+    left: 90%;
 }
 .main-container .tendencia3{
     position: absolute;
@@ -84,8 +247,13 @@
     left:5%;
     top: 60%;
     background: linear-gradient(180deg, #7A7A7A 0%, rgba(126, 126, 126, 0) 100%);
-    border-color: aliceblue;
-    border-style: dotted;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+.tendencia3:hover{
+    cursor: pointer;
+    border-style: outset;
 }
 .tendencia3 .imagen{
     position: relative;
@@ -93,17 +261,55 @@
     height: 90%;
     top: 5%;
     left: 5%;
-    border-color: aliceblue;
-    border-style: dotted;
+    background: url('../img/after.jpg');
+    background-repeat: no-repeat;
+
 }
 .tendencia3 .titulo{
     position: absolute;
-    width: 30%;
+    width: 35%;
     top: 40%;
-    left: 50%;
+    left: 40%;
+    text-align: center;
     color: var(--main-white);
     -ms-word-break: break-all;
     word-break: break-all;
+}
+.tendencia3 .categoria{
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    top: 5%;
+    left: 40%;
+    background-color: var(--main-orange);
+    color: var(--main-black);
+    border-color: aliceblue;
+    border-radius: 15px;
+    font-size: 13px;
+    text-align: center;
+    -ms-word-break: break-all;
+    word-break: break-all;
+}
+.tendencia3 .puntaje{
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    top: 80%;
+    left: 40%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    -ms-word-break: break-all;
+    word-break: break-all;
+
+}
+.tendencia3 .trend{
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    top: 80%;
+    left: 90%;
 }
 .main-container .tendencia4{
     position: absolute;
@@ -112,8 +318,13 @@
     left: 55%;
     top: 60%;
     background: linear-gradient(180deg, #7A7A7A 0%, rgba(126, 126, 126, 0) 100%);
-    border-color: aliceblue;
-    border-style: dotted;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+.tendencia4:hover{
+    cursor: pointer;
+    border-style: outset;
 }
 .tendencia4 .imagen{
     position: relative;
@@ -121,15 +332,53 @@
     height: 90%;
     top: 5%;
     left: 5%;
-    border-color: aliceblue;
-    border-style: dotted;
+    background: url('../img/black-swan.jpg');
+    background-repeat: no-repeat;
+
 }
 .tendencia4 .titulo{
     position: absolute;
-    width: 30%;
+    width: 35%;
     top: 40%;
-    left: 50%;
+    left: 40%;
+    text-align: center;
     color: var(--main-white);
     -ms-word-break: break-all;
     word-break: break-all;
+}
+.tendencia4 .categoria{
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    top: 5%;
+    left: 40%;
+    background-color: var(--main-orange);
+    color: var(--main-black);
+    border-color: aliceblue;
+    border-radius: 15px;
+    font-size: 13px;
+    text-align: center;
+    -ms-word-break: break-all;
+    word-break: break-all;
+}
+.tendencia4 .puntaje{
+    position: absolute;
+    width: 30%;
+    height: 10%;
+    top: 80%;
+    left: 40%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    -ms-word-break: break-all;
+    word-break: break-all;
+
+}
+.tendencia4 .trend{
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    top: 80%;
+    left: 90%;
 }
