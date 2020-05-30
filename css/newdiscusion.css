@@ -64,7 +64,7 @@ textarea{
   position: relative;
   border-radius: 5%;
   width: 80%;
-  height: 30%;
+  height: 28%;
   border: 0;
   margin-top:1%;
 }
@@ -81,7 +81,7 @@ textarea{
   font-weight: 900;
   width: 16%;
   height: 8%;
-  margin-top: 1%;
+  margin-top: 2%;
 }
 .publicar{
   background-color: #FF9F1C;
@@ -91,5 +91,5 @@ textarea{
   font-weight: 900;
   width: 16%;
   height: 8%;
-  margin-top: 1%;
+  margin-top: 2%;
 }
