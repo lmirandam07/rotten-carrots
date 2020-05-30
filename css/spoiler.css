@@ -29,14 +29,18 @@
     border: 1px solid #FFFFFF;
     border-radius: 15px;
     z-index: 1;
+
+    cursor: pointer;
 }
 
 .t_tag{
-    color: #FFFFFF;
+    color: #000000;
     z-index: 2;
     font-size: small;
     text-align: center;
     padding-top: 1.5%;
+
+    cursor: pointer;
 }
 
 .tiempo{
@@ -138,6 +142,8 @@
 
     color: #FF9F1C;
 
+    cursor: pointer;
+
 }
 
 .comments{
@@ -153,6 +159,8 @@
     line-height: 28px;
 
     color: #FF9F1C;
+
+    cursor: pointer;
 }
 
 .share{
@@ -168,6 +176,8 @@
     line-height: 28px;
 
     color: #FF9F1C;
+
+    cursor: pointer;
 }
 
 #icono{
@@ -185,6 +195,8 @@
     font-weight: bold;
 
     color: #FF9F1C;
+
+    cursor: pointer;
 }
 
 #i_more{
@@ -200,4 +212,6 @@
     line-height: 28px;
     
     color: #FF9F1C;
+
+    cursor: pointer;
 }
