@@ -110,6 +110,11 @@ body {
     border-top: 1px solid rgba(255,255,255,0.05);
 }
 
+.sb-item .sb-links {
+    text-decoration: none;
+    color: var(--main-orange);
+}
+
 .sb-items  .sb-item:hover {
     background-color: var(--hover-grey);
 }
@@ -118,12 +123,12 @@ body {
     background-color: var(--active-grey);
 }
 
-.sb-item .fas {
+.sb-item .sb-links .fas {
     margin: .8rem;
     padding: .8rem;
 }
 
-.sb-item .far {
+.sb-item .sb-links .far {
     margin: .8rem;
     padding: .8rem;
 }
