@@ -20,6 +20,10 @@
     height: 100%;
     padding: 0 1rem;
     border-radius: 5px;
+    background-color: var(--main-grey);
+}
+.escoger select:hover{
+    cursor: pointer;
 }
 .main-container .puesto1{
     position: absolute;
