@@ -33,7 +33,7 @@ button{
   position: relative;
   color: #000000;
 }
-input{
+.inputs{
   left: 5%;
   top:5%;
   position: relative;
@@ -43,6 +43,17 @@ input{
   border: 0;
   margin-top:1%;
 }
+.first{
+  left: 5%;
+  top:5%;
+  position: relative;
+  border-radius: 15px;
+  width: 80%;
+  height: 10%;
+  border: 0;
+  margin-top:1%;
+}
+
 .buscar{
   width: 16%;
   height: 8%;
