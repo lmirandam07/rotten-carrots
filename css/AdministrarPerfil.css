@@ -26,6 +26,7 @@
     background:none;
     color:fff;
     font-size: 30px;
+
 }
 
 
@@ -83,6 +84,7 @@
 }
 
 .cajaPadreAP a{
+    text-align: center;
     cursor: pointer;
     color: var(--main-orange);
     font-size: 20px;

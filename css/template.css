@@ -72,6 +72,11 @@ body {
     height: 40%;
     width: 10%;
     padding-left: 10%;
+
+}
+
+.searchbar .search-btn:visited {
+    color:  var(--main-orange);
 }
 
 .search-btn i {
