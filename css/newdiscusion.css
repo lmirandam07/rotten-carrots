@@ -37,7 +37,7 @@ input{
   left: 5%;
   top:5%;
   position: relative;
-  border-radius: 5%;
+  border-radius: 15px;
   width: 80%;
   height: 10%;
   border: 0;
@@ -63,7 +63,7 @@ textarea{
   left: 5%;
   top:5%;
   position: relative;
-  border-radius: 5%;
+  border-radius: 15px;
   width: 80%;
   height: 28%;
   border: 0;
