@@ -38,6 +38,8 @@
     border-radius: 15px;
 
     z-index: 1;
+
+    cursor: pointer;
 }
 
 .t_tag_1{
@@ -47,7 +49,10 @@
     text-align: center;
     padding-top: 1.5%;
 
-    cursor: pointer;
+}
+
+.tag_1:hover{
+    transform:scale(1.1);
 }
 
 .tiempo_1{
@@ -82,6 +87,10 @@
     color: #FFFFFF;
 
     cursor: pointer;
+}
+
+.user_1:hover{
+    transform:scale(1.1);
 }
 
 .comentario_1{
@@ -132,6 +141,10 @@
     cursor: pointer;
 }
 
+.carrots_1:hover{
+    transform:scale(1.1);
+}
+
 .comments_1{
     position: absolute;
     width: 81px;
@@ -149,6 +162,10 @@
     cursor: pointer;
 }
 
+.comments_1:hover{
+    transform:scale(1.1);
+}
+
 .share_1{
     position: absolute;
     width: 108px;
@@ -164,6 +181,10 @@
     color: #FF9F1C;
 
     cursor: pointer;
+}
+
+.share_1:hover{
+    transform:scale(1.1);
 }
 
 #icono{
@@ -186,7 +207,7 @@
     position: absolute;
     width: auto;
     height: auto;
-    left: 22%;
+    left: 22.5%;
     top: 38%;
     
     font-style: normal;
@@ -197,6 +218,10 @@
     color: #FFFFFF;
 
     cursor: pointer;
+}
+
+.user_2:hover{
+    transform:scale(1.1);
 }
 
 .tiempo_2{
@@ -260,6 +285,10 @@
     cursor: pointer;
 }
 
+.carrots_2:hover{
+    transform:scale(1.1);
+}
+
 .comments_2{
     position: absolute;
     width: 81px;
@@ -277,6 +306,10 @@
     cursor: pointer;
 }
 
+.comments_2:hover{
+    transform:scale(1.1);
+}
+
 .share_2{
     position: absolute;
     width: 108px;
@@ -292,6 +325,10 @@
     color: #FF9F1C;
 
     cursor: pointer;
+}
+
+.share_2:hover{
+    transform:scale(1.1);
 }
 
 
@@ -319,6 +356,8 @@
     border-radius: 15px;
 
     z-index: 1;
+
+    cursor: pointer;
 }
 
 .t_tag_3{
@@ -327,8 +366,10 @@
     font-size: small;
     text-align: center;
     padding-top: 1.5%;
+}
 
-    cursor: pointer;
+.tag_3:hover{
+    transform:scale(1.1);
 }
 
 .comentario_3{
@@ -379,6 +420,10 @@
     cursor: pointer;
 }
 
+.user_3:hover{
+    transform:scale(1.1);
+}
+
 .tiempo_3{
     position: absolute;
     width: auto;
@@ -413,6 +458,10 @@
     cursor: pointer;
 }
 
+.carrots_3:hover{
+    transform:scale(1.1);
+}
+
 .comments_3{
     position: absolute;
     width: 81px;
@@ -430,6 +479,10 @@
     cursor: pointer;
 }
 
+.comments_3:hover{
+    transform:scale(1.1);
+}
+
 .share_3{
     position: absolute;
     width: 108px;
@@ -445,4 +498,8 @@
     color: #FF9F1C;
 
     cursor: pointer;
+}
+
+.share_3:hover{
+    transform:scale(1.1);
 }
