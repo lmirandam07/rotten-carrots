@@ -1,0 +1,255 @@
+.discussions {
+  top: 5%;
+  left: 3%;
+  font-family: 'Istok Web', sans-serif;
+  font-size: 1.750em;
+  position: absolute;
+}
+
+.create {
+  position: absolute;
+  top: 2%;
+  left: 83%;
+  font-family: 'Istok Web', sans-serif;
+}
+
+.plus {
+  top: 2%;
+  left: 94%;
+  position: absolute;
+  height: 4%;
+}
+.plus:hover{
+  transform: scale(1.1);
+}
+
+.name {
+  top: 15%;
+  left: 8%;
+  position: absolute;
+}
+
+.disch4 {
+  top: 15%;
+  left: 33%;
+  position: absolute;
+}
+
+.imgh4 {
+  top: 15%;
+  left: 72%;
+  position: absolute;
+}
+
+.prueba {
+  position: relative;
+  width: 85%;
+  height: 95%;
+  margin: auto;
+}
+.file1 {
+  position: absolute;
+  left: 90%;
+  top: 22%;
+  height: 4%;
+}
+.file1:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.del1 {
+  position: absolute;
+  left: 90%;
+  top: 29%;
+  height: 5%;
+}
+.del1:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.file2 {
+  position: absolute;
+  left: 90%;
+  top: 42%;
+  height: 4%;
+}
+.file2:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.del2 {
+  position: absolute;
+  left: 90%;
+  top: 49%;
+  height: 4%;
+}
+.del2:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.file3 {
+  position: absolute;
+  left: 90%;
+  top: 62%;
+  height: 4%;
+}
+.file3:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.del3 {
+  position: absolute;
+  left: 90%;
+  top: 69%;
+  height: 4%;
+}
+.del3:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.file4 {
+  position: absolute;
+  left: 90%;
+  top: 82%;
+  height: 4%;
+}
+.file4:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.del4 {
+  position: absolute;
+  left: 90%;
+  top: 89%;
+  height: 4%;
+}
+.del4:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.primtabla {
+  position: absolute;
+  left: 6%;
+  top: 20%;
+  border-color: #FF9F1C;
+  border-width: thick;
+  border: 2px;
+  border-radius: 10%;
+  border-collapse: collapse;
+}
+
+.segtabla {
+  position: absolute;
+  left: 6%;
+  top: 40%;
+  border-color: #FF9F1C;
+  border-width: thick;
+  border: 2px;
+  border-radius: 10%;
+  border-collapse: collapse;
+}
+
+.tertabla {
+  position: absolute;
+  left: 6%;
+  top: 60%;
+  border-color: #FF9F1C;
+  border-width: thick;
+  border: 2px;
+  border-radius: 10%;
+  border-collapse: collapse;
+}
+
+.cuartabla {
+  position: absolute;
+  left: 6%;
+  top: 80%;
+  border-color: #FF9F1C;
+  border-width: thick;
+  border: 2px;
+  border-radius: 10%;
+  border-collapse: collapse;
+}
+
+td {
+  border-color: #FF9F1C;
+  height: 4.85em;
+  text-align: center;
+  border: 0;
+  padding: 0;
+
+}
+
+.td1 {
+  width: 7.5em;
+}
+
+.td2 {
+  text-align: justify;
+  width: 25em;
+}
+
+.td3 {
+  width: 15em;
+}
+
+.act1 {
+  height: 100%;
+  margin: 5px 0 0;
+  border: 2px solid;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding-top: 20%;
+}
+p{
+  color: #ffffff;
+}
+
+.act2 {
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 2%;
+  height: 100%;
+  margin: 5px 0 0;
+  border: 2px solid;
+}
+
+.act3 {
+  height: 100%;
+  margin: 5px 0 0;
+  border: 2px solid;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.imagen1 {
+  padding-top: 1%;
+  width: 4.375em;
+}
+
+.imagen2 {
+  padding-top: 1%;
+  height: 4.375em;
+}
+
+.imagen3 {
+  padding-top: 1%;
+  height: 5em;
+}
+
+.act4 {
+  height: 100%;
+  margin: 5px 0 0;
+  border: 2px solid;
+  border-top-left-radius: 15%;
+  border-bottom-left-radius: 15%;
+  padding-top: 2%;
+}

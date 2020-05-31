@@ -101,13 +101,22 @@ body {
 }
 
 .sb-items  .sb-item {
-    display: block;
+    display: flex;
     cursor: pointer;
-    text-align: justify;
-    padding: 7% 25%;
+    padding-left: 20%;
+    align-items: center;
     border-bottom: 1px solid #bdb8d7;
     border-bottom: 1px solid rgba(0,0,0,0.05);
     border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.sb-item .sb-links {
+    text-decoration: none;
+    color: var(--main-orange);
+}
+
+.sb-item .sb-links:visited {
+    color: var(--main-orange);
 }
 
 .sb-items  .sb-item:hover {
@@ -118,10 +127,16 @@ body {
     background-color: var(--active-grey);
 }
 
-.sb-item .sb-text {
-    padding-left: .5rem;
-    vertical-align: 5px;
+.sb-item .sb-links .fas {
+    margin: .8rem;
+    padding: .8rem;
 }
+
+.sb-item .sb-links .far {
+    margin: .8rem;
+    padding: .8rem;
+}
+
 
 .navbar .profile-container {
     width: 30%;

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap" rel="stylesheet');
+
+body{
+    background-color: black;
+}
+
+.logoFondo {
+    opacity: 30%;
+    position: fixed;
+    z-index: -2;
+    left: 20%;
+    width: 80%;
+}
+
+h1.contacto{
+    text-align: center;
+    position: fixed;
+    left: 20%;
+    width: 80%;
+    top: 45%;
+    font-family: Istok Web;
+    font-weight: bold;
+    font-size: 400%;
+    text-align: center;
+    opacity: 75%;
+    color: white;
+}
+
+p.instagram {
+    text-align: right;
+    width: 40%;
+    position: fixed;
+    left: 20%;
+    top: 70%;
+    font-family: Istok Web;
+    font-weight: bold;
+    font-size: 200%;
+    color: #FF9F1C;
+}
+
+.instagram{
+    position: fixed;
+    margin-right: 2%;
+    left: 42%;
+    top: 69%;
+}
+
+p.twitter {
+    text-align: right;
+    width: 40%;
+    position: fixed;
+    left: 20%;
+    top: 80%;
+    font-family: Istok Web;
+    font-weight: bold;
+    font-size: 200%;
+    color: #FF9F1C;
+}
+
+.twitter{
+    margin-right: 2%;
+    position: fixed;
+    left: 42%;
+    top: 79%;
+}
+
+p.reddit {
+    text-align: left;
+    margin-right: 2%;
+    width: 30%;
+    position: fixed;
+    left: 70%;
+    top: 70%;
+    font-family: Istok Web;
+    font-weight: bold;
+    font-size: 200%;
+    color: #FF9F1C;
+}
+
+div.iconos{
+    margin-top: 2%;
+    display: flex;
+}
+.reddit{
+    margin-right: auto;
+    position: fixed;
+    left: 65%;
+    top: 68%;
+}
+
+p.facebook {
+    text-align: left;
+    margin-right: 2%;
+    width: 30%;
+    position: fixed;
+    left: 70%;
+    top: 80%;
+    font-family: Istok Web;
+    font-weight: bold;
+    font-size: 200%;
+    color: #FF9F1C;
+}
+
+.facebook {
+    position: fixed;
+    margin-right: auto;
+    left: 65%;
+    top: 78.5%;
+}

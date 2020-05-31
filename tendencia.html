@@ -21,8 +21,8 @@
 
             <div class="profile-container">
                 <div class="profile">
-                    <i class="far fa-user-circle fa-4x"></i>
-                    <small>Usuario</small>
+                    <a href="./AdministrarPerfil.html" class="user-img"><i class="far fa-user fa-2x"></i> </a>
+                    <small class="user-name" id="user-name">Usuario</small>
                 </div>
             </div>
 
@@ -33,51 +33,132 @@
                 <img class="logo" src="./img/logo.jpg" alt="">
             </div>
             <ul class="sb-items">
-                <li class="sb-item"><a href="#"></a><i class="fas fa-newspaper fa-2x"></i> <span class="sb-text">Foro </span> </li>
-                <li class="sb-item"><a href="#"></a><i class="far fa-plus-square fa-2x"></i> <span class="sb-text">Discusión </span></li>
-                <li class="sb-item"><a href="#"></a><i class="fas fa-fire-alt fa-2x"></i> <span class="sb-text">Tendencias </span></li>
-                <li class="sb-item"><a href="#"></a><i class="fas fa-info fa-2x"></i> <span class="sb-text">Nosotros </span></li>
-                <li class="sb-item"><a href="#"></a><i class="far fa-envelope fa-2x"></i> <span class="sb-text">Contáctanos </span></li>
+                <li class="sb-item"><a class="sb-links" href="./foro.html"><i class="fas fa-newspaper fa-2x"></i> <span class="sb-text">Foro </span></a></li>
+                <li class="sb-item"><a class="sb-links" href="agregar-discusion.html"><i class="far fa-plus-square fa-2x"></i> <span class="sb-text">Discusión </span></a></li>
+                <li class="sb-item"><a class="sb-links" href="./tendencia.html"><i class="fas fa-fire-alt fa-2x"></i> <span class="sb-text">Tendencias </span></a></li>
+                <li class="sb-item"><a class="sb-links" href="./acerca-de-nosotros.html"><i class="far fa-address-card fa-2x"></i> <span class="sb-text">Nosotros </span></a></li>
+                <li class="sb-item"><a class="sb-links" href="./Contacto.html"><i class="far fa-envelope fa-2x"></i> <span class="sb-text">Contáctanos </span></a></li>
             </ul>
         </aside>
 
-
     </header>
     <main class="main-container">
+        <div class="escoger">
+            <select name="categorias" id="categorias">
+                <option value="Accion">Acción</option>
+                <option value="Romance">Romance</option>
+                <option value="Suspenso">Suspenso</option>
+                <option value="Terror">Terror</option>
+            </select>
+
+        </div>
+        <div class="puesto1">
+            <p>1</p>
+        </div>
+        <div class="puesto2">
+            <p>2</p>
+        </div>
+        <div class="puesto3">
+            <p>3</p>
+        </div>
+        <div class="puesto4">
+            <p>4</p>
+        </div>
         <div class="tendencia1">
             <div class="titulo">
-                <h4>TENDENCIA 1<h4>
+                <h2>Inception<h2>
             </div>
             <div class="imagen">
             </div>
             <div class="categoria">
                 <p>Categoria</p>
             </div>
+            <div class="puntaje">
+                <div class="carrot">
+                    <i class="fas fa-carrot"></i>
+                </div>
+                <div class="puntos">
+                    <p>8995</p>
+                </div>
+            </div>
+            <div class="trend">
+                <i class="fas fa-fire-alt"></i>
+            </div>
         </div>
+
+
         <div class="tendencia2">
             <div class="titulo">
-                <h4>TENDENCIA 2<h4>
+                <h2>Fight Club<h2>
             </div>
             <div class="imagen">
                 
             </div>
+            <div class="categoria">
+                <p>Categoria</p>
+            </div>
+            <div class="puntaje">
+                <div class="carrot">
+                    <i class="fas fa-carrot"></i>
+                </div>
+                <div class="puntos">
+                    <p>7456</p>
+                </div>
+            </div>
+            <div class="trend">
+                <i class="fas fa-fire-alt"></i>
+            </div>
         </div>
+
+
+
         <div class="tendencia3">
             <div class="titulo">
-                <h4>TENDENCIA 3<h4>
+                <h2>After<h2>
             </div>
             <div class="imagen">
                 
             </div>
+            <div class="categoria">
+                <p>Categoria</p>
+            </div>
+            <div class="puntaje">
+                <div class="carrot">
+                    <i class="fas fa-carrot"></i>
+                </div>
+                <div class="puntos">
+                    <p>4200</p>
+                </div>
+            </div>
+            <div class="trend">
+                <i class="fas fa-fire-alt"></i>
+            </div>
         </div>
+
+
         <div class="tendencia4">
             <div class="titulo">
-                <h4>TENDENCIA 4<h4>
+                <h2>Black Swan<h2>
             </div>
             <div class="imagen">
-                
+            </div>
+            <div class="categoria">
+                <p>Categoria</p>
+            </div>
+            <div class="puntaje">
+                <div class="carrot">
+                    <i class="fas fa-carrot"></i>
+                </div>
+                <div class="puntos">
+                    <p>2105</p>
+                </div>
+            </div>
+            <div class="trend">
+                <i class="fas fa-fire-alt"></i>
             </div>
         </div>
+
+
     </main>
 
 </body>
