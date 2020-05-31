@@ -44,15 +44,14 @@
     width: 15%;
     height: 40px;
     background-color: var(--main-orange);
+    color: var(--main-black);
     border-style: none;
-    margin: 6% 0 5% 0;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin: 6% 3%;
 }
 
 .ContenedorBotonesAP button:hover{
     cursor: pointer;
-    
+
 }
 
 .ContenedorCamposAP{
@@ -63,10 +62,15 @@
     margin-inline-start: auto;
 }
 
-#link{
-    color: black;
-    margin-left: auto;
-    margin-right: auto;
+.ContenedorBotonesAP .link{
+    color: var(--main-black);
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+.ContenedorBotonesAP .cerrar{
+    color: var(--main-orange);
+    background-color: var(--main-black);
 }
 
 .ContenedorCamposAP input{
