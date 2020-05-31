@@ -240,3 +240,7 @@
     top: 73%;
     left: 37%;
 }
+
+.more:hover{
+    transform:scale(1.1)
+}
