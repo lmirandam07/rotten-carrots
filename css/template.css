@@ -141,6 +141,15 @@ body {
     margin: .8rem;
     padding: .8rem;
 }
+.sb-items  .sb-item.active{
+    background-color: var(--main-orange);
+}
+.sb-items  .sb-item.active i{
+    color: var(--main-black);
+}
+.sb-items  .sb-item.active span{
+    color: var(--main-black);
+}
 
 
 .navbar .profile-container {
