@@ -19,6 +19,9 @@
   position: absolute;
   height: 4%;
 }
+.plus:hover{
+  transform: scale(1.1);
+}
 
 .name {
   top: 15%;
@@ -50,12 +53,20 @@
   top: 22%;
   height: 4%;
 }
+.file1:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
 
 .del1 {
   position: absolute;
   left: 90%;
   top: 29%;
-  height: 4%;
+  height: 5%;
+}
+.del1:hover{
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .file2 {
@@ -64,12 +75,20 @@
   top: 42%;
   height: 4%;
 }
+.file2:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
 
 .del2 {
   position: absolute;
   left: 90%;
   top: 49%;
   height: 4%;
+}
+.del2:hover{
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .file3 {
@@ -78,12 +97,20 @@
   top: 62%;
   height: 4%;
 }
+.file3:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
 
 .del3 {
   position: absolute;
   left: 90%;
   top: 69%;
   height: 4%;
+}
+.del3:hover{
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .file4 {
@@ -92,12 +119,20 @@
   top: 82%;
   height: 4%;
 }
+.file4:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
 
 .del4 {
   position: absolute;
   left: 90%;
   top: 89%;
   height: 4%;
+}
+.del4:hover{
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .primtabla {
