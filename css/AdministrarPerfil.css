@@ -26,7 +26,11 @@
     background:none;
     color:fff;
     font-size: 30px;
+}
 
+.ContenedorImagenAP a{
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
