@@ -16,7 +16,7 @@
 .plus {
   top: 2%;
   left: 94%;
-  position: absolute;
+  position: relative;
   height: 4%;
 }
 .plus:hover{
