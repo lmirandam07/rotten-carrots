@@ -33,7 +33,6 @@ p.instagram {
     position: fixed;
     left: 20%;
     top: 70%;
-    margin-left: 0.5%;
     font-family: Istok Web;
     font-weight: bold;
     font-size: 200%;
@@ -42,7 +41,8 @@ p.instagram {
 
 .instagram{
     position: fixed;
-    left: 43%;
+    margin-right: 2%;
+    left: 42%;
     top: 69%;
 }
 
@@ -59,13 +59,15 @@ p.twitter {
 }
 
 .twitter{
+    margin-right: 2%;
     position: fixed;
-    left: 43%;
+    left: 42%;
     top: 79%;
 }
 
 p.reddit {
     text-align: left;
+    margin-right: 2%;
     width: 30%;
     position: fixed;
     left: 70%;
@@ -76,15 +78,20 @@ p.reddit {
     color: #FF9F1C;
 }
 
+div.iconos{
+    margin-top: 2%;
+    display: flex;
+}
 .reddit{
+    margin-right: auto;
     position: fixed;
-    margin-right: 0.5%;
     left: 65%;
     top: 68%;
 }
 
 p.facebook {
     text-align: left;
+    margin-right: 2%;
     width: 30%;
     position: fixed;
     left: 70%;
@@ -97,7 +104,7 @@ p.facebook {
 
 .facebook {
     position: fixed;
-    margin-right: 0.5%;
+    margin-right: auto;
     left: 65%;
     top: 78.5%;
 }
