@@ -1,6 +1,3 @@
-*{
-    overflow: hidden;
-}
 
 .f_comments{
     position: absolute;
@@ -105,6 +102,8 @@
     box-sizing: border-box;
 
     z-index: 1;
+
+    overflow: hidden;
 }
 
 .t_comentario_1{
@@ -251,6 +250,8 @@
     background: rgba(61, 61, 61, 0.82);
     border: 1px solid #FF9F1C;
     box-sizing: border-box;
+
+    overflow: hidden;
 }
 
 .t_comentario_2{
@@ -384,6 +385,8 @@
     box-sizing: border-box;
 
     z-index: 1;
+
+    overflow: hidden;
 }
 
 .t_comentario_3{
