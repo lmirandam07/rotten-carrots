@@ -5,10 +5,10 @@ body{
     background-color: black;
 }
 
-.logoFondo {
+img.logoFondo {
     opacity: 30%;
     position: fixed;
-    z-index: -2;
+    z-index: -4;
     left: 20%;
     width: 80%;
 }
@@ -38,10 +38,4 @@ p.AcercaNosotros {
     font-size: 100%;
     opacity: 80%;
     color: white;
-}
-
-.Informacion{
-    width: 100%;
-    height: 100%;
-    align-content: center;
 }
