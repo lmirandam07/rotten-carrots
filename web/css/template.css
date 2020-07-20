@@ -31,7 +31,7 @@ body {
 }
 
 .wrapper .navbar {
-    position: relative;
+    position: sticky;
     margin-left: 20%;
     width: 80%;
     height: 15%;

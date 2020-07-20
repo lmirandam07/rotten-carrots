@@ -21,7 +21,7 @@
             <div class="searchbar-container">
                 <div class="searchbar">
                     <input type="text" class="search-input" placeholder="Ingrese la película a buscar" id="search">
-                    <a class="search-btn" href="./ResultadoDeBusqueda.html" id="search-btn">
+                    <a class="search-btn" href="./ResultadoDeBusqueda.jsp" id="search-btn">
                         <i class="fas fa-search"></i>
                     </a>
                 </div>
@@ -29,7 +29,7 @@
 
             <div class="profile-container">
                 <div class="profile">
-                    <a href="./AdministrarPerfil.jsp.html" class="user-img"><i class="far fa-user fa-2x"></i> </a>
+                    <a href="./AdministrarPerfil.jsp.jsp" class="user-img"><i class="far fa-user fa-2x"></i> </a>
                     <small class="user-name" id="user-name">Usuario</small>
                 </div>
             </div>
@@ -41,11 +41,11 @@
                 <img class="logo" src="./img/logo.jpg" alt="">
             </div>
             <ul class="sb-items">
-                <li class="sb-item"><a class="sb-links" href="./foro.html"><i class="fas fa-newspaper fa-2x"></i> <span class="sb-text">Foro </span></a></li>
-                <li class="sb-item"><a class="sb-links" href="./admin.html"><i class="far fa-plus-square fa-2x"></i> <span class="sb-text">Discusión </span></a></li>
-                <li class="sb-item"><a class="sb-links" href="./tendencia.html"><i class="fas fa-fire-alt fa-2x"></i> <span class="sb-text">Tendencias </span></a></li>
-                <li class="sb-item"><a class="sb-links" href="./acerca-de-nosotros.html"><i class="far fa-address-card fa-2x"></i> <span class="sb-text">Nosotros </span></a></li>
-                <li class="sb-item active"><a class="sb-links" href="./Contacto.html"><i class="far fa-envelope fa-2x"></i> <span class="sb-text">Contáctanos </span></a></li>
+                <li class="sb-item"><a class="sb-links" href="./foro.jsp"><i class="fas fa-newspaper fa-2x"></i> <span class="sb-text">Foro </span></a></li>
+                <li class="sb-item"><a class="sb-links" href="./admin.jsp"><i class="far fa-plus-square fa-2x"></i> <span class="sb-text">Discusión </span></a></li>
+                <li class="sb-item"><a class="sb-links" href="./tendencia.jsp"><i class="fas fa-fire-alt fa-2x"></i> <span class="sb-text">Tendencias </span></a></li>
+                <li class="sb-item"><a class="sb-links" href="./nosotros.jsp"><i class="far fa-address-card fa-2x"></i> <span class="sb-text">Nosotros </span></a></li>
+                <li class="sb-item active"><a class="sb-links" href="./Contacto.jsp"><i class="far fa-envelope fa-2x"></i> <span class="sb-text">Contáctanos </span></a></li>
             </ul>
         </aside>
 

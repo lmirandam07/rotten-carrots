@@ -17,7 +17,7 @@
 <body>
 	<div class="container">
 		<h2>Rotten Carrots</h2>
-		<form class="iniciar" action="./foro.html">
+		<form class="iniciar" action="./foro.jsp">
 			<input type="email" name ="email" id= "email"class="email" placeholder="Correo Electronico" autofocus required>
 			<br>
 			<input type="password" name="contra" id="contra" class="contra" placeholder="Contraseña" required>

@@ -30,7 +30,7 @@
 
             <div class="profile-container">
                 <div class="profile">
-                    <a href="./administrar_perfil.jsp.jsp" class="user-img"><i class="far fa-user fa-2x"></i> </a>
+                    <a href="./administrar_perfil.jsp" class="user-img"><i class="far fa-user fa-2x"></i> </a>
                     <small class="user-name" id="user-name">Usuario</small>
                 </div>
             </div>

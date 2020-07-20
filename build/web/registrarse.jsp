@@ -14,10 +14,11 @@
     <script src="https://kit.fontawesome.com/e9fad0131d.js" crossorigin="anonymous"></script>
 	<title>Rotten Carrots</title>
 </head>
+<a href="../../web/registrarse.jsp"></a>
 <body>
 	<div class="containerRegistro">
 		<h2>Rotten Carrots</h2>
-		<form class="registrar" action="foro.html">
+		<form class="registrar" action="foro.jsp">
             <div class="forma">
                 <input type="Usuario" name= "usuario" id="usuario" class="textbox" placeholder="Usuario">
                 <br>
@@ -46,7 +47,7 @@
             </div>
             <button class="Registro">Registrarse</button>
             <br>
-            <p>¿Ya tienes una cuenta? <a href="index.html">Inicia sesión aquí</a></p>
+            <p>¿Ya tienes una cuenta? <a href="index.jsp">Inicia sesión aquí</a></p>
 
 		</form>
 	</div>
