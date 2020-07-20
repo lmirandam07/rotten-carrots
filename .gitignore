@@ -104,3 +104,5 @@ dist
 .tern-port
 /rotten-carrots/nbproject/private/
 /rotten-carrots/build/
+/build/
+/nbproject/private/
