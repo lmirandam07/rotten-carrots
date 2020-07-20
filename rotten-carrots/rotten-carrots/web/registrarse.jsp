@@ -14,6 +14,7 @@
     <script src="https://kit.fontawesome.com/e9fad0131d.js" crossorigin="anonymous"></script>
 	<title>Rotten Carrots</title>
 </head>
+<a href="../../web/registrarse.jsp"></a>
 <body>
 	<div class="containerRegistro">
 		<h2>Rotten Carrots</h2>
