@@ -61,10 +61,6 @@
                 <i id="icono" class="fas fa-comment-dots"></i> 8
             </div>
 
-            <div class="share">
-                <i id="icono" class="fas fa-share"></i> Compartir
-            </div>
-
         </div> <!--FINAL DEL POST-->
 
         <div class="more">
