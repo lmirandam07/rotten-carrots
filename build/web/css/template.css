@@ -31,10 +31,10 @@ body {
 }
 
 .wrapper .navbar {
-    position: relative;
+    position: sticky;
     margin-left: 20%;
     width: 80%;
-    height: 20%;
+
     background-image: url('../img/peliculas-bg.jpg');
     border-bottom: 2px solid var(--main-orange);
 }
@@ -42,7 +42,7 @@ body {
 .navbar .searchbar-container {
     width: 70%;
     height: 65%;
-    transform: translateY(80%);
+    transform: translateY(50%);
 }
 
 .searchbar-container .searchbar {
@@ -61,6 +61,7 @@ body {
     appearance: none;
     border: none;
     border-radius: 10px;
+
 }
 
 .searchbar .search-input:hover {
@@ -161,8 +162,8 @@ body {
     background: -webkit-linear-gradient(to bottom, #414345, #232526);
     background: linear-gradient(to bottom, #414345, #232526);
     width: 80%;
-    height: 80%;
-    position: sticky;
+    height: 85%;
+    position: fixed;
     margin-left: 20%;
 }
 
