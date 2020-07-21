@@ -24,11 +24,11 @@
                     <table class="titulosdetabla">
                         <tbody>
                             <tr>
-                                <td class="td1"><div class="alineartexto"><h3>DISCUSIÓN</h3></div></td>
-                                <td class="td2"><div class="alineartexto"><h3>INICIADO</h3></div></td>
-                                <td class="td2"><div class="alineartexto"><h3>RESPUESTAS</h3></div></td>
-                                <td class="td2"><div class="alineartexto"><h3>VISTAS</h3></div></td>
-                                <td class="td3"><div class="alineartexto"><h3>RESPUESTA MÁS RECIENTE</h3></div></td>
+                                <td class="td1"><div class="alineartexto"><h3>DISCUSIÓN</h3></div></td><!-- spoiler->titulo_spoiler -->
+                                <td class="td2"><div class="alineartexto"><h3>INICIADO</h3></div></td><!-- usuario->nombre_usuario -->
+                                <td class="td2"><div class="alineartexto"><h3>RATING</h3></div></td><!-- spoiler->rating -->
+                                <td class="td2"><div class="alineartexto"><h3>CARROTS</h3></div></td><!-- spoiler->carrots -->
+                                <td class="td3"><div class="alineartexto"><h3>RESPUESTA MÁS RECIENTE</h3></div></td><!-- comentario+usuario->nombre_usuario -->
                             </tr>
                         </tbody>
                     </table>
