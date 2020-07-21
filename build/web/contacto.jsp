@@ -23,8 +23,6 @@
 
 
         <div class="contacto">
-<<<<<<< HEAD
-=======
             <br>
             <h3 class="asunto">Asunto</h3>
             <br>
@@ -39,7 +37,6 @@
             <a href="./contacto.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
             <a href="./foro.jsp"><button type="button" name="button" class="enviar">Enviar</button></a>
 
->>>>>>> 9c05f742c9ac77f02b485722744defbcf09a646d
         </div>
         
     </main>

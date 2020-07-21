@@ -33,7 +33,7 @@
                                 <tr>
                                         <td class="td1"><div class="act1"> <p>Jack Muere</p> </div></td>
                                         <td class="td2"><div class="act2"><p>Al final de Titanic todos nos desilucionamos con el destino final que tuvo el personaje interpretado por Leonardo DiCaprio...</p></div></td>
-                                        <td class="td3"><div class="act3"> <img class="imagen1"src="./img/yungdicaprio.jpg" alt=""> </div></td>
+                                        <td class="td3"><div class="act3"> <img class="imagen"src="./img/yungdicaprio.jpg" alt=""> </div></td>
                                 </tr>
                         </tbody>
                 </table>
