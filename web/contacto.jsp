@@ -19,8 +19,8 @@
     <%@include file="templates/header.html" %>
     <main class="main-container">
         <div class="contacto">
-
         </div>
+        
     </main>
 </body>
 </html>
