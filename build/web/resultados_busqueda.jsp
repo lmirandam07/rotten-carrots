@@ -19,8 +19,7 @@
 <body>
     <%@include file="templates/header.html" %>
     <main class="main-container">
-			<div class="prueba">
-                    <h3 class="Discussions">Resultado de búsqueda:</h3>
+		<div class="prueba">
                     <table class="titulosdetabla">
                         <tbody>
                             <tr>
