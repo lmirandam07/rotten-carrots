@@ -18,40 +18,34 @@
 <body>
     <%@include file="templates/header.html" %>
     <main class="main-container">
-        <div class="comments-container">
-            <div> <!--Comment-->
+        <section class="comments-wrapper">
+            <div class="comments-container">
+                <div class="comment"> <!--Comment-->
+                    <div class= "comment-content">
+                        <div class="comment-header">
+                            <h4 class="comment-user">@SuicideSquadHater</h4>
+                            <div class="comment-tag">
+                                <small class="tag">categoría</small>
+                            </div>
+                        </div>
 
-                <img class="pp_user_1" src="./img/pp_user.png" alt=""> <!--AGREGAR IMAGEN PP USUARIO-->
+                        <div class="comment-mensaje">
+                            <p class="mensaje">
+                                No concuerdo caballero, me parece que la historia fue llevada a cabo de la mejor forma y Jared hace un papel fenomenal en esa película, retratando a la perfección un personaje tan complejo como el Joker y el plot twist al final fue la cereza del pastel ante tal obra de arte. Saludos
+                            </p>
+                        </div>
 
-                <div class="tag_1">
-                    <p class="t_tag_1">
-                        Categoría
-                    </p>
+                        <div class="comment-footer">
+                            <div class="comment-carrots">
+                                <button class="btn-carrots"><small class="carrots"><i class="fas fa-carrot"></i> 0</small></button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="tiempo_1">
-                    <p>Hace 10 horas</p>
-                </div>
-
-                <div class="user_1">
-                    <h4>
-                        @SuicideSquadLover
-                    </h4>
-                </div>
-
-                <div class="comentario_1">
-                    <p class="t_comentario_1">
-                        No concuerdo caballero, me parece que la historia fue llevada a cabo de la mejor forma y Jared hace un papel fenomenal en esa película, retratando a la perfección un personaje tan complejo como el Joker y el plot twist al final fue la cereza del pastel ante tal obra de arte. Saludos
-                    </p>
-                </div>
-
-                <div class="carrots_1">
-                    <i id="icono" class="fas fa-carrot"></i> -3
-                </div>
-
-            </div>
             
-        </div> <!--FIN DEL FONDO-->
+            </div> <!--FIN DEL FONDO-->
+        </section>
+        
     </main>
 
 </body>
