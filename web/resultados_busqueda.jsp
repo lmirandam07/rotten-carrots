@@ -21,11 +21,6 @@
     <main class="main-container">
 			<div class="prueba">
                     <h3 class="Discussions">Resultado de búsqueda:</h3>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-
                     <table class="titulosdetabla">
                         <tbody>
                             <tr>
