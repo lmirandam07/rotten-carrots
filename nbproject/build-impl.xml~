@@ -1,6 +1,7 @@
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
+=======
+>>>>>>> 288189d1de0d473a894eab0f76b453362c96551e
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
         *** GENERATED FROM project.xml - DO NOT EDIT  ***
@@ -1018,7 +1019,7 @@ exists or setup the property manually. For example like this:
 <<<<<<< HEAD
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
 =======
-        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-3}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
 >>>>>>> 288189d1de0d473a894eab0f76b453362c96551e
         <mkdir dir="${build.web.dir}/META-INF"/>
         <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update"/>
@@ -1027,7 +1028,7 @@ exists or setup the property manually. For example like this:
 <<<<<<< HEAD
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
 =======
-        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-3}" todir="${build.web.dir}/WEB-INF/lib"/>
 >>>>>>> 288189d1de0d473a894eab0f76b453362c96551e
     </target>
     <target depends="init" if="dist.ear.dir" name="-clean-webinf-lib">
@@ -1468,8 +1469,8 @@ exists or setup the property manually. For example like this:
     <target depends="init,undeploy-clean,deps-clean,do-clean,check-clean,-post-clean" description="Clean build products." name="clean"/>
     <target depends="clean" description="Clean build products." name="clean-ear"/>
 </project>
+<<<<<<< HEAD
 =======
->>>>>>> a4aad0c914e0f7ed05262f41f32f1cf0ce6bd737
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
         *** GENERATED FROM project.xml - DO NOT EDIT  ***
@@ -2029,7 +2030,8 @@ or ant -Dj2ee.platform.classpath=&lt;server_classpath&gt; (where no properties f
                     <formatter type="brief" usefile="false"/>
                     <formatter type="xml"/>
                     <jvmarg value="-ea"/>
-                    <jvmarg value="-agentlib:jdwp=transport=${debug-transport},address=${jpda.address}"/>
+                    <jvmarg line="${debug-args-line}"/>
+                    <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
                     <customize/>
                 </junit>
             </sequential>
@@ -2061,7 +2063,8 @@ or ant -Dj2ee.platform.classpath=&lt;server_classpath&gt; (where no properties f
                     <formatter type="xml"/>
                     <jvmarg value="-ea"/>
                     <jvmarg line="${run.jvmargs.ide}"/>
-                    <jvmarg value="-agentlib:jdwp=transport=${debug-transport},address=${jpda.address}"/>
+                    <jvmarg line="${debug-args-line}"/>
+                    <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
                     <customize/>
                 </junit>
             </sequential>
@@ -2219,6 +2222,18 @@ or ant -Dj2ee.platform.classpath=&lt;server_classpath&gt; (where no properties f
         </macrodef>
     </target>
     <target name="-init-debug-args">
+        <property name="version-output" value="java version &quot;${ant.java.version}"/>
+        <condition property="have-jdk-older-than-1.4">
+            <or>
+                <contains string="${version-output}" substring="java version &quot;1.0"/>
+                <contains string="${version-output}" substring="java version &quot;1.1"/>
+                <contains string="${version-output}" substring="java version &quot;1.2"/>
+                <contains string="${version-output}" substring="java version &quot;1.3"/>
+            </or>
+        </condition>
+        <condition else="-Xdebug" property="debug-args-line" value="-Xdebug -Xnoagent -Djava.compiler=none">
+            <istrue value="${have-jdk-older-than-1.4}"/>
+        </condition>
         <condition else="dt_socket" property="debug-transport-by-os" value="dt_shmem">
             <os family="windows"/>
         </condition>
@@ -2235,7 +2250,8 @@ or ant -Dj2ee.platform.classpath=&lt;server_classpath&gt; (where no properties f
             <sequential>
                 <java classname="@{classname}" fork="true">
                     <jvmarg line="${endorsed.classpath.cmd.line.arg}"/>
-                    <jvmarg value="-agentlib:jdwp=transport=${debug-transport},address=${jpda.address}"/>
+                    <jvmarg line="${debug-args-line}"/>
+                    <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
                     <jvmarg line="${runmain.jvmargs}"/>
                     <classpath>
                         <path path="@{classpath}"/>
@@ -2455,36 +2471,20 @@ exists or setup the property manually. For example like this:
     <target depends="init,compile,compile-jsps,-pre-dist,-do-dist-with-manifest,-do-dist-without-manifest" name="do-dist"/>
     <target depends="init" if="dist.ear.dir" name="library-inclusion-in-manifest">
 <<<<<<< HEAD
-        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-2}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
-<<<<<<< HEAD
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+=======
+        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-2}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+>>>>>>> d432a221c156ff55ad63cd482d83569d5e8f65fd
         <mkdir dir="${build.web.dir}/META-INF"/>
         <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update"/>
     </target>
     <target depends="init" name="library-inclusion-in-archive" unless="dist.ear.dir">
-        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-2}" todir="${build.web.dir}/WEB-INF/lib"/>
+<<<<<<< HEAD
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
-    </target>
 =======
-        <mkdir dir="${build.web.dir}/META-INF"/>
-        <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update"/>
-    </target>
-    <target depends="init" name="library-inclusion-in-archive" unless="dist.ear.dir"/>
->>>>>>> 1ccf4f75b20ebad1fda586e469f7983f1fbcc079
-=======
-        <mkdir dir="${build.web.dir}/META-INF"/>
-        <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update"/>
-    </target>
-    <target depends="init" name="library-inclusion-in-archive" unless="dist.ear.dir">
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-2}" todir="${build.web.dir}/WEB-INF/lib"/>
+>>>>>>> d432a221c156ff55ad63cd482d83569d5e8f65fd
     </target>
-=======
-        <mkdir dir="${build.web.dir}/META-INF"/>
-        <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update"/>
-    </target>
-    <target depends="init" name="library-inclusion-in-archive" unless="dist.ear.dir"/>
->>>>>>> 288189d1de0d473a894eab0f76b453362c96551e
->>>>>>> a4aad0c914e0f7ed05262f41f32f1cf0ce6bd737
     <target depends="init" if="dist.ear.dir" name="-clean-webinf-lib">
         <delete dir="${build.web.dir}/WEB-INF/lib"/>
     </target>
@@ -2923,7 +2923,6 @@ exists or setup the property manually. For example like this:
     <target depends="init,undeploy-clean,deps-clean,do-clean,check-clean,-post-clean" description="Clean build products." name="clean"/>
     <target depends="clean" description="Clean build products." name="clean-ear"/>
 </project>
-<<<<<<< HEAD
+>>>>>>> 1ccf4f75b20ebad1fda586e469f7983f1fbcc079
 =======
->>>>>>> 5ce20f980331b29477f4c1f88ae619f79af09277
->>>>>>> a4aad0c914e0f7ed05262f41f32f1cf0ce6bd737
+>>>>>>> 288189d1de0d473a894eab0f76b453362c96551e
