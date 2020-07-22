@@ -7,30 +7,12 @@
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <web-module-libraries>
                 <library dirs="200">
-<<<<<<< HEAD
                     <file>${file.reference.mariadb-java-client-2.2.5.jar-3}</file>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <file>${file.reference.mariadb-java-client-2.2.5.jar}</file>
-=======
-                    <file>${&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD}</file>
-                </library>
-                <library dirs="200">
-                    <file>${file.reference.mariadb-java-client-2.2.5.jar-2}</file>
->>>>>>> kirsten
-=======
-<<<<<<< HEAD
-                    <file>${file.reference.mariadb-java-client-2.2.5.jar-2}</file>
-=======
-                    <file>${file.reference.mariadb-java-client-2.2.5.jar}</file>
->>>>>>> a4aad0c914e0f7ed05262f41f32f1cf0ce6bd737
->>>>>>> d432a221c156ff55ad63cd482d83569d5e8f65fd
->>>>>>> e8a75964bf9211c7ca195e89796ab0a8a81bd759
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
-                    <file>${file.reference.mariadb-java-client-2.2.5.jar-1}</file>
+                    <file>${file.reference.mariadb-java-client-2.2.5.jar-4}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
             </web-module-libraries>
             <web-module-additional-libraries/>
