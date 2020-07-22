@@ -2470,12 +2470,20 @@ exists or setup the property manually. For example like this:
     </target>
     <target depends="init,compile,compile-jsps,-pre-dist,-do-dist-with-manifest,-do-dist-without-manifest" name="do-dist"/>
     <target depends="init" if="dist.ear.dir" name="library-inclusion-in-manifest">
+<<<<<<< HEAD
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+=======
+        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-2}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+>>>>>>> d432a221c156ff55ad63cd482d83569d5e8f65fd
         <mkdir dir="${build.web.dir}/META-INF"/>
         <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update"/>
     </target>
     <target depends="init" name="library-inclusion-in-archive" unless="dist.ear.dir">
+<<<<<<< HEAD
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
+=======
+        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-2}" todir="${build.web.dir}/WEB-INF/lib"/>
+>>>>>>> d432a221c156ff55ad63cd482d83569d5e8f65fd
     </target>
     <target depends="init" if="dist.ear.dir" name="-clean-webinf-lib">
         <delete dir="${build.web.dir}/WEB-INF/lib"/>
