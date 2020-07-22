@@ -18,7 +18,7 @@
 	<title>Rotten Carrots</title>
 </head>
 <body>
-    <%@include file="templates/header.html" %>
+    <%@include file="templates/header.jsp" %>
     <main class="main-container">
         <div class="prueba">
             <div class="crear">
@@ -38,8 +38,7 @@
                                    <tr>
                                            <td class="td1"><div class="act1"> <p>Jack Muere</p> </div></td>
                                            <td class="td2"><div class="act2"><p>Al final de Titanic todos nos desilucionamos con el destino final que tuvo el personaje interpretado por Leonardo DiCaprio...</p></div></td>
-
-                                           <td class="td4"><img class="del"src="./img/delete.png" alt=""></td>
+                                           <td class="td4"><button class="btn-del"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button></td>
                                    </tr>
                            </tbody>
                     </table>
@@ -48,8 +47,7 @@
                                    <tr>
                                            <td class="td1"><div class="act1"> <p>Bruce Willis era un fantasma</p></div></td>
                                            <td class="td2"><div class="act2"><p>De lo mas emocionante del cine en las últimas 3 décadas fué enterarnos que al final, Bruce Willis estaba muerto...</p></div></td>
-
-                                           <td class="td4"><img class="del"src="./img/delete.png" alt=""></td>
+                                           <td class="td4"><button class="btn-del"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button></td>
                                    </tr>
                            </tbody>
                     </table>
@@ -58,8 +56,7 @@
                                    <tr>
                                            <td class="td1"><div class="act1"><p> Snape era bueno</p></div></td>
                                            <td class="td2"><div class="act2"><p>Después de la película del principe mestizo, la verdad sorpendió que las razones de Snape para hacer lo que hizo estaban justificadas...</p> </div></td>
-
-                                           <td class="td4"><img class="del"src="./img/delete.png" alt=""></td>
+                                           <td class="td4"><button class="btn-del"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button></td>
                                    </tr>
                            </tbody>
                     </table>
@@ -70,8 +67,7 @@
                                    <tr>
                                            <td class="td1"><div class="act1"><p>Tyler Durden era una personalidad alterna</p></div></td>
                                            <td class="td2"><div class="act2"><p>Muy pocos se dieron cuenta de los mensajes que nos daban alrededor de la película para descubrir la verdad...</p> </div></td>
-
-                                           <td class="td4"><img class="del"src="./img/delete.png" alt=""></td>
+                                           <td class="td4"><button class="btn-del"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button></td>
                                    </tr>
                            </tbody>
                     </table>
