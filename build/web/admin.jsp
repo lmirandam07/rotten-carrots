@@ -23,7 +23,7 @@
         <div class="prueba">
             <div class="crear">
                <h5 class="create">Crear Discusion</h5>
-               <a href="./agregar_discusion.jsp"><img class="plus" src="./img/plus.png" alt="plus"></a>
+               <a class="enlace" href="./agregar_discusion.jsp"><img class="plus" src="./img/plus.png" alt="plus"></a>
             </div>
 
                  <div class="discusiones">
