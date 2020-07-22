@@ -17,7 +17,7 @@
 	<title>Rotten Carrots</title>
 </head>
 <body>
-    <%@include file="templates/header.html" %>
+    <%@include file="templates/header.jsp" %>
     <main class="main-container">
         <h2>Agregar Discusión</h2>
 

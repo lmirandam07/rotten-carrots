@@ -16,7 +16,7 @@
 	<title>Rotten Carrots - Comentarios Spoiler</title>
 </head>
 <body>
-    <%@include file="templates/header.html" %>
+    <%@include file="templates/header.jsp" %>
     <main class="main-container">
         <section class="comments-wrapper">
             <div class="comments-container">
