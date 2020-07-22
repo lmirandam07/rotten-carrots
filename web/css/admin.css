@@ -46,15 +46,18 @@
   font-family: 'Istok Web', sans-serif;
 }
 
-
-.plus {
+a .plus {
   top: 1%;
   width: 25%;
   margin-left: 1rem;
   position: relative;
+ 
 }
 .plus:hover{
   transform: scale(1.1);
+}
+.enlace{
+    height: 50%;
 }
 
 
