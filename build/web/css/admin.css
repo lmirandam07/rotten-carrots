@@ -9,7 +9,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: #333 var(--main-grey);
+    scrollbar-color: #333 var(--main-gvarrey);
     background: linear-gradient(180deg, #7A7A7A 0%, rgba(126, 126, 126, 0) 100%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -60,12 +60,6 @@ a .plus {
     height: 50%;
 }
 
-
-
-
-.del{
-  width: 35%;
-}
 .primtabla {
   position: relative;
   left: 2%;
@@ -165,3 +159,14 @@ p{
   padding-top: 2%;
 }
 
+.btn-del{
+    border-style: none;
+    background-color:var(--main-orange);
+    border-radius: 5px;
+    width: 45%;
+    height: 50%;
+}
+.btn-del:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
