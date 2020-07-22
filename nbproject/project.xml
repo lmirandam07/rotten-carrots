@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> a4aad0c914e0f7ed05262f41f32f1cf0ce6bd737
@@ -49,6 +50,8 @@
     </configuration>
 </project>
 =======
+=======
+>>>>>>> 5e1e671c572340867042d9083b0c745aa93caa4d
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://www.netbeans.org/ns/project/1">
     <type>org.netbeans.modules.web.project</type>
@@ -62,7 +65,13 @@
                     <file>${file.reference.mariadb-java-client-2.6.1.jar}</file>
 =======
                     <file>${file.reference.mariadb-java-client-2.2.5.jar-3}</file>
+<<<<<<< HEAD
 >>>>>>> e8a75964bf9211c7ca195e89796ab0a8a81bd759
+=======
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.mariadb-java-client-2.2.5.jar-4}</file>
+>>>>>>> 5e1e671c572340867042d9083b0c745aa93caa4d
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
             </web-module-libraries>
@@ -76,5 +85,3 @@
         </data>
     </configuration>
 </project>
->>>>>>> 1ccf4f75b20ebad1fda586e469f7983f1fbcc079
->>>>>>> a4aad0c914e0f7ed05262f41f32f1cf0ce6bd737
