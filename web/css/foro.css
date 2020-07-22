@@ -104,6 +104,7 @@
     height: 25%;
     color: var(--main-white);
     cursor: pointer;
+    text-shadow: 1.5px 1.5px #333;
 }
 
 .post-content .post-info {
