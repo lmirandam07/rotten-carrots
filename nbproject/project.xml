@@ -5,20 +5,12 @@
         <data xmlns="http://www.netbeans.org/ns/web-project/3">
             <name>rotten-carrots</name>
             <minimum-ant-version>1.6.5</minimum-ant-version>
-<<<<<<< HEAD
             <web-module-libraries>
-                <library dirs="200">
-                    <file>${file.reference.mariadb-java-client-2.2.5.jar-2}</file>
-                    <path-in-war>WEB-INF/lib</path-in-war>
-                </library>
                 <library dirs="200">
                     <file>${file.reference.mariadb-java-client-2.2.5.jar-1}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
             </web-module-libraries>
-=======
-            <web-module-libraries/>
->>>>>>> 1ccf4f75b20ebad1fda586e469f7983f1fbcc079
             <web-module-additional-libraries/>
             <source-roots>
                 <root id="src.dir"/>
