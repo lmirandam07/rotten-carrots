@@ -8,7 +8,13 @@
 }
 .encabezados{
     margin-left: 5%;
-    width: 90%;
+    width: 70%;
+    padding-top: 5%;
+}
+.encabezados tr{
+    height: 55%;
+    margin: 0;
+    
 }
 .encabezados td{
     text-align: justify;
@@ -116,9 +122,6 @@ td {
   width: 25em;
 }
 
-.td3 {
-  width: 15em;
-}
 .td4 {
   width: 10%;
 }
@@ -142,29 +145,8 @@ p{
   height: 100%;
   margin: 5px 0 0;
   border: 2px solid;
-}
-
-.act3 {
-  height: 100%;
-  margin: 5px 0 0;
-  border: 2px solid;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-}
-
-.imagen {
-  padding-top: 1%;
-  width: 4.375em;
-}
-
-.imagen2 {
-  padding-top: 1%;
-  height: 4.375em;
-}
-
-.imagen3 {
-  padding-top: 1%;
-  height: 5em;
 }
 
 .act4 {
