@@ -17,7 +17,7 @@
 	<title>Rotten Carrots</title>
 </head>
 <body>
-    <%@include file="templates/header.html" %>
+    <%@include file="templates/header.jsp" %>
     <main class="main-container">
 			<div class="prueba">
                     <h3 class="Discussions">Resultado de búsqueda:</h3>
