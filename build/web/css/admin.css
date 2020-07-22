@@ -6,6 +6,16 @@
   font-size: 1.750em;
   position: absolute;
 }
+.encabezados{
+    margin-left: 5%;
+    width: 90%;
+}
+.encabezados td{
+    text-align: justify;
+    padding-left: 2.5rem;
+    
+   
+}
 
 .create {
   position: absolute;
@@ -25,118 +35,17 @@
   transform: scale(1.1);
 }
 
-.name {
-  top: 15%;
-  left: 8%;
-  position: absolute;
-}
-
-.disch4 {
-  top: 15%;
-  left: 33%;
-  position: absolute;
-}
-
-.imgh4 {
-  top: 15%;
-  left: 72%;
-  position: absolute;
-}
-
 .prueba {
   position: relative;
   width: 85%;
   height: 95%;
   margin: auto;
 }
-.file1 {
-  position: absolute;
-  left: 90%;
-  top: 22%;
-  height: 4%;
-}
-.file1:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-}
 
-.del1 {
-  position: absolute;
-  left: 90%;
-  top: 29%;
-  height: 5%;
-}
-.del1:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-}
 
-.file2 {
-  position: absolute;
-  left: 90%;
-  top: 42%;
-  height: 4%;
+.del{
+  width: 35%;
 }
-.file2:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.del2 {
-  position: absolute;
-  left: 90%;
-  top: 49%;
-  height: 4%;
-}
-.del2:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.file3 {
-  position: absolute;
-  left: 90%;
-  top: 62%;
-  height: 4%;
-}
-.file3:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.del3 {
-  position: absolute;
-  left: 90%;
-  top: 69%;
-  height: 4%;
-}
-.del3:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.file4 {
-  position: absolute;
-  left: 90%;
-  top: 82%;
-  height: 4%;
-}
-.file4:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.del4 {
-  position: absolute;
-  left: 90%;
-  top: 89%;
-  height: 4%;
-}
-.del4:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
 .primtabla {
   position: absolute;
   left: 6%;
@@ -146,6 +55,10 @@
   border: 2px;
   border-radius: 10%;
   border-collapse: collapse;
+  display: flex;
+}
+.primtabla .act1{
+   align-items: baseline;
 }
 
 .segtabla {
@@ -157,6 +70,7 @@
   border: 2px;
   border-radius: 10%;
   border-collapse: collapse;
+  display: flex;
 }
 
 .tertabla {
@@ -168,6 +82,8 @@
   border: 2px;
   border-radius: 10%;
   border-collapse: collapse;
+  display: flex;
+  margin-bottom: 1rem;
 }
 
 .cuartabla {
@@ -179,6 +95,7 @@
   border: 2px;
   border-radius: 10%;
   border-collapse: collapse;
+  display: flex;
 }
 
 td {
@@ -201,6 +118,9 @@ td {
 
 .td3 {
   width: 15em;
+}
+.td4 {
+  width: 10%;
 }
 
 .act1 {
