@@ -58,16 +58,18 @@
             </div>
 
             <div class="comments">
-                <i id="icono" class="fas fa-comment-dots"></i> 8
+                <i id="icono" class="fas fa-comment-dots"></i>
+                <a href="cargar_comentario.jsp">Comentar</a>
             </div>
 
         </div> <!--FINAL DEL POST-->
 
         <div class="more">
             <a href="./comentarios.jsp">
-                <h2 class="t_more">Cargar más comentarios</h2>
+                    <h2 class="t_more">Cargar más comentarios</h2>
             </a>
             <i id="i_more" class="fas fa-chevron-circle-right"></i>
+            
         </div>
     </main>
 

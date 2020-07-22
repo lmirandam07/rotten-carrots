@@ -1,0 +1,86 @@
+
+
+h2 {
+  text-align: center;
+  padding-top: 0.7%;
+  font-size: 2rem;
+  padding-bottom: 1%;
+  font-style: normal;
+  font-weight: bold;
+  font-family: 'Istok Web', sans-serif;
+}
+
+h3{
+  font-family: 'Istok Web', sans-serif;
+}
+button{
+  font-family: 'Montserrat', sans-serif;
+}
+.contacto {
+  width: 65%;
+  height: 70%;
+  /*background: #cfcfcf;*/
+  position: relative;
+  margin: auto;
+  border-radius: 1%;
+  background-image: linear-gradient( to bottom, #7e7e7e, #232526);
+  border-style: none;
+}
+
+.asunto{
+  left: 8%;
+  top: 5%;
+  position: relative;
+  color: #000000;
+}
+
+.i_asunto{
+  left: 8%;
+  top:5%;
+  position: relative;
+  border-radius: 5px;
+  width: 80%;
+  height: 10%;
+  border: 0;
+  margin-top:1%;
+  padding: .5rem;
+}
+
+textarea{
+  left: 8%;
+  top:5%;
+  position: relative;
+  border-radius: 5px;
+  width: 80%;
+  height: 28%;
+  border: 0;
+  margin-top:1%;
+  padding: .5rem;
+}
+
+.consulta{
+  left: 8%;
+  position: relative;
+  color: #000000;
+}
+.cancelar{
+  background-color: #FF9F1C;
+  border-style: none;
+  left: 30%;
+  position: relative;
+  font-weight: 900;
+  width: 16%;
+  height: 8%;
+  margin-top: 2%;
+}
+.enviar{
+  background-color: #FF9F1C;
+  border-style: none;
+  left: 40%;
+  position: relative;
+  font-weight: 900;
+  width: 16%;
+  height: 8%;
+  margin-top: 2%;
+}
+

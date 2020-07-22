@@ -1,0 +1,76 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07/21/2020, 07:25:26 PM
+    Author     : Javier Singh
+*/
+
+h2 {
+  text-align: center;
+  padding-top: 0.7%;
+  font-size: 2rem;
+  padding-bottom: 1%;
+  font-style: normal;
+  font-weight: bold;
+  font-family: 'Istok Web', sans-serif;
+}
+
+h3{
+  font-family: 'Istok Web', sans-serif;
+}
+button{
+  font-family: 'Montserrat', sans-serif;
+}
+.comentario {
+  width: 65%;
+  height: 70%;
+  /*background: #cfcfcf;*/
+  position: relative;
+  margin: auto;
+  border-radius: 1%;
+  background-image: linear-gradient( to bottom, #7e7e7e, #232526);
+  border-style: none;
+}
+
+textarea{
+  left: 8%;
+  top:4%;
+  position: relative;
+  border-radius: 5px;
+  width: 80%;
+  height: 30%;
+  border: 0;
+  margin-top:1%;
+  padding: .5rem;
+}
+
+.opinion{
+  left: 8%;
+  position: relative;
+  color: #fff;
+  text-shadow: 1px 1px #333;
+}
+
+.cancelar{
+  background-color: #FF9F1C;
+  border-style: none;
+  left: 30%;
+  position: relative;
+  font-weight: 900;
+  width: 16%;
+  height: 8%;
+  margin-top: 2%;
+}
+.publicar{
+  background-color: #FF9F1C;
+  border-style: none;
+  left: 40%;
+  position: relative;
+  font-weight: 900;
+  width: 16%;
+  height: 8%;
+  margin-top: 2%;
+}

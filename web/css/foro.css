@@ -104,6 +104,7 @@
     height: 25%;
     color: var(--main-white);
     cursor: pointer;
+    text-shadow: 1.5px 1.5px #333;
 }
 
 .post-content .post-info {
@@ -118,6 +119,15 @@
 
 .post-info .post-carrots {
     margin-right: 1rem;
+}
+
+.btn-post {
+    appearance: none;
+    border: none;
+    border-radius: 5px;
+    padding: .1rem .2rem;
+    background-color: var(--main-orange);
+    cursor: pointer;
 }
 
 .post-info .post-carrots:hover {

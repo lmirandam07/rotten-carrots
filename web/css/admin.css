@@ -1,183 +1,114 @@
-.discussions {
-  top: 5%;
-  left: 3%;
-  font-family: 'Istok Web', sans-serif;
-  font-size: 1.750em;
-  position: absolute;
+.discusiones{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    flex-wrap: nowrap;
+    width: 90%;
+    margin-top: 3rem;
+    margin-left: 4rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #333 var(--main-grey);
+    background: linear-gradient(180deg, #7A7A7A 0%, rgba(126, 126, 126, 0) 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+}
+.discusiones .encabezados{
+    margin-left: 5%;
+    width: 70%;
 }
 
+.encabezados td{
+    text-align: justify;
+    padding-left: 5%;
+    
+   
+}
+.crear{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: space-between;
+  position: absolute;
+  width: 25%;
+  height: 10%;
+  top: 2%;
+  left: 80%;
+  font-family: 'Istok Web', sans-serif; 
+
+    
+}
 .create {
-  position: absolute;
-  top: 2%;
-  left: 82.5%;
+  position: relative;
+  top: 15%;
   font-family: 'Istok Web', sans-serif;
 }
 
-
-.plus {
-  top: 2%;
-  left: 94%;
-  position: absolute;
-  height: 4%;
+a .plus {
+  top: 1%;
+  width: 25%;
+  margin-left: 1rem;
+  position: relative;
+ 
 }
 .plus:hover{
   transform: scale(1.1);
 }
-
-.name {
-  top: 15%;
-  left: 8%;
-  position: absolute;
+.enlace{
+    height: 50%;
 }
 
-.disch4 {
-  top: 15%;
-  left: 33%;
-  position: absolute;
-}
 
-.imgh4 {
-  top: 15%;
-  left: 72%;
-  position: absolute;
-}
 
-.prueba {
-  position: relative;
-  width: 85%;
-  height: 95%;
-  margin: auto;
-}
-.file1 {
-  position: absolute;
-  left: 90%;
-  top: 22%;
-  height: 4%;
-}
-.file1:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-}
 
-.del1 {
-  position: absolute;
-  left: 90%;
-  top: 29%;
-  height: 5%;
+.del{
+  width: 35%;
 }
-.del1:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.file2 {
-  position: absolute;
-  left: 90%;
-  top: 42%;
-  height: 4%;
-}
-.file2:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.del2 {
-  position: absolute;
-  left: 90%;
-  top: 49%;
-  height: 4%;
-}
-.del2:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.file3 {
-  position: absolute;
-  left: 90%;
-  top: 62%;
-  height: 4%;
-}
-.file3:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.del3 {
-  position: absolute;
-  left: 90%;
-  top: 69%;
-  height: 4%;
-}
-.del3:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.file4 {
-  position: absolute;
-  left: 90%;
-  top: 82%;
-  height: 4%;
-}
-.file4:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.del4 {
-  position: absolute;
-  left: 90%;
-  top: 89%;
-  height: 4%;
-}
-.del4:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
 .primtabla {
-  position: absolute;
-  left: 6%;
-  top: 20%;
+  position: relative;
+  left: 2%;
   border-color: #FF9F1C;
   border-width: thick;
   border: 2px;
   border-radius: 10%;
   border-collapse: collapse;
+  margin-bottom: 1rem;
 }
 
 .segtabla {
-  position: absolute;
-  left: 6%;
-  top: 40%;
+  position: relative;
+  left: 2%;
   border-color: #FF9F1C;
   border-width: thick;
   border: 2px;
   border-radius: 10%;
   border-collapse: collapse;
+  margin-bottom: 1rem;
+
 }
 
 .tertabla {
-  position: absolute;
-  left: 6%;
-  top: 60%;
+  position: relative;
+  left: 2%;
   border-color: #FF9F1C;
   border-width: thick;
   border: 2px;
   border-radius: 10%;
   border-collapse: collapse;
+  margin-bottom: 1rem;
 }
 
 .cuartabla {
-  position: absolute;
-  left: 6%;
-  top: 80%;
+  position: relative;
+  left: 2%;
   border-color: #FF9F1C;
   border-width: thick;
   border: 2px;
   border-radius: 10%;
   border-collapse: collapse;
+
 }
 
 td {
@@ -198,8 +129,8 @@ td {
   width: 25em;
 }
 
-.td3 {
-  width: 15em;
+.td4 {
+  width: 10%;
 }
 
 .act1 {
@@ -208,7 +139,7 @@ td {
   border: 2px solid;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  padding-top: 20%;
+  padding-top: 5%;
 }
 p{
   color: #ffffff;
@@ -221,29 +152,8 @@ p{
   height: 100%;
   margin: 5px 0 0;
   border: 2px solid;
-}
-
-.act3 {
-  height: 100%;
-  margin: 5px 0 0;
-  border: 2px solid;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-}
-
-.imagen1 {
-  padding-top: 1%;
-  width: 4.375em;
-}
-
-.imagen2 {
-  padding-top: 1%;
-  height: 4.375em;
-}
-
-.imagen3 {
-  padding-top: 1%;
-  height: 5em;
 }
 
 .act4 {
@@ -254,3 +164,4 @@ p{
   border-bottom-left-radius: 15%;
   padding-top: 2%;
 }
+
