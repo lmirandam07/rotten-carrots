@@ -26,11 +26,8 @@
             <h3 class="name">Nombre del Tema</h3>
             <br>
             <input type="name" name="tema" value="" placeholder=" " class="first" class="inputs">
-            <h3 class="name">Imagen</h3>
             <br>
-            <input type="imagen" name="" value=""class="inputs">
             <br>
-            <button type="button" name="button" class="buscar">Buscar</button>
             <h3 class="disc">Discusión</h3>
             <textarea name="name" rows="8" cols="80"></textarea>
             <br>
