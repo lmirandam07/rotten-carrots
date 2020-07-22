@@ -19,94 +19,56 @@
 <body>
     <%@include file="templates/header.jsp" %>
     <main class="main-container">
-			<div class="prueba">
-                    <h3 class="Discussions">Resultado de búsqueda:</h3>
-                    <table class="titulosdetabla">
-                        <tbody>
-                            <tr>
-                                <td class="td1"><div class="alineartexto"><h3>DISCUSIÓN</h3></div></td><!-- spoiler->titulo_spoiler -->
-                                <td class="td2"><div class="alineartexto"><h3>INICIADO</h3></div></td><!-- usuario->nombre_usuario -->
-                                <td class="td2"><div class="alineartexto"><h3>RATING</h3></div></td><!-- spoiler->rating -->
-                                <td class="td2"><div class="alineartexto"><h3>CARROTS</h3></div></td><!-- spoiler->carrots -->
-                                <td class="td3"><div class="alineartexto"><h3>RESPUESTA MÁS RECIENTE</h3></div></td><!-- comentario+usuario->nombre_usuario -->
-                            </tr>
-                        </tbody>
+        <div class="prueba">
+
+
+                 <div class="discusiones">
+                    <table class="encabezados">
+                        <tr>
+                           <td><h4>Nombre</h4></td>
+                           <td><h4>Discusión</h4></td>
+                        </tr>
+                    </table>
+                    <table class="primtabla">
+                           <tbody>
+                                   <tr>
+                                           <td class="td1"><div class="act1"> <p>Jack Muere</p> </div></td>
+                                           <td class="td2"><div class="act2"><p>Al final de Titanic todos nos desilucionamos con el destino final que tuvo el personaje interpretado por Leonardo DiCaprio...</p></div></td>
+                                           <td class="td4"><button class="btn-del"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i></button></td>
+                                   </tr>
+                           </tbody>
+                    </table>
+                    <table class="segtabla">
+                           <tbody>
+                                   <tr>
+                                           <td class="td1"><div class="act1"> <p>Bruce Willis era un fantasma</p></div></td>
+                                           <td class="td2"><div class="act2"><p>De lo mas emocionante del cine en las últimas 3 décadas fué enterarnos que al final, Bruce Willis estaba muerto...</p></div></td>
+                                           <td class="td4"><button class="btn-del"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i></button></td>
+                                   </tr>
+                           </tbody>
+                    </table>
+                    <table class="tertabla">
+                           <tbody>
+                                   <tr>
+                                           <td class="td1"><div class="act1"><p> Snape era bueno</p></div></td>
+                                           <td class="td2"><div class="act2"><p>Después de la película del principe mestizo, la verdad sorpendió que las razones de Snape para hacer lo que hizo estaban justificadas...</p> </div></td>
+                                           <td class="td4"><button class="btn-del"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i></button></td>
+                                   </tr>
+                           </tbody>
                     </table>
 
-						<table class="primtabla">
-							<tbody>
-								<tr>
-                                    <td class="td1"><div class="act1"><p><a href="">¿Al final Cobb recupera a sus hijos?</a></p></div></td>
-									<td class="td2"><div class="act2"><p>Blue Kirby</p></div></td>
-                                    <td class="td2"><div class="act2"><p>25</p></div></td>
-                                    <td class="td2"><div class="act2"><p>34520</p></div></td>
-                                    <td class="td3"><div class="act3"><p>TarantinoJR</p></div></td>
-								</tr>
-                            </tbody>
-                        </table>
 
-                        <br>
-
-                        <table class="primtabla">
-							<tbody>
-								<tr>
-									<td class="td1"><div class="act1"><p><a href="">¿Le robaron un Oscar a Leonardo DiCaprio?</a></p></div></td>
-									<td class="td2"><div class="act2"><p>DiCapriio</p></div></td>
-                                    <td class="td2"><div class="act2"><p>89</p></div></td>
-                                    <td class="td2"><div class="act2"><p>97206</p></div></td>
-                                    <td class="td3"><div class="act3"><p>JavierSIN</p></div></td>
-								</tr>
-							</tbody>
-                        </table>
-
-                        <br>
-
-                        <table class="primtabla">
-							<tbody>
-								<tr>
-									<td class="td1"><div class="act1"><p><a href="">¿Cómo saber cuándo estamos en el mundo real?</a></p></div></td>
-									<td class="td2"><div class="act2"><p>GreenMario</p></div></td>
-                                    <td class="td2"><div class="act2"><p>17</p></div></td>
-                                    <td class="td2"><div class="act2"><p>49347</p></div></td>
-                                    <td class="td3"><div class="act3"><p>LeBronStan</p></div></td>
-								</tr>
-							</tbody>
-                        </table>
-
-                        <br>
-
-                        <table class="primtabla">
-							<tbody>
-								<tr>
-									<td class="td1"><div class="act1"><p><a href="">¿Cuáles son los diferentes tipos de sueños?</a></p></div></td>
-									<td class="td2"><div class="act2"><p>Dundunsua</p></div></td>
-                                    <td class="td2"><div class="act2"><p>18</p></div></td>
-                                    <td class="td2"><div class="act2"><p>32458</p></div></td>
-                                    <td class="td3"><div class="act3"><p>Ranguliao</p></div></td>
-								</tr>
-							</tbody>
-                        </table>
-
-                        <br>
-
-                        <table class="primtabla">
-							<tbody>
-								<tr>
-									<td class="td1"><div class="act1"><p><a href="">¿Cómo escapa el personaje de DiCaprio del hotel?</a></p></div></td>
-									<td class="td2"><div class="act2"><p>AAPotter</p></div></td>
-                                    <td class="td2"><div class="act2"><p>37</p></div></td>
-                                    <td class="td2"><div class="act2"><p>68957</p></div></td>
-                                    <td class="td3"><div class="act3"><p>Simp4Life</p></div></td>
-								</tr>
-							</tbody>
-                        </table>
-
-                        <br>
-
-
-			</div>
-
-
+                    <table class="cuartabla">
+                           <tbody>
+                                   <tr>
+                                           <td class="td1"><div class="act1"><p>Tyler Durden era una personalidad alterna</p></div></td>
+                                           <td class="td2"><div class="act2"><p>Muy pocos se dieron cuenta de los mensajes que nos daban alrededor de la película para descubrir la verdad...</p> </div></td>
+                                           <td class="td4"><button class="btn-del"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i></button></td>
+                                   </tr>
+                           </tbody>
+                    </table>
+                </div>
+        </div>
     </main>
 
 </body>
