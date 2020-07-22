@@ -38,6 +38,7 @@
             <a href="./foro.jsp"><button type="button" name="button" class="enviar">Enviar</button></a>
 
         </div>
+        
     </main>
 </body>
 </html>
