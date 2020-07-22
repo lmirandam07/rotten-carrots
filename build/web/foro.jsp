@@ -43,14 +43,12 @@
 
                         <div class="post-info">
                             <div class="post-carrots">
-                                <small class="carrots"><i class="fas fa-carrot"></i> 15</small>
+                                <button class="btn-post"><small class="carrots"><i class="fas fa-carrot"></i> 15</small></button>
                             </div>
                             <div class="post-comments">
-                                <small class="comments"><i id="icono" class="fas fa-comment-dots"></i> 50</small>
+                                <button class="btn-post"><small class="comments"><i id="icono" class="fas fa-comment-dots"></i> 50</small></button>
                             </div>
-                            <div class="post-share">
-                                <small class="comments"><i id="icono" class="fas fa-share"></i> Compartir</small>
-                            </div>
+                            
                         </div>
                         <a href="./spoiler.jsp">
                             <span class="link-span"></span>
@@ -80,13 +78,10 @@
 
                         <div class="post-info">
                             <div class="post-carrots">
-                                <small class="carrots"><i class="fas fa-carrot"></i> 15</small>
+                                <button class="btn-post"><small class="carrots"><i class="fas fa-carrot"></i> 15</small></button>
                             </div>
                             <div class="post-comments">
-                                <small class="comments"><i id="icono" class="fas fa-comment-dots"></i> 50</small>
-                            </div>
-                            <div class="post-share">
-                                <small class="comments"><i id="icono" class="fas fa-share"></i> Compartir</small>
+                                <button class="btn-post"><small class="comments"><i id="icono" class="fas fa-comment-dots"></i> 50</small></button>
                             </div>
                         </div>
                     </div>
@@ -113,13 +108,10 @@
 
                         <div class="post-info">
                             <div class="post-carrots">
-                                <small class="carrots"><i class="fas fa-carrot"></i> 15</small>
+                                <button class="btn-post"><small class="carrots"><i class="fas fa-carrot"></i> 15</small></button>
                             </div>
                             <div class="post-comments">
-                                <small class="comments"><i id="icono" class="fas fa-comment-dots"></i> 50</small>
-                            </div>
-                            <div class="post-share">
-                                <small class="comments"><i id="icono" class="fas fa-share"></i> Compartir</small>
+                                <button class="btn-post"><small class="comments"><i id="icono" class="fas fa-comment-dots"></i> 50</small></button>
                             </div>
                         </div>
                     </div>

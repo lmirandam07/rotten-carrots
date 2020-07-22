@@ -1,4 +1,12 @@
-
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07/21/2020, 07:25:26 PM
+    Author     : Javier Singh
+*/
 
 h2 {
   text-align: center;
@@ -16,7 +24,7 @@ h3{
 button{
   font-family: 'Montserrat', sans-serif;
 }
-.contacto {
+.comentario {
   width: 65%;
   height: 70%;
   /*background: #cfcfcf;*/
@@ -27,42 +35,24 @@ button{
   border-style: none;
 }
 
-.asunto{
-  left: 8%;
-  top: 5%;
-  position: relative;
-  color: #000000;
-}
-
-.i_asunto{
-  left: 8%;
-  top:5%;
-  position: relative;
-  border-radius: 5px;
-  width: 80%;
-  height: 10%;
-  border: 0;
-  margin-top:1%;
-  padding: .5rem;
-}
-
 textarea{
   left: 8%;
-  top:5%;
+  top:4%;
   position: relative;
   border-radius: 5px;
   width: 80%;
-  height: 28%;
+  height: 30%;
   border: 0;
   margin-top:1%;
   padding: .5rem;
 }
 
-.consulta{
+.opinion{
   left: 8%;
   position: relative;
   color: #000000;
 }
+
 .cancelar{
   background-color: #FF9F1C;
   border-style: none;
@@ -73,7 +63,7 @@ textarea{
   height: 8%;
   margin-top: 2%;
 }
-.enviar{
+.publicar{
   background-color: #FF9F1C;
   border-style: none;
   left: 40%;
@@ -83,4 +73,3 @@ textarea{
   height: 8%;
   margin-top: 2%;
 }
-
