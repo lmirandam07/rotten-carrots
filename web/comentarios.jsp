@@ -25,7 +25,7 @@
                         <div class="comment-header">
                             <h4 class="comment-user">@SuicideSquadHater</h4>
                             <div class="comment-tag">
-                                <small class="tag">categoría</small>
+                                <h4 class="tag">categoría</h4>
                             </div>
                         </div>
 
@@ -40,7 +40,9 @@
                                 <button class="btn-carrots"><small class="carrots"><i class="fas fa-carrot"></i> 0</small></button>
                             </div>
                         </div>
+                        <hr>
                     </div>
+                    
                 </div>
             
             </div> <!--FIN DEL FONDO-->

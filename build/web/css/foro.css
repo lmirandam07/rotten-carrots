@@ -120,6 +120,15 @@
     margin-right: 1rem;
 }
 
+.btn-post {
+    appearance: none;
+    border: none;
+    border-radius: 5px;
+    padding: .1rem .2rem;
+    background-color: var(--main-orange);
+    cursor: pointer;
+}
+
 .post-info .post-carrots:hover {
     cursor: pointer;
     transform: scale(1.1);
