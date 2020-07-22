@@ -65,12 +65,10 @@
         </div> <!--FINAL DEL POST-->
 
         <div class="more">
-            <div class="cargar-commentario">
-                <a href="./comentarios.jsp">
+            <a href="./comentarios.jsp">
                     <h2 class="t_more">Cargar más comentarios</h2>
-                </a>
-                <i id="i_more" class="fas fa-chevron-circle-right"></i>
-            </div>
+            </a>
+            <i id="i_more" class="fas fa-chevron-circle-right"></i>
             
         </div>
     </main>

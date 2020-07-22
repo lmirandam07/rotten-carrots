@@ -50,7 +50,8 @@ textarea{
 .opinion{
   left: 8%;
   position: relative;
-  color: #000000;
+  color: #fff;
+  text-shadow: 1px 1px #333;
 }
 
 .cancelar{
