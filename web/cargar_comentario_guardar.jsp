@@ -65,7 +65,7 @@
     <%@include file="templates/header.jsp" %>
     
     <main class="main-container">
-        <div class="hola">
+        <div class="hola" class="comentario">
         <br>
         <h2>Nuevo Comentario</h2>
         <br>
@@ -83,7 +83,7 @@
             
                 
             <button href="./comentarios.jsp" type="submit" type="button" class="publicar" disable>Publicar</button>
-            <a href="./spoiler.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
+            <a href="./spoiler.jsp"><button type="button" name="button" class="cancelar" disable >Cancelar</button></a>
             
             </form>
             
@@ -92,7 +92,7 @@
         </div>
         </div>
     <div class="modal">
-                <h4 class="sub">SPOILER GUARDADO CORRECTAMENTE</h4>
+                <h4 class="sub">COMENTARIO GUARDADO CORRECTAMENTE</h4>
                 <a href="./spoiler.jsp"><button class="guardar" >Aceptar</button></a>
                 
 

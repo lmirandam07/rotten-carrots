@@ -52,7 +52,7 @@ button{
 }
 .comentario {
   width: 65%;
-  height: 70%;
+  height: 100%;
   /*background: #cfcfcf;*/
   position: relative;
   margin: auto;
@@ -62,7 +62,7 @@ button{
 }
 .comentario2 {
   width: 50%;
-  height: 50%;
+  height: 70%;
   /*background: #cfcfcf;*/
   position: absolute;
   margin: auto;
@@ -111,7 +111,6 @@ textarea{
   height: 50%;
   margin-top: 2%;
 }
-
-.main-container{
-  opacity:0.7
+.hola{
+    opacity:0.2
 }
