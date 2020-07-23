@@ -47,8 +47,9 @@
                     
     <main class="main-container">
         <section class="comments-wrapper">
+            
             <div class="comments-container">
-                <%
+                 <%
             while(rs.next()) {
               
                         String usuarios = rs.getString("nombre_usuario");
@@ -59,8 +60,11 @@
                         
                     
                  %>
+             
                 <div class="comment"> <!--Comment-->
+                     
                     <div class= "comment-content">
+                        
                         <div class="comment-header">
                             <h4 class="comment-user"><%=usuarios%></h4>
                             <div class="comment-tag">
