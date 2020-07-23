@@ -17,6 +17,7 @@
     height: 42%;
     top: 5%;
     left: 2%;
+    border: 2px solid var(--main-grey);
 }
 
 .tag{

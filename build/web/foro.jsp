@@ -69,10 +69,10 @@
 
                         <div class="post-info">
                             <div class="post-carrots">
-                                <button class="btn-post"><small class="carrots"><i class="fas fa-carrot"></i><%= carrots %></small></button>
+                                <button type="button" class="btn-post" ><small class="carrots"><i class="fas fa-carrot"></i><%= carrots %></small></button>
                             </div>
                             <div class="post-comments">
-                                <button class="btn-post"><small class="comments"><i id="icono" class="fas fa-comment-dots"></i> <%= comentarios %></small></button>
+                                <button type="button" class="btn-post" ><small class="comments"><i id="icono" class="fas fa-comment-dots"></i> <%= comentarios %></small></button>
                             </div>
                             <div class="post-comments">
                                 <button name="<%= id_spoiler %>" type="submit" class="btn-post"><small class="comments"><i id="icono" class="fas fa-share"></i> Ver spoiler</small></button>

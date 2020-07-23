@@ -3,6 +3,23 @@
     height: 100%;
 }
 
+.posts-container::-webkit-scrollbar
+{
+   width: 10px;
+   height: 10px;
+   background: #333;
+}
+
+.posts-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+
+.posts-container::-webkit-scrollbar-thumb {
+    background: var(--main-orange);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+
 .posts-container {
     width: 70%;
     height: 100%;
@@ -13,13 +30,19 @@
     flex-flow: wrap;
     overflow-y: auto;
     scrollbar-width: thin;
+<<<<<<< HEAD
+    scrollbar-color: #333 var(--main-orange);
+=======
     scrollbar-color: #333 var(--main-grey);
 
 }
 posts-container::webkit-scrollbar{
     width: thin;
     color:#333 var(--main-grey);
+>>>>>>> 97ca79b88d1c322567b0ccc2ae1120d16047258b
 }
+
+
 
 .posts-container .post {
     position: relative;
@@ -164,6 +187,7 @@ posts-container::webkit-scrollbar{
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .trend-container .trend {
