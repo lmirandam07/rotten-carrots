@@ -27,48 +27,67 @@
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
      
     Statement stmt = conn.createStatement();
-    ResultSet rs = stmt.executeQuery("SELECT * FROM ");
+    ResultSet rs = stmt.executeQuery("SELECT sp.id_spoiler, nombre_usuario, foto_pelicula, genero, titulo_spoiler, carrots, comentarios "
+                                        + "FROM spoiler sp, pelicula p, usuario us "
+                                        + "WHERE sp.id_pelicula = p.id_pelicula AND sp.id_usuario = us.id_usuario; ");
+    
     %>
     <main class="main-container">
         <div class="foro-container">
             <section class="posts-container">
-
-                <div class="post">
+                
+                <%
+                    while(rs.next()) {
+                        String usuario = rs.getString("nombre_usuario");
+                        String foto_pelicula = rs.getString("foto_pelicula");
+                        String titulo = rs.getString("titulo_spoiler");
+                        String genero = rs.getString("genero");
+                        String carrots = rs.getString("carrots");
+                        String comentarios = rs.getString("comentarios");
+                        String id_spoiler = rs.getString("id_spoiler");
+                    
+                 %>
+                 
+                 <form class="post" method="POST" action="spoiler.jsp">
                     <div class="post-img">
-                        <img src="./img/suicidesquad.png" class="img-spoiler" alt="">
+                        <img src="<%=foto_pelicula%>" class="img-spoiler" alt="">
                     </div>
 
                     <div class= "post-content">
                         <div class="post-tag">
-                            <small class="tag">categoría</small>
+                            <small class="tag"><%= genero %></small>
                         </div>
 
                         <div class="post-user">
                             <i class="fas fa-user"></i>
-                            <a href="./administrar_perfil.jsp" class="user-name"><small>@SuicideSquadHater</small></a>
+                            <a href="./administrar_perfil.jsp" class="user-name"><small>@<%= usuario %></small></a>
                         </div>
 
                         <div class="post-title">
-                            <h3>Odio el Joker de Jared Leto</h3>
+                            <h3><%= titulo %></h3>
                         </div>
 
                         <div class="post-info">
                             <div class="post-carrots">
-                                <button class="btn-post"><small class="carrots"><i class="fas fa-carrot"></i> 15</small></button>
+                                <button class="btn-post"><small class="carrots"><i class="fas fa-carrot"></i><%= carrots %></small></button>
                             </div>
                             <div class="post-comments">
-                                <button class="btn-post"><small class="comments"><i id="icono" class="fas fa-comment-dots"></i> 50</small></button>
+                                <button class="btn-post"><small class="comments"><i id="icono" class="fas fa-comment-dots"></i> <%= comentarios %></small></button>
+                            </div>
+                            <div class="post-comments">
+                                <button name="<%= id_spoiler %>" type="submit" class="btn-post"><small class="comments"><i id="icono" class="fas fa-share"></i> Ver spoiler</small></button>
                             </div>
                             
                         </div>
-                        <a href="./spoiler.jsp">
-                            <span class="link-span"></span>
-                        </a>
                     </div>
 
-                </div>
+                </form>
+                 
+                 <%}%>
+                
+                
 
-                <div class="post">
+                <!--<div class="post">
                     <div class="post-img">
                         <img src="./img/after.jpg" class="img-spoiler" alt="">
                     </div>
@@ -126,7 +145,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </section>
 
             <section class="trend-container">
