@@ -33,6 +33,12 @@ button{
   position: relative;
   color: #000000;
 }
+
+.drop{
+    left: 22%;
+    top: 6%;
+    position: relative;
+}
 .inputs{
   left: 10%;
   top:5%;
@@ -53,17 +59,6 @@ button{
   border: 0;
   margin-top:1%;
   padding: 0.7rem;
-}
-
-.buscar{
-  width: 16%;
-  height: 8%;
-  background-color: #FF9F1C;
-  border-style: none;
-  left: 64%;
-  margin-top: 2%;
-  position: relative;
-  font-weight: 900;
 }
 
 button:hover{
