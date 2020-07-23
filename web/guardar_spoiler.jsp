@@ -3,7 +3,8 @@
     Created on : 07/23/2020, 03:28:13 PM
     Author     : Alexander
 --%>
-
+<%@page import="Entidad.Spoiler"%>
+<%@page import="Proceso.SpoilerProceso"%>
 <!DOCTYPE html>
 <html  lang="es">
     <head>
@@ -17,6 +18,23 @@
     </head>
     <body>
     <%@include file="templates/header.jsp" %>
+        <%
+        int usuario = 1;
+        int pelicula = 1;
+        String titulo = request.getParameter("tema");
+        String cuerpo = request.getParameter("cuerpo");
+        
+        Spoiler spoiler = new Spoiler();
+        spoiler.setId_usuario(usuario);
+        spoiler.setId_pelicula(pelicula);
+        spoiler.setTitulo_spoiler(titulo);
+        spoiler.setDescripcion_spoiler(cuerpo);
+    %>
+    <%
+        SpoilerProceso pspoiler = new SpoilerProceso();
+        pspoiler.GuardarSpoiler(spoiler);
+       
+    %>
     <main class="main-container">
         <div class="mensaje">
            <h2>Agregar Discusión</h2>
@@ -27,7 +45,7 @@
                 <br><br>
                 <h3 class="name">Nombre del Tema</h3>
                 <br>
-                <input type="text" name="tema" id="tema" value="" placeholder=" " class="first" class="inputs">
+                <input type="text" value="" placeholder=" " class="first" class="inputs">
                 <br><br><br>
                 <h3 class="name">Película: </h3>
                 <select class="drop">

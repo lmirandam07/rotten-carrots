@@ -48,7 +48,7 @@
             </select>
             <br><br><br>
             <h3 class="disc">Discusión</h3>
-            <textarea name="name" rows="8" cols="80"></textarea>
+            <textarea name="cuerpo" id="cuerpo" rows="8" cols="80"></textarea>
 
             <br>
             <a href="./admin.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
