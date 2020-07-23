@@ -24,11 +24,7 @@
     <%@include file="templates/header.jsp" %>
     <%
      Class.forName("org.mariadb.jdbc.Driver");
-<<<<<<< HEAD
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
-=======
-     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
->>>>>>> 97ca79b88d1c322567b0ccc2ae1120d16047258b
      
     Statement stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery("SELECT sp.id_spoiler, nombre_usuario, foto_pelicula, genero, titulo_spoiler, carrots, comentarios "
@@ -131,7 +127,7 @@
                             <small class="tag">categoría</small>
                         </div>
 
-                        <div class="post-user">
+                        <div class="post-us0er">
                             <i class="fas fa-user"></i>
                             <a href="#" class="user-name"><small>@SuicideSquadHater</small></a>
                         </div>
