@@ -44,7 +44,7 @@
                     contador = contador + 1;
                     String pelicula = rs.getString("nombre_peli");
                 %>
-                <option name="<%=contador%>"><%=pelicula%></option>
+                <option name="pelicula" value="<%=contador%>"><%=pelicula%></option>
                 <%}%>
             </select>
             <br><br><br>
