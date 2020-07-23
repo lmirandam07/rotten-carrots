@@ -3,7 +3,10 @@
     Created on : 20-jul-2020, 15:39:56
     Author     : luyim
 --%>
-
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="Entidad.Comentario"%>
+<%@page import="Proceso.ComentarioProceso"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -17,6 +20,52 @@
 </head>
 <body>
     <%@include file="templates/header.jsp" %>
+    <div class="container my-5">
+    <%
+        Boolean guardado = (Boolean)session.getAttribute("guardado");
+        int c = (Integer)session.getAttribute("ejecucion");
+        session.setAttribute("ejecucion", c + 1);
+        if(guardado){
+    %>
+    <%
+        int usuario=1;
+        int spoiler=1;
+        String cuerpo_comentario = request.getParameter("cuerpo_comentario");
+        
+        Comentario comentario = new Comentario();
+        
+        
+        comentario.setId_usuario(usuario);
+        comentario.setId_spoiler(spoiler);
+        comentario.setCuerpo_comentario(cuerpo_comentario);
+        
+ 
+       
+          
+       
+    %>
+        <ul>
+            
+            <%%>
+        </ul>
+
+    <%
+        
+        ComentarioProceso pcomentario = new ComentarioProceso();
+        int isSaved = pcomentario.GuardarComentario(comentario);
+        if(isSaved > 0){
+            out.print("Se inserto");
+
+        }else{
+            out.print("No se inserto");
+        }
+        
+        }
+     else{
+    %>
+
+    <%}%>
+</div>
     <main class="main-container">
         <section class="comments-wrapper">
             <div class="comments-container">
@@ -44,6 +93,7 @@
                     </div>
                     
                 </div>
+                
             
             </div> <!--FIN DEL FONDO-->
         </section>

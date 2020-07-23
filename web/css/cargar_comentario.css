@@ -23,6 +23,8 @@ h3{
 }
 button{
   font-family: 'Montserrat', sans-serif;
+  width:20%;
+  height: 15%;
 }
 .comentario {
   width: 65%;
@@ -57,7 +59,7 @@ textarea{
 .cancelar{
   background-color: #FF9F1C;
   border-style: none;
-  left: 30%;
+  left: 10%;
   position: relative;
   font-weight: 900;
   width: 16%;
@@ -67,10 +69,10 @@ textarea{
 .publicar{
   background-color: #FF9F1C;
   border-style: none;
-  left: 40%;
+  left: 50%;
   position: relative;
   font-weight: 900;
   width: 16%;
-  height: 8%;
+  height: 50%;
   margin-top: 2%;
 }
