@@ -35,7 +35,11 @@
             <select class="drop">
                 <%
                     Class.forName("org.mariadb.jdbc.Driver");
+<<<<<<< HEAD
                     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+=======
+                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+>>>>>>> 670258c6ad276e4fcc4f2f9126aa24ae20b1636c
 
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery("SELECT * FROM pelicula");
@@ -48,7 +52,7 @@
             </select>
             <br><br><br>
             <h3 class="disc">Discusión</h3>
-            <textarea name="name" rows="8" cols="80"></textarea>
+            <textarea name="cuerpo" id="cuerpo" rows="8" cols="80"></textarea>
 
             <br>
             <a href="./admin.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
