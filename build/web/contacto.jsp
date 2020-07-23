@@ -4,7 +4,7 @@
     Author     : luyim
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,24 +20,26 @@
     <main class="main-container">
         <br>
         <h2>Contacto</h2>
-
-
+        
         <div class="contacto">
-            <br>
-            <h3 class="asunto">Asunto</h3>
-            <br>
-            <input type="name" name="i_asunto" value="" placeholder="   Asunto" class="i_asunto">
-            <br><br>
-            <h3 class="consulta">Consulta</h3>
-            <textarea name="name" rows="8" cols="80" placeholder="
-                      
-                           
-                           Escriba aquÃ­ su consulta"></textarea>
-            <br>
-            <a href="./contacto.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
-            <a href="./foro.jsp"><button type="button" name="button" class="enviar">Enviar</button></a>
+            <form method="POST" action="nosotros.jsp">
+                <br>
+                <h3 class="asunto">Asunto</h3>
+                <br>
+                <input type="name" name="i_asunto" value="" placeholder="   Asunto" class="i_asunto">
+                <br><br>
+                <h3 class="consulta">Consulta</h3>
+                <textarea name="i_consulta" rows="8" cols="80" placeholder="
 
+
+                               Escriba aquí su consulta"></textarea>
+                <br>
+                <a href="./contacto.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
+                <input type="submit" class="enviar" value="Enviar" />
+            </form>
         </div>
+        
+        
         
     </main>
 </body>

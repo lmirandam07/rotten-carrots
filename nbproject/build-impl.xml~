@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
         *** GENERATED FROM project.xml - DO NOT EDIT  ***
@@ -1451,6 +1452,8 @@ exists or setup the property manually. For example like this:
 <<<<<<< HEAD
 =======
 >>>>>>> 288189d1de0d473a894eab0f76b453362c96551e
+=======
+>>>>>>> 3bc984ec0743d89470fdebfa6f9987226c90005f
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
         *** GENERATED FROM project.xml - DO NOT EDIT  ***
@@ -2011,11 +2014,16 @@ or ant -Dj2ee.platform.classpath=&lt;server_classpath&gt; (where no properties f
                     <formatter type="xml"/>
                     <jvmarg value="-ea"/>
 <<<<<<< HEAD
-                    <jvmarg line="${debug-args-line}"/>
-                    <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
+                    <jvmarg value="-agentlib:jdwp=transport=${debug-transport},address=${jpda.address}"/>
 =======
+<<<<<<< HEAD
                     <jvmarg value="-agentlib:jdwp=transport=${debug-transport},address=${jpda.address}"/>
 >>>>>>> 288189d1de0d473a894eab0f76b453362c96551e
+=======
+                    <jvmarg line="${debug-args-line}"/>
+                    <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
+>>>>>>> d73ae1212d804f39752e816d94deb107a04fd1b4
+>>>>>>> 3bc984ec0743d89470fdebfa6f9987226c90005f
                     <customize/>
                 </junit>
             </sequential>
@@ -2048,11 +2056,16 @@ or ant -Dj2ee.platform.classpath=&lt;server_classpath&gt; (where no properties f
                     <jvmarg value="-ea"/>
                     <jvmarg line="${run.jvmargs.ide}"/>
 <<<<<<< HEAD
-                    <jvmarg line="${debug-args-line}"/>
-                    <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
+                    <jvmarg value="-agentlib:jdwp=transport=${debug-transport},address=${jpda.address}"/>
 =======
+<<<<<<< HEAD
                     <jvmarg value="-agentlib:jdwp=transport=${debug-transport},address=${jpda.address}"/>
 >>>>>>> 288189d1de0d473a894eab0f76b453362c96551e
+=======
+                    <jvmarg line="${debug-args-line}"/>
+                    <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
+>>>>>>> d73ae1212d804f39752e816d94deb107a04fd1b4
+>>>>>>> 3bc984ec0743d89470fdebfa6f9987226c90005f
                     <customize/>
                 </junit>
             </sequential>
@@ -2211,6 +2224,10 @@ or ant -Dj2ee.platform.classpath=&lt;server_classpath&gt; (where no properties f
     </target>
     <target name="-init-debug-args">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 3bc984ec0743d89470fdebfa6f9987226c90005f
         <property name="version-output" value="java version &quot;${ant.java.version}"/>
         <condition property="have-jdk-older-than-1.4">
             <or>
@@ -2223,8 +2240,12 @@ or ant -Dj2ee.platform.classpath=&lt;server_classpath&gt; (where no properties f
         <condition else="-Xdebug" property="debug-args-line" value="-Xdebug -Xnoagent -Djava.compiler=none">
             <istrue value="${have-jdk-older-than-1.4}"/>
         </condition>
+<<<<<<< HEAD
 =======
 >>>>>>> 288189d1de0d473a894eab0f76b453362c96551e
+=======
+>>>>>>> d73ae1212d804f39752e816d94deb107a04fd1b4
+>>>>>>> 3bc984ec0743d89470fdebfa6f9987226c90005f
         <condition else="dt_socket" property="debug-transport-by-os" value="dt_shmem">
             <os family="windows"/>
         </condition>
@@ -2242,11 +2263,16 @@ or ant -Dj2ee.platform.classpath=&lt;server_classpath&gt; (where no properties f
                 <java classname="@{classname}" fork="true">
                     <jvmarg line="${endorsed.classpath.cmd.line.arg}"/>
 <<<<<<< HEAD
-                    <jvmarg line="${debug-args-line}"/>
-                    <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
+                    <jvmarg value="-agentlib:jdwp=transport=${debug-transport},address=${jpda.address}"/>
 =======
+<<<<<<< HEAD
                     <jvmarg value="-agentlib:jdwp=transport=${debug-transport},address=${jpda.address}"/>
 >>>>>>> 288189d1de0d473a894eab0f76b453362c96551e
+=======
+                    <jvmarg line="${debug-args-line}"/>
+                    <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
+>>>>>>> d73ae1212d804f39752e816d94deb107a04fd1b4
+>>>>>>> 3bc984ec0743d89470fdebfa6f9987226c90005f
                     <jvmarg line="${runmain.jvmargs}"/>
                     <classpath>
                         <path path="@{classpath}"/>
@@ -2467,6 +2493,7 @@ exists or setup the property manually. For example like this:
     <target depends="init" if="dist.ear.dir" name="library-inclusion-in-manifest">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
 =======
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-3}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
@@ -2474,10 +2501,17 @@ exists or setup the property manually. For example like this:
 =======
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-2}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
 >>>>>>> kirsten
+=======
+        <copyfiles files="${file.reference.mariadb-java-client-2.6.1.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+=======
+        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+>>>>>>> d73ae1212d804f39752e816d94deb107a04fd1b4
+>>>>>>> 3bc984ec0743d89470fdebfa6f9987226c90005f
         <mkdir dir="${build.web.dir}/META-INF"/>
         <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update"/>
     </target>
     <target depends="init" name="library-inclusion-in-archive" unless="dist.ear.dir">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
@@ -2487,6 +2521,12 @@ exists or setup the property manually. For example like this:
 =======
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-2}" todir="${build.web.dir}/WEB-INF/lib"/>
 >>>>>>> kirsten
+=======
+        <copyfiles files="${file.reference.mariadb-java-client-2.6.1.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+=======
+        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+>>>>>>> d73ae1212d804f39752e816d94deb107a04fd1b4
+>>>>>>> 3bc984ec0743d89470fdebfa6f9987226c90005f
     </target>
     <target depends="init" if="dist.ear.dir" name="-clean-webinf-lib">
         <delete dir="${build.web.dir}/WEB-INF/lib"/>
@@ -2926,6 +2966,7 @@ exists or setup the property manually. For example like this:
     <target depends="init,undeploy-clean,deps-clean,do-clean,check-clean,-post-clean" description="Clean build products." name="clean"/>
     <target depends="clean" description="Clean build products." name="clean-ear"/>
 </project>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <?xml version="1.0" encoding="UTF-8"?>
@@ -5830,3 +5871,5 @@ exists or setup the property manually. For example like this:
 </project>
 >>>>>>> 5e1e671c572340867042d9083b0c745aa93caa4d
 >>>>>>> 160e5e2fdd7f48375546f95de05764a75d8ca363
+=======
+>>>>>>> 3bc984ec0743d89470fdebfa6f9987226c90005f
