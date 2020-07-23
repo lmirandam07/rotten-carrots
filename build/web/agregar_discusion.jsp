@@ -31,12 +31,8 @@
             <input type="text" name="tema" id="tema" value="" placeholder=" " class="first" class="inputs">
             <br>
             <br>
-<<<<<<< HEAD
 
-            <h3 class="name">Genero: </h3>
-=======
             <h3 class="name">Película: </h3>
->>>>>>> javier
             <select class="drop">
                 <%
                     Class.forName("org.mariadb.jdbc.Driver");
