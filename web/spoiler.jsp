@@ -26,7 +26,11 @@
     int id_spoiler = Integer.parseInt(request.getParameter("id_spoiler"));  
     System.out.println(id_spoiler);  
     Class.forName("org.mariadb.jdbc.Driver");
+<<<<<<< HEAD
     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");    
+=======
+    Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");    
+>>>>>>> a79639f0f01318753f8dfb466e08fdf391b27f2c
     Statement stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, foto_pelicula, genero, titulo_spoiler, descripcion_spoiler, carrots, comentarios "
                                         + "FROM spoiler sp, pelicula p, usuario us "

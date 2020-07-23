@@ -35,10 +35,14 @@
             <select class="drop">
                 <%
                     Class.forName("org.mariadb.jdbc.Driver");
+<<<<<<< HEAD
+                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
+=======
 
                     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 
 
+>>>>>>> 23de3cbafffd9cf7b76b129b25212dc2673a3eef
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery("SELECT * FROM pelicula");
                     int contador = 0;
