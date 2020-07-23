@@ -16,7 +16,7 @@
     scrollbar-color: #333 var(--main-grey);
 
 }
-body::webkit-scrollbar{
+posts-container::webkit-scrollbar{
     width: thin;
     color:#333 var(--main-grey);
 }
