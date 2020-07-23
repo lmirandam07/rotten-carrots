@@ -4,7 +4,9 @@
     Author     : luyim
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.io.*" %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -19,7 +21,7 @@
 <body>
     <%@include file="templates/header.jsp" %>
     <main class="main-container">
-        <h2>Agregar DiscusiÃ³n</h2>
+        <h2>Agregar Discusión</h2>
 
 
         <div class="discusion">
@@ -28,7 +30,23 @@
             <input type="name" name="tema" value="" placeholder=" " class="first" class="inputs">
             <br>
             <br>
-            <h3 class="disc">DiscusiÃ³n</h3>
+            <h3 class="name">Género: </h3>
+            <select class="drop">
+                <%
+                    Class.forName("org.mariadb.jdbc.Driver");
+                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+                    Statement stmt = con.createStatement();
+                    ResultSet rs = stmt.executeQuery("SELECT * FROM pelicula");
+                    while(rs.next()){
+                        
+                    String genero2 = rs.getString("genero");
+                %>
+                <option name="<%=genero2%>"><%=genero2%></option>
+                <%}%>
+            </select>
+            <br>
+            <br>
+            <h3 class="disc">Discusión</h3>
             <textarea name="name" rows="8" cols="80"></textarea>
             <br>
             <a href="./admin.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
