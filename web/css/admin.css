@@ -75,7 +75,7 @@ a .plus {
     height: 50%;
 }
 
-.primtabla {
+.tabla {
   position: relative;
   left: 2%;
   border-color: #FF9F1C;
@@ -84,40 +84,6 @@ a .plus {
   border-radius: 10%;
   border-collapse: collapse;
   margin-bottom: 1rem;
-}
-
-.segtabla {
-  position: relative;
-  left: 2%;
-  border-color: #FF9F1C;
-  border-width: thick;
-  border: 2px;
-  border-radius: 10%;
-  border-collapse: collapse;
-  margin-bottom: 1rem;
-
-}
-
-.tertabla {
-  position: relative;
-  left: 2%;
-  border-color: #FF9F1C;
-  border-width: thick;
-  border: 2px;
-  border-radius: 10%;
-  border-collapse: collapse;
-  margin-bottom: 1rem;
-}
-
-.cuartabla {
-  position: relative;
-  left: 2%;
-  border-color: #FF9F1C;
-  border-width: thick;
-  border: 2px;
-  border-radius: 10%;
-  border-collapse: collapse;
-
 }
 
 td {

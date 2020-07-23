@@ -23,10 +23,11 @@
         String pelicula = request.getParameter("pelicula");
         String titulo = request.getParameter("tema");
         String cuerpo = request.getParameter("cuerpo");
+        int id_pelicula = Integer.parseInt(pelicula);
         
         Spoiler spoiler = new Spoiler();
         spoiler.setId_usuario(usuario);
-        spoiler.setId_pelicula(pelicula);
+        spoiler.setId_pelicula(id_pelicula);
         spoiler.setTitulo_spoiler(titulo);
         spoiler.setDescripcion_spoiler(cuerpo);
     %>
@@ -56,8 +57,8 @@
                 <textarea name="name" rows="8" cols="80"></textarea>
 
                 <br>
-                <a href="./admin.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
-                <input type="submit" name="button" class="publicar" value="Publicar">
+                <a href="./admin.jsp"><button type="button" name="button" class="cancelar" disabled="True">Cancelar</button></a>
+                <input type="submit" name="button" class="publicar" value="Publicar" disabled="True">
                 </form>
 
             </div>

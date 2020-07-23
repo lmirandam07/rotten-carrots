@@ -36,7 +36,7 @@
                            <td><h4>Discusión</h4></td>
                         </tr>
                     </table>
-                    <table class="primtabla">
+                    <table class="tabla">
                            <tbody>
                                    <tr>
                                            <td class="td1"><div class="act1"> <p>Jack Muere</p> </div></td>
@@ -45,7 +45,7 @@
                                    </tr>
                            </tbody>
                     </table>
-                    <table class="segtabla">
+                    <table class="tabla">
                            <tbody>
                                    <tr>
                                            <td class="td1"><div class="act1"> <p>Bruce Willis era un fantasma</p></div></td>
@@ -54,7 +54,7 @@
                                    </tr>
                            </tbody>
                     </table>
-                    <table class="tertabla">
+                    <table class="tabla">
                            <tbody>
                                    <tr>
                                            <td class="td1"><div class="act1"><p> Snape era bueno</p></div></td>
@@ -65,7 +65,7 @@
                     </table>
 
 
-                    <table class="cuartabla">
+                    <table class="tabla">
                            <tbody>
                                    <tr>
                                            <td class="td1"><div class="act1"><p>Tyler Durden era una personalidad alterna</p></div></td>
