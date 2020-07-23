@@ -28,7 +28,7 @@ public class SpoilerProceso {
 
             
             /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
-            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten-carrots", "root", "1014");
+            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
             
             /*  para tirar el error generico de que no se conecto a la base de datos   */
         }catch(SQLException e){
@@ -52,9 +52,9 @@ public class SpoilerProceso {
             Statement smtm = conn.createStatement();
             
             /* Se define el query que se va a ejecutar en la base de datos */
-            String query = "INSERT INTO spoiler(titulo_spoiler,descripcion_spoiler)";
+            String query = "INSERT INTO spoiler(id_usuario,id_pelicula,titulo_spoiler,descripcion_spoiler,comentarios,carrots)";
                     /* cadena concatenada para poner los VALUES que se van a insertar */
-                   query += "VALUES('"+spoiler.getTitulo_spoiler()+"','"+spoiler.getDescripcion_spoiler()+"')";
+                   query += "VALUES('"+spoiler.getId_usuario()+"','"+spoiler.getId_pelicula()+"','"+spoiler.getTitulo_spoiler()+"','"+spoiler.getDescripcion_spoiler()+"','"+spoiler.getComentarios()+"','"+spoiler.getCarrots()+"')";
                   
             /* Se ejecuta el query con la variable que se habia declarado. entre parentesis ira el query que definimos aneriomente */
             /* se le iguala a excecuteupdate, para hacer una insercion, actualizacion o borrado */

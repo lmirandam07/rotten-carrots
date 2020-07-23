@@ -23,16 +23,18 @@
 
 
         <div class="discusion">
+            <form method="POST" action="./admin.jsp">
             <h3 class="name">Nombre del Tema</h3>
             <br>
-            <input type="name" name="tema" value="" placeholder=" " class="first" class="inputs">
+            <input type="text" name="tema" id="tema" value="" placeholder=" " class="first" class="inputs">
             <br>
             <br>
             <h3 class="disc">Discusión</h3>
-            <textarea name="name" rows="8" cols="80"></textarea>
+            <textarea name="cuerpo" id="cuerpo" rows="8" cols="80"></textarea>
             <br>
             <a href="./admin.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
-            <a href="./foro.jsp"><button type="button" name="button" class="publicar">Publicar</button></a>
+            <input type="submit" name="button" class="publicar">Publicar
+            </form>
 
         </div>
 
