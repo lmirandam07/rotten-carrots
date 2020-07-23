@@ -58,12 +58,6 @@
                 </p>
             </div>
 
-            <div class="tiempo">
-                <p>
-                    Hace 10 horas
-                </p>
-            </div>
-
             <img class="pp_user" src="./img/pp_user.png" alt=""> <!--AÑADIR IMÁGEN PP USUARIO-->
             <div class="user">
                 <h3>
