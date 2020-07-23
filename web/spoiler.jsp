@@ -24,7 +24,6 @@
     <%@include file="templates/header.jsp" %>
     <%
     int id_spoiler = Integer.parseInt(request.getParameter("id_spoiler"));  
-    System.out.println(id_spoiler);  
     Class.forName("org.mariadb.jdbc.Driver");
 
     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");    
@@ -34,7 +33,6 @@
                                         + "FROM spoiler sp, pelicula p, usuario us "
                                         + "WHERE sp.id_pelicula = p.id_pelicula AND sp.id_usuario = us.id_usuario "
                                         + "AND sp.id_spoiler = "+id_spoiler+";"); 
-    System.out.println(rs);
     %>
     <main class="main-container">
         
@@ -50,7 +48,7 @@
             String comentarios = rs.getString("comentarios");
                     
         %>
-        <div class="post">
+        <form class="post" action="comentarios.jsp" method="POST">
             
             <img src="<%=foto_pelicula%>" class="img_spoiler" alt="">
             
@@ -80,15 +78,15 @@
             </div>
 
             <div class="carrots">
-                <i id="icono" class="fas fa-carrot"></i> <%=carrots%>
+                <button class="btn-post" type="button" class="btn-post"><i class="fas fa-carrot"></i> <%=carrots%></button>
+                
             </div>
 
             <div class="comments">
-                <i id="icono" class="fas fa-comment-dots"></i>
-                <a href="cargar_comentario.jsp">Comentar</a>
+                <button class="btn-post" name="id_spoiler" value="<%=id_spoiler%>" type="submit" class="btn-post"><i class="fas fa-comment-dots"></i> Comentar</button>
             </div>
 
-        </div>
+        </form>
         <%}%>
 
         <div class="more">

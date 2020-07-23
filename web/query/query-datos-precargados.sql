@@ -39,9 +39,9 @@ INSERT INTO comentario (id_usuario, id_spoiler, cuerpo_comentario) VALUES
 
 
 -- Devuelve las 4 peliculas con mas zanahorias
-SELECT foto_pelicula, nombre_pelicula, SUM(carrots) AS total_carrots
+SELECT foto_pelicula, nombre_peli, SUM(carrots) AS total_carrots
 FROM pelicula p, spoiler sp
 WHERE p.id_pelicula = sp.id_pelicula
+GROUP BY nombre_peli
 ORDER BY SUM(carrots) DESC
-GROUP BY nombre_peliculaspoiler
 LIMIT 4;
