@@ -68,13 +68,13 @@
 
                         <div class="post-info">
                             <div class="post-carrots">
-                                <button type="button" class="btn-post" ><small class="carrots"><i class="fas fa-carrot"></i><%= carrots %></small></button>
+                                <button name="carrots" value="<%=carrots%>" type="button" class="btn-post" ><small class="carrots"><i class="fas fa-carrot"></i><%= carrots %></small></button>
                             </div>
                             <div class="post-comments">
-                                <button type="button" class="btn-post" ><small class="comments"><i id="icono" class="fas fa-comment-dots"></i> <%= comentarios %></small></button>
+                                <button name="comentarios" value="<%=comentarios%>" type="button" class="btn-post" ><small class="comments"><i id="icono" class="fas fa-comment-dots"></i> <%= comentarios %></small></button>
                             </div>
                             <div class="post-comments">
-                                <button name="<%= id_spoiler %>" type="submit" class="btn-post"><small class="comments"><i id="icono" class="fas fa-share"></i> Ver spoiler</small></button>
+                                <button  name="id_spoiler" value="<%=id_spoiler%>" type="submit" class="btn-post"><small class="comments"><i id="icono" class="fas fa-share"></i> Ver spoiler</small></button>
                             </div>
                             
                         </div>
@@ -83,68 +83,7 @@
                 </form>
                  
                  <%}%>
-                
-                
 
-                <!--<div class="post">
-                    <div class="post-img">
-                        <img src="./img/after.jpg" class="img-spoiler" alt="">
-                    </div>
-
-                    <div class= "post-content">
-                        <div class="post-tag">
-                            <small class="tag">categoría</small>
-                        </div>
-
-                        <div class="post-user">
-                            <i class="fas fa-user"></i>
-                            <a href="#" class="user-name"><small>@SuicideSquadHater</small></a>
-                        </div>
-
-                        <div class="post-title">
-                            <h3>Los manes se van a vivir juntos</h3>
-                        </div>
-
-                        <div class="post-info">
-                            <div class="post-carrots">
-                                <button class="btn-post"><small class="carrots"><i class="fas fa-carrot"></i> 15</small></button>
-                            </div>
-                            <div class="post-comments">
-                                <button class="btn-post"><small class="comments"><i id="icono" class="fas fa-comment-dots"></i> 50</small></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="post">
-                    <div class="post-img">
-                        <img src="./img/inception.jpg" class="img-spoiler" alt="">
-                    </div>
-
-                    <div class= "post-content">
-                        <div class="post-tag">
-                            <small class="tag">categoría</small>
-                        </div>
-
-                        <div class="post-us0er">
-                            <i class="fas fa-user"></i>
-                            <a href="#" class="user-name"><small>@SuicideSquadHater</small></a>
-                        </div>
-
-                        <div class="post-title">
-                            <h3>Al final todo fue un sueño</h3>
-                        </div>
-
-                        <div class="post-info">
-                            <div class="post-carrots">
-                                <button class="btn-post"><small class="carrots"><i class="fas fa-carrot"></i> 15</small></button>
-                            </div>
-                            <div class="post-comments">
-                                <button class="btn-post"><small class="comments"><i id="icono" class="fas fa-comment-dots"></i> 50</small></button>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </section>
 
             <section class="trend-container">
