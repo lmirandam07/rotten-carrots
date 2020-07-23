@@ -35,12 +35,8 @@
             <select class="drop">
                 <%
                     Class.forName("org.mariadb.jdbc.Driver");
-<<<<<<< HEAD
                     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
-=======
-                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
 
->>>>>>> 87e5fda87ea88400ac2e98f960ab37dfa15a1c7d
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery("SELECT * FROM pelicula");
                     while(rs.next()){

@@ -69,7 +69,6 @@
         <br>
         <h2>Nuevo Comentario</h2>
         <br>
-
         <div class="comentario">
             <br>
             <br><br>
@@ -83,7 +82,7 @@
             <br><br>
             
                 
-            <button href="./comentarios.jsp" type="submit" type="button" class="publicar" >Publicar</button>
+            <button href="./comentarios.jsp" type="submit" type="button" class="publicar" disable>Publicar</button>
             <a href="./spoiler.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
             
             </form>
@@ -91,26 +90,13 @@
 
 
         </div>
-    </main>
-    <div>
-            <div class="comentario2" class="main-container2">
-            <br>
-            <br><br> 
-               
-            <br><br>
-            
-                <h2>Se ha cargado el comentario</h2>
-        
-            <a href="./spoiler.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
-            
-            
-            
-
+        </div>
+    <div class="modal">
+                <h4 class="sub">SPOILER GUARDADO CORRECTAMENTE</h4>
+                <a href="./spoiler.jsp"><button class="guardar" >Aceptar</button></a>
+                
 
         </div>
-            
-            </div>
-      </div> 
         </main>
      
 </body>
