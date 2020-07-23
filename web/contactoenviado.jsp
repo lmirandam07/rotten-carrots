@@ -52,13 +52,15 @@
 
                                   Escriba aquí su consulta"></textarea>
                         <br>
-                        <a href="./contacto.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
-                        <input type="submit" class="enviar" value="Enviar" />
+                        <a href="./contacto.jsp"><button type="button" name="button" disabled class="cancelar">Cancelar</button></a>
+                        <input type="submit" disabled class="enviar" value="Enviar" />
                     </form>
                 </div>
            </div>
-            <h3>Mensaje enviado correctamente</h3>
-            <a href="./contacto.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
+            <div class="modal">
+                <h4 class="sub">MENSAJE ENVIADO CORRECTAMENTE</h4>
+                <a href="./contacto.jsp"><button class="guardar" >Aceptar</button></a>
+            </div>
         </div>
         
         
