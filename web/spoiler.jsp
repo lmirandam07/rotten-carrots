@@ -4,6 +4,11 @@
     Author     : luyim
 --%>
 
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.DriverManager"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -16,15 +21,40 @@
 	<title>Rotten Carrots - Spoiler</title>
 </head>
 <body>
-        <%@include file="templates/header.jsp" %>
+    <%@include file="templates/header.jsp" %>
+    <%
+    int id_spoiler = Integer.parseInt(request.getParameter("id_spoiler"));  
+    System.out.println(id_spoiler);  
+    Class.forName("org.mariadb.jdbc.Driver");
+    Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");    
+    Statement stmt = conn.createStatement();
+    ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, foto_pelicula, genero, titulo_spoiler, descripcion_spoiler, carrots, comentarios "
+                                        + "FROM spoiler sp, pelicula p, usuario us "
+                                        + "WHERE sp.id_pelicula = p.id_pelicula AND sp.id_usuario = us.id_usuario "
+                                        + "AND sp.id_spoiler = "+id_spoiler+";"); 
+    System.out.println(rs);
+    %>
     <main class="main-container">
+        
+        <%
+            
+        while(rs.next()) {
+            String usuario = rs.getString("nombre_usuario");
+            String foto_pelicula = rs.getString("foto_pelicula");
+            String genero = rs.getString("genero");
+            String titulo = rs.getString("titulo_spoiler");
+            String descripcion = rs.getString("descripcion_spoiler");
+            String carrots = rs.getString("carrots");
+            String comentarios = rs.getString("comentarios");
+                    
+        %>
         <div class="post">
-
-            <img src="./img/suicidesquad.png" class="img_spoiler" alt="">
+            
+            <img src="<%=foto_pelicula%>" class="img_spoiler" alt="">
             
             <div class= "tag">
                 <p class="t_tag">
-                    Categoría
+                    <%=genero%>
                 </p>
             </div>
 
@@ -37,24 +67,24 @@
             <img class="pp_user" src="./img/pp_user.png" alt=""> <!--AÑADIR IMÁGEN PP USUARIO-->
             <div class="user">
                 <h3>
-                    @SuicideSquadHater
+                    @<%=usuario%>
                 </h3>
             </div>
 
             <div class="titulo">
                 <h2>
-                    Título Spoiler
+                    <%=titulo%>
                 </h2>
             </div>
 
             <div class="comentario">
                 <p class="t_comentario">
-                    Ese Joker de Jared Leto es tremenda ***** , no sé a quién se le ocurrió hacer esta película, fue un insulto a los fans. Porquería de villano Enchantress.
+                    <%=descripcion%>
                 </p>
             </div>
 
             <div class="carrots">
-                <i id="icono" class="fas fa-carrot"></i> 15
+                <i id="icono" class="fas fa-carrot"></i> <%=carrots%>
             </div>
 
             <div class="comments">
@@ -62,7 +92,8 @@
                 <a href="cargar_comentario.jsp">Comentar</a>
             </div>
 
-        </div> <!--FINAL DEL POST-->
+        </div>
+        <%}%>
 
         <div class="more">
             <a href="./comentarios.jsp">
