@@ -4,7 +4,8 @@
     Created on : 20-jul-2020, 15:39:56
     Author     : luyim
 --%>
-
+<%@page import="Entidad.Spoiler"%>
+<%@page import="Proceso.SpoilerProceso"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -19,6 +20,28 @@
 </head>
 <body>
     <%@include file="templates/header.jsp" %>
+
+    <%
+        int usuario = 1;
+        int pelicula = 1;
+        int comentarios =0;
+        int carrots = 0;
+        String titulo = request.getParameter("tema");
+        String cuerpo = request.getParameter("cuerpo");
+        
+        Spoiler spoiler = new Spoiler();
+        spoiler.setId_usuario(usuario);
+        spoiler.setId_pelicula(pelicula);
+        spoiler.setTitulo_spoiler(titulo);
+        spoiler.setDescripcion_spoiler(cuerpo);
+        spoiler.setComentarios(comentarios);
+        spoiler.setCarrots(carrots);
+    %>
+    <%
+        SpoilerProceso pspoiler = new SpoilerProceso();
+        pspoiler.GuardarSpoiler(spoiler);
+       
+    %>
     <main class="main-container">
         <div class="prueba">
             <div class="crear">
