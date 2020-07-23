@@ -72,6 +72,10 @@ textarea{
   height: 8%;
   margin-top: 2%;
 }
+
+.cancelar:hover{
+    cursor: pointer;
+}
 .enviar{
   background-color: #FF9F1C;
   border-style: none;
@@ -81,6 +85,10 @@ textarea{
   width: 16%;
   height: 8%;
   margin-top: 2%;
+}
+
+.enviar:hover{
+    cursor: pointer;
 }
 
 .fondo{
@@ -112,5 +120,9 @@ textarea{
     margin-top: 10%;
     height: 25%;
     background-color:  var(--main-orange);
+}
+
+.modal .guardar:hover{
+    cursor: pointer;
 }
 
