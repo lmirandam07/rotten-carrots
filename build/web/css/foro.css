@@ -30,18 +30,10 @@
     flex-flow: wrap;
     overflow-y: auto;
     scrollbar-width: thin;
-<<<<<<< HEAD
-    scrollbar-color: #333 var(--main-grey);
-}
-
-=======
-    scrollbar-color: #333 var(--main-orange);
     scrollbar-color: #333 var(--main-grey);
 
 }
 
-
->>>>>>> 206bc0333dc1fcf70cafb02a2053ed43f3a10b96
 .posts-container .post {
     position: relative;
     width: 80%;
