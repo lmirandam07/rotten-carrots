@@ -32,17 +32,12 @@
             <input type="text" name="tema" id="tema" value="" placeholder=" " class="first" class="inputs">
             <br><br><br>
             <h3 class="name">Película: </h3>
-            <select class="drop">
+            <select class="drop" name="pelicula">
                 <%
                     Class.forName("org.mariadb.jdbc.Driver");
-<<<<<<< HEAD
+
                     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
-=======
 
-                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
-
-
->>>>>>> 23de3cbafffd9cf7b76b129b25212dc2673a3eef
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery("SELECT * FROM pelicula");
                     int contador = 0;
@@ -50,7 +45,7 @@
                     contador = contador + 1;
                     String pelicula = rs.getString("nombre_peli");
                 %>
-                <option name="pelicula" value="<%=contador%>"><%=pelicula%></option>
+                <option value="<%=contador%>"><%=pelicula%></option>
                 <%}%>
             </select>
             <br><br><br>
