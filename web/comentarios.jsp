@@ -7,6 +7,10 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="Entidad.Comentario"%>
 <%@page import="Proceso.ComentarioProceso"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.DriverManager"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -20,82 +24,72 @@
 </head>
 <body>
     <%@include file="templates/header.jsp" %>
+    <%
+     Class.forName("org.mariadb.jdbc.Driver");
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+     
+    Statement stmt = conn.createStatement();
+    ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, cuerpo_comentario, carrots_comentario, genero "
+                                        + "FROM spoiler sp, comentario c, usuario us, pelicula p "
+                                        + "WHERE sp.id_spoiler = c.id_spoiler AND us.id_usuario = c.id_usuario AND sp.id_pelicula = p.id_pelicula; ");
+    
+    %>
     <div class="container my-5">
-    <%
-        Boolean guardado = (Boolean)session.getAttribute("guardado");
-        int c = (Integer)session.getAttribute("ejecucion");
-        session.setAttribute("ejecucion", c + 1);
-        if(guardado){
-    %>
-    <%
-        int usuario=1;
-        int spoiler=1;
-        String cuerpo_comentario = request.getParameter("cuerpo_comentario");
-        
-        Comentario comentario = new Comentario();
-        
-        
-        comentario.setId_usuario(usuario);
-        comentario.setId_spoiler(spoiler);
-        comentario.setCuerpo_comentario(cuerpo_comentario);
-        
- 
-       
-          
-       
-    %>
+    
+    
         <ul>
             
             <%%>
         </ul>
-
-    <%
-        
-        ComentarioProceso pcomentario = new ComentarioProceso();
-        int isSaved = pcomentario.GuardarComentario(comentario);
-        if(isSaved > 0){
-
-        }else{
-
-        }
-        
-        }
-     else{
-    %>
-
-    <%}%>
+    
 </div>
+
+                    
     <main class="main-container">
         <section class="comments-wrapper">
             <div class="comments-container">
+                <%
+            while(rs.next()) {
+              
+                        String usuarios = rs.getString("nombre_usuario");
+                        String cuerpo_comment = rs.getString("cuerpo_comentario");
+                        String zanahoria = rs.getString("carrots_comentario");
+                        String genero = rs.getString("genero");
+                        
+                        
+                    
+                 %>
                 <div class="comment"> <!--Comment-->
                     <div class= "comment-content">
                         <div class="comment-header">
-                            <h4 class="comment-user">@SuicideSquadHater</h4>
+                            <h4 class="comment-user"><%=usuarios%></h4>
                             <div class="comment-tag">
-                                <h4 class="tag">categoría</h4>
+                                <h4 class="tag"><%=genero%></h4>
                             </div>
                         </div>
 
                         <div class="comment-mensaje">
                             <p class="mensaje">
-                                No concuerdo caballero, me parece que la historia fue llevada a cabo de la mejor forma y Jared hace un papel fenomenal en esa película, retratando a la perfección un personaje tan complejo como el Joker y el plot twist al final fue la cereza del pastel ante tal obra de arte. Saludos
+                               <%=cuerpo_comment%>
                             </p>
                         </div>
 
                         <div class="comment-footer">
                             <div class="comment-carrots">
-                                <button class="btn-carrots"><small class="carrots"><i class="fas fa-carrot"></i> 0</small></button>
+                                <button class="btn-carrots"><small class="carrots"><i class="fas fa-carrot"></i> <%=zanahoria%></small></button>
                             </div>
                         </div>
                         <hr>
                     </div>
                     
                 </div>
+                            <%}%>
                 
             
             </div> <!--FIN DEL FONDO-->
         </section>
+   
+        
         
     </main>
 
