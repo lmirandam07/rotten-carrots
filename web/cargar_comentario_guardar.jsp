@@ -93,7 +93,7 @@
         </div>
     <div class="modal">
                 <h4 class="sub">COMENTARIO GUARDADO CORRECTAMENTE</h4>
-                <a href="./spoiler.jsp"><button class="guardar" >Aceptar</button></a>
+                <a href="./foro.jsp"><button class="guardar" >Aceptar</button></a>
                 
 
         </div>
