@@ -25,7 +25,7 @@
 
 
         <div class="discusion">
-            <form method="POST" action="./admin.jsp">
+            <form method="POST" action="./guardar_spoiler.jsp">
             <br><br>
             <h3 class="name">Nombre del Tema</h3>
             <br>
@@ -36,18 +36,23 @@
                 <%
                     Class.forName("org.mariadb.jdbc.Driver");
                     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+<<<<<<< HEAD
+=======
+
+>>>>>>> 18c4d7fecb392c76f4b7319fbc655e0e7e85c9de
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery("SELECT * FROM pelicula");
+                    int contador = 0;
                     while(rs.next()){
-                        
+                    contador = contador + 1;
                     String pelicula = rs.getString("nombre_peli");
                 %>
-                <option name="<%=pelicula%>"><%=pelicula%></option>
+                <option name="<%=contador%>"><%=pelicula%></option>
                 <%}%>
             </select>
             <br><br><br>
             <h3 class="disc">Discusión</h3>
-            <textarea name="name" rows="8" cols="80"></textarea>
+            <textarea name="cuerpo" id="cuerpo" rows="8" cols="80"></textarea>
 
             <br>
             <a href="./admin.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>

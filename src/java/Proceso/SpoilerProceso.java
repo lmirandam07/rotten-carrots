@@ -52,9 +52,9 @@ public class SpoilerProceso {
             Statement smtm = conn.createStatement();
             
             /* Se define el query que se va a ejecutar en la base de datos */
-            String query = "INSERT INTO spoiler(id_usuario,id_pelicula,titulo_spoiler,descripcion_spoiler,comentarios,carrots)";
+            String query = "INSERT INTO spoiler(id_usuario,id_pelicula,titulo_spoiler,descripcion_spoiler)";
                     /* cadena concatenada para poner los VALUES que se van a insertar */
-                   query += "VALUES('"+spoiler.getId_usuario()+"','"+spoiler.getId_pelicula()+"','"+spoiler.getTitulo_spoiler()+"','"+spoiler.getDescripcion_spoiler()+"','"+spoiler.getComentarios()+"','"+spoiler.getCarrots()+"')";
+                   query += "VALUES('"+spoiler.getId_usuario()+"','"+spoiler.getId_pelicula()+"','"+spoiler.getTitulo_spoiler()+"','"+spoiler.getDescripcion_spoiler()+"')";
                   
             /* Se ejecuta el query con la variable que se habia declarado. entre parentesis ira el query que definimos aneriomente */
             /* se le iguala a excecuteupdate, para hacer una insercion, actualizacion o borrado */
