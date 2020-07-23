@@ -30,9 +30,29 @@
     flex-flow: wrap;
     overflow-y: auto;
     scrollbar-width: thin;
+<<<<<<< HEAD
     scrollbar-color: #333 var(--main-grey);
 }
 
+=======
+<<<<<<< HEAD
+=======
+
+    scrollbar-color: #333 var(--main-grey);
+}
+
+
+    scrollbar-color: #333 var(--main-orange);
+>>>>>>> a197909f70440b3b3d93ccf9c99a7d29756ef6e7
+    scrollbar-color: #333 var(--main-grey);
+
+}
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> a197909f70440b3b3d93ccf9c99a7d29756ef6e7
+>>>>>>> 4dba49a7ec3ff78cff1a9b31909f0ef9385334ae
 .posts-container .post {
     position: relative;
     width: 80%;
