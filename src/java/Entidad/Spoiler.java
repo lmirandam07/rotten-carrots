@@ -12,6 +12,34 @@ package Entidad;
 public class Spoiler {
 
     /**
+     * @return the carrots
+     */
+    public int getCarrots() {
+        return carrots;
+    }
+
+    /**
+     * @param carrots the carrots to set
+     */
+    public void setCarrots(int carrots) {
+        this.carrots = carrots;
+    }
+
+    /**
+     * @return the comentarios
+     */
+    public int getComentarios() {
+        return comentarios;
+    }
+
+    /**
+     * @param comentarios the comentarios to set
+     */
+    public void setComentarios(int comentarios) {
+        this.comentarios = comentarios;
+    }
+
+    /**
      * @return the id_spoiler
      */
     public int getId_spoiler() {
@@ -83,6 +111,8 @@ public class Spoiler {
     private int id_spoiler;
     private int id_usuario;
     private int id_pelicula;
+    private int carrots;
+    private int comentarios;
     private String titulo_spoiler;
     private String descripcion_spoiler;
     
