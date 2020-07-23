@@ -21,7 +21,7 @@
 <body>
     <%@include file="templates/header.jsp" %>
     <main class="main-container">
-        <h2>Agregar Discusión</h2>
+        <h2>Agregar Discusion</h2>
 
 
         <div class="discusion">
@@ -31,8 +31,8 @@
             <input type="text" name="tema" id="tema" value="" placeholder=" " class="first" class="inputs">
             <br>
             <br>
-<<<<<<< HEAD
-            <h3 class="name">Género: </h3>
+
+            <h3 class="name">Genero: </h3>
             <select class="drop">
                 <%
                     Class.forName("org.mariadb.jdbc.Driver");
@@ -48,12 +48,12 @@
             </select>
             <br>
             <br>
-            <h3 class="disc">Discusión</h3>
+            <h3 class="disc">Discusion</h3>
             <textarea name="name" rows="8" cols="80"></textarea>
-=======
-            <h3 class="disc">DiscusiÃ³n</h3>
+
+            <h3 class="disc">Discusion</h3>
             <textarea name="cuerpo" id="cuerpo" rows="8" cols="80"></textarea>
->>>>>>> herrera
+
             <br>
             <a href="./admin.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
             <input type="submit" name="button" class="publicar">Publicar
