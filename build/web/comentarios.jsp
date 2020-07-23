@@ -27,10 +27,14 @@
     <%
      Class.forName("org.mariadb.jdbc.Driver");
 <<<<<<< HEAD
+<<<<<<< HEAD
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
 =======
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
 >>>>>>> 206bc0333dc1fcf70cafb02a2053ed43f3a10b96
+=======
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+>>>>>>> 7b2c98ac62f13a5210aea76016f9b786a07dac13
      
     Statement stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, cuerpo_comentario, carrots_comentario, genero "
@@ -51,8 +55,9 @@
                     
     <main class="main-container">
         <section class="comments-wrapper">
+            
             <div class="comments-container">
-                <%
+                 <%
             while(rs.next()) {
               
                         String usuarios = rs.getString("nombre_usuario");
@@ -63,8 +68,11 @@
                         
                     
                  %>
+             
                 <div class="comment"> <!--Comment-->
+                     
                     <div class= "comment-content">
+                        
                         <div class="comment-header">
                             <h4 class="comment-user"><%=usuarios%></h4>
                             <div class="comment-tag">

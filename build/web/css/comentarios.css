@@ -9,7 +9,7 @@
 
 .comments-wrapper .comments-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -39,10 +39,10 @@
 
 .comments-container .comment {
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
     align-content: space-between;
     width: 90%;
-    height: 90%;
+    height: 35%;
     scrollbar-width: thin;
     scrollbar-color: #333 var(--main-orange);
 }

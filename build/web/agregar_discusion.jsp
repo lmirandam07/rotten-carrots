@@ -37,11 +37,22 @@
                     Class.forName("org.mariadb.jdbc.Driver");
 <<<<<<< HEAD
 
+<<<<<<< HEAD
                     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
 =======
                     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
 >>>>>>> 206bc0333dc1fcf70cafb02a2053ed43f3a10b96
+=======
+                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 
+=======
+                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+<<<<<<< HEAD
+=======
+>>>>>>> 688fdbfc36440bd9f0529fdd71a8bf81cde6f911
+>>>>>>> 7b2c98ac62f13a5210aea76016f9b786a07dac13
+
+>>>>>>> 206bc0333dc1fcf70cafb02a2053ed43f3a10b96
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery("SELECT * FROM pelicula");
                     int contador = 0;
