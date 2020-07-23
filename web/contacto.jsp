@@ -32,7 +32,7 @@
                 <textarea name="i_consulta" rows="8" cols="80" placeholder="
 
 
-                               Escriba aquí su consulta"></textarea>
+                          Escriba aquí su consulta"></textarea>
                 <br>
                 <a href="./contacto.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
                 <input type="submit" class="enviar" value="Enviar" />
