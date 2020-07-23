@@ -22,7 +22,7 @@
         <h2>Contacto</h2>
         
         <div class="contacto">
-            <form method="POST" action="nosotros.jsp">
+            <form method="POST" action="contactoenviado.jsp">
                 <br>
                 <h3 class="asunto">Asunto</h3>
                 <br>
