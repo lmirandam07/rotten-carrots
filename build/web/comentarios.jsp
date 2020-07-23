@@ -54,10 +54,9 @@
         ComentarioProceso pcomentario = new ComentarioProceso();
         int isSaved = pcomentario.GuardarComentario(comentario);
         if(isSaved > 0){
-            out.print("Se inserto");
 
         }else{
-            out.print("No se inserto");
+
         }
         
         }
