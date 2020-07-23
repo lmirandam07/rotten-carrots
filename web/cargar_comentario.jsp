@@ -31,7 +31,7 @@
         <div class="comentario">
             <br>
             <br><br>
-            <form action="./comentarios.jsp" method="POST"> 
+            <form action="./cargar_comentario_guardar.jsp" method="POST"> 
                 <h3 class="opinion">Mi opinión sobre este spoiler es...</h3>
                 <br>
             <textarea name="cuerpo_comentario" rows="8" cols="80" placeholder="
@@ -41,7 +41,7 @@
             <br><br>
             
                 
-            <button href="./comentarios.jsp" type="submit" type="button" class="publicar" >Publicar</button>
+            <button href="./cargar_comentario_guardar.jsp" type="submit" type="button" class="publicar" >Publicar</button>
             <a href="./spoiler.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
             
             </form>
