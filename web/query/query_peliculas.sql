@@ -19,4 +19,4 @@ INSERT INTO pelicula (id_genero, nombre_peli, descripcion_peli, foto_pelicula, a
  INSERT INTO pelicula (id_genero, nombre_peli, descripcion_peli, foto_pelicula, ano_pelicula) VALUES 
  ('4', 'Otro día para matar','John Wick, un exasesino a sueldo, se enfrenta al mafioso Viggo Tarazov, quien ofrece una recompensa a aquel que logre acabar con la vida de Wick.',
  'https://images.justwatch.com/poster/147599059/s592', '2015');
- 
+ spoiler

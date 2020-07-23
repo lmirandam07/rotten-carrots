@@ -1,4 +1,8 @@
 
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.DriverManager"%>
 <%-- 
     Document   : newjsp
     Created on : 20-jul-2020, 15:39:56
@@ -18,6 +22,13 @@
 </head>
 <body>
     <%@include file="templates/header.jsp" %>
+    <%
+     Class.forName("org.mariadb.jdbc.Driver");
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+     
+    Statement stmt = conn.createStatement();
+    ResultSet rs = stmt.executeQuery("SELECT * FROM ");
+    %>
     <main class="main-container">
         <div class="foro-container">
             <section class="posts-container">
