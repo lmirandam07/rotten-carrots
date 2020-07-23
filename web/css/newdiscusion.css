@@ -1,5 +1,30 @@
-
-
+.mensaje{
+    opacity: 25%;
+}
+.modal{
+    position: absolute;
+    text-align: center;
+    padding: 2rem;
+    top: 25%;
+    left:30%;
+    width: 40%;
+    height: 35%;
+    background-color: #000000;
+    border-style: solid; 
+    z-index: 1;
+}
+.modal h4{
+    margin-top: 5%;
+}
+.modal .guardar{
+    appearance:none;
+    border-style: none;
+    position: relative;
+    width: 30%;
+    margin-top: 10%;
+    height: 25%;
+    background-color:  var(--main-orange);
+}
 h2 {
   text-align: center;
   padding-top: 0.7%;
