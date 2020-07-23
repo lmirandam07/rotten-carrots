@@ -12,6 +12,7 @@ font-family: 'Istok Web', sans-serif;
 
 h3{
   font-family: 'Istok Web', sans-serif;
+  color: #ffffff;
 }
 button{
   font-family: 'Montserrat', sans-serif;
@@ -31,11 +32,11 @@ button{
   left: 10%;
   top: 5%;
   position: relative;
-  color: #000000;
+  display: inline;
 }
 
 .drop{
-    left: 22%;
+    left: 13%;
     top: 6%;
     position: relative;
 }
@@ -82,7 +83,6 @@ textarea{
 .disc{
   left: 10%;
   position: relative;
-  color: #000000;
 }
 .cancelar{
   background-color: #FF9F1C;

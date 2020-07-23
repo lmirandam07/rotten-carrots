@@ -21,42 +21,37 @@
 <body>
     <%@include file="templates/header.jsp" %>
     <main class="main-container">
-        <h2>Agregar Discusion</h2>
+        <h2>Agregar Discusión</h2>
 
 
         <div class="discusion">
             <form method="POST" action="./admin.jsp">
+            <br><br>
             <h3 class="name">Nombre del Tema</h3>
             <br>
             <input type="text" name="tema" id="tema" value="" placeholder=" " class="first" class="inputs">
-            <br>
-            <br>
-
-            <h3 class="name">Genero: </h3>
+            <br><br><br>
+            <h3 class="name">Película: </h3>
             <select class="drop">
                 <%
                     Class.forName("org.mariadb.jdbc.Driver");
-                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery("SELECT * FROM pelicula");
                     while(rs.next()){
                         
-                    String genero2 = rs.getString("genero");
+                    String pelicula = rs.getString("nombre_peli");
                 %>
-                <option name="<%=genero2%>"><%=genero2%></option>
+                <option name="<%=pelicula%>"><%=pelicula%></option>
                 <%}%>
             </select>
-            <br>
-            <br>
-            <h3 class="disc">Discusion</h3>
+            <br><br><br>
+            <h3 class="disc">Discusión</h3>
             <textarea name="name" rows="8" cols="80"></textarea>
-
-            <h3 class="disc">Discusion</h3>
-            <textarea name="cuerpo" id="cuerpo" rows="8" cols="80"></textarea>
 
             <br>
             <a href="./admin.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
-            <input type="submit" name="button" class="publicar">Publicar
+            <input type="submit" name="button" class="publicar" value="Publicar">
             </form>
 
         </div>
