@@ -41,11 +41,12 @@
 
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery("SELECT * FROM pelicula");
+                    int contador = 0;
                     while(rs.next()){
-                        
+                    contador = contador + 1;
                     String pelicula = rs.getString("nombre_peli");
                 %>
-                <option name="<%=pelicula%>"><%=pelicula%></option>
+                <option name="<%=contador%>"><%=pelicula%></option>
                 <%}%>
             </select>
             <br><br><br>
