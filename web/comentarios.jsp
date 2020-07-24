@@ -25,6 +25,7 @@
 <body>
     <%@include file="templates/header.jsp" %>
     <%
+            int id_spoiler = Integer.parseInt(request.getParameter("id_spoiler")); 
      Class.forName("org.mariadb.jdbc.Driver");
 
  
