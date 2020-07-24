@@ -36,11 +36,17 @@
                 <%
                     Class.forName("org.mariadb.jdbc.Driver");
 <<<<<<< HEAD
+<<<<<<< HEAD
                     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 515edc76a2eed36c7f97b184e6e69411e7921eaf
                     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+<<<<<<< HEAD
+
+=======
 =======
 <<<<<<< HEAD
                     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");

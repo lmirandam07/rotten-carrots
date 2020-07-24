@@ -25,10 +25,20 @@
     <main class="main-container">
 
         <%
-                    int v_usuario = 1;
-                    
-                    Class.forName("org.mariadb.jdbc.Driver");
+            int v_usuario = 1;
 
+<<<<<<< HEAD
+            Class.forName("org.mariadb.jdbc.Driver");
+
+            Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, email, contrasena, perfil_usuario FROM usuario WHERE id_usuario = "+v_usuario+";");
+            while(rs.next()){
+                String usuario = rs.getString("nombre_usuario");
+                String contrasena = rs.getString("contrasena");
+                String email = rs.getString("email");
+                String foto = rs.getString("perfil_usuario");
+=======
                     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, email, contrasena, perfil_usuario FROM usuario WHERE id_usuario = "+v_usuario+";");
@@ -37,6 +47,7 @@
                         String contrasena = rs.getString("contrasena");
                         String email = rs.getString("email");
                         String foto = rs.getString("perfil_usuario");
+>>>>>>> 456e70a47998c6f68792a55e4ccab83272b7d18c
         %>
         <h2 class="titulo">Administrar Perfil</h2>
 

@@ -28,6 +28,12 @@ public class UsuarioProceso {
 
 =======
             this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 515edc76a2eed36c7f97b184e6e69411e7921eaf
 >>>>>>> 456e70a47998c6f68792a55e4ccab83272b7d18c
 
         } catch(SQLException e) {

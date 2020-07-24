@@ -8,7 +8,11 @@
             <web-module-libraries>
                 <library dirs="200">
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <file>${file.reference.mariadb-java-client-2.2.5.jar-4}</file>
+=======
+                    <file>${file.reference.mariadb-java-client-2.6.1.jar}</file>
+>>>>>>> 515edc76a2eed36c7f97b184e6e69411e7921eaf
 =======
                     <file>${file.reference.mariadb-java-client-2.2.5.jar-7}</file>
 >>>>>>> 456e70a47998c6f68792a55e4ccab83272b7d18c
