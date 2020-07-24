@@ -28,9 +28,7 @@ public class SpoilerProceso {
 
             
             /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
-
-
-            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
 
 
             /*  para tirar el error generico de que no se conecto a la base de datos   */
@@ -83,7 +81,7 @@ public class SpoilerProceso {
             Statement smtm = conn.createStatement();
             
             /* Se define el query que se va a ejecutar en la base de datos */
-            String query = "Delete From spoiler where id_usuario = "+spoiler.getId_usuario()+";";
+            String query = "Delete From spoiler where id_spoiler = "+spoiler.getId_spoiler()+";";
                     /* cadena concatenada para poner los VALUES que se van a insertar */
                   
             /* Se ejecuta el query con la variable que se habia declarado. entre parentesis ira el query que definimos aneriomente */
