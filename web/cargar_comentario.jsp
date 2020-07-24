@@ -48,7 +48,7 @@
             
                 
             <input type="submit" name="id_spoiler" class="publicar" value="<%=id_spoiler2%>" placeholder="Publicar"></input>
-            <a href="./spoiler.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
+            <a href="./foro.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
             
             </form>
             
