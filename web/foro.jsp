@@ -35,7 +35,7 @@
     
     %>
     <main class="main-container">
-        <div class="foro-container">
+        
             <section class="posts-container">
                 
                 <%
@@ -88,23 +88,30 @@
                  <%}%>
 
             </section>
-
+                
             <section class="trend-container">
                 
-                <%
-                    
-                %>
                 <div class="trend">
                     <h2>Top Tendencias</h2>
-
+                    <%
+                        Statement stmt2 = conn.createStatement();
+                        ResultSet rs2 = stmt2.executeQuery("SELECT nombre_peli, SUM(carrots) AS total_carrots FROM pelicula p, spoiler sp WHERE p.id_pelicula = sp.id_pelicula GROUP BY nombre_peli ORDER BY SUM(carrots) DESC LIMIT 4;");                       
+                    %>    
                     <ul>
-                        <li class="trend-movie">
-                            <h3>Inception</h3>
-                            <small>
-                                8995 zanahorias
-                            </small>
-                        </li>
-                        <li class="trend-movie">
+                        <%
+                            while(rs2.next()) {
+                                String top_pelicula = rs2.getString("nombre_peli");
+                                String total_carrots = rs2.getString("total_carrots");
+                            
+                        %>                                                   
+                            <li class="trend-movie">
+                                <h3><%= top_pelicula %></h3>
+                                <small>
+                                    <%= total_carrots %> zanahorias
+                                </small>
+                            </li>                        
+                        <%}%>
+                        <!--<li class="trend-movie">
                             <h3>Fight Club</h3>
                             <small>
                                 7456 zanahorias
@@ -121,7 +128,8 @@
                             <small>
                                 2105 zanahorias
                             </small>
-                        </li>
+                        </li>-->
+                        
                     </ul>
                     <hr class="divisor">
                     <div class="mostrar-mas-container">
@@ -131,7 +139,9 @@
                 </div>
 
             </section>
-        </div>
+            
+            
+        
     </main>
 
 </body>
