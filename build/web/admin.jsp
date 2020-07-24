@@ -14,7 +14,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/template.css">
 		<link rel="stylesheet" href="./css/admin.css">
@@ -25,7 +25,7 @@
 <body>
     <%@include file="templates/header.jsp" %>
     <%
-     int usuario_prueba = 1;
+     int usuario_prueba = 3;
      Class.forName("org.mariadb.jdbc.Driver");
     
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
@@ -54,9 +54,11 @@
                         </tr>
                     </table>
                 <%
+                    int cont = 0;
                     while(rs.next()) {
                         String titulo = rs.getString("titulo_spoiler");
                         String descripcion = rs.getString("descripcion_spoiler");
+                        cont = cont + 1;
                     
                  %>
                     <table class="tabla">
@@ -64,7 +66,7 @@
                                    <tr>
                                            <td class="td1"><div class="act1"> <p><%=titulo%></p> </div></td>
                                            <td class="td2"><div class="act2"><p><%=descripcion%></p></div></td>
-                                           <td class="td4"><button class="btn-del"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button></td>
+                                           <td class="td4"><a href="elimar_spoiler.jsp"><button class="btn-del" name="eliminar" value="<%=cont%>"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button></a></td>
                                    </tr>
                            </tbody>
                     </table>
