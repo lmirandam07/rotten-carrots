@@ -30,10 +30,20 @@
     flex-flow: wrap;
     overflow-y: auto;
     scrollbar-width: thin;
+<<<<<<< HEAD
     scrollbar-color: #333 var(--main-grey);
     scrollbar-color: #333 var(--main-orange);
 
 }
+=======
+
+
+}
+
+
+
+
+>>>>>>> b63a6f8b6866cbd13062e709cadc5cf3e8a6de9c
 .posts-container .post {
     position: relative;
     width: 80%;
@@ -173,6 +183,9 @@
 
 
 .trend-container {
+    position: absolute;
+    top: 1%;
+    left: 70%;
     width: 30%;
     height: 100%;
     display: flex;

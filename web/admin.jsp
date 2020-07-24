@@ -6,11 +6,15 @@
 --%>
 <%@page import="Entidad.Spoiler"%>
 <%@page import="Proceso.SpoilerProceso"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.DriverManager"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/template.css">
 		<link rel="stylesheet" href="./css/admin.css">
@@ -20,60 +24,54 @@
 </head>
 <body>
     <%@include file="templates/header.jsp" %>
+    <%
+     int usuario_prueba = 3;
+     Class.forName("org.mariadb.jdbc.Driver");
+    
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 
+     Statement stmt = conn.createStatement();
+
+     ResultSet rs = stmt.executeQuery("Select titulo_spoiler,descripcion_spoiler from spoiler where id_usuario = "+usuario_prueba+";");
+    
+    %>
 
     <main class="main-container">
         <div class="prueba">
+        
             <div class="crear">
                <h5 class="create">Crear Discusion</h5>
                <a class="enlace" href="./agregar_discusion.jsp"><img class="plus" src="./img/plus.png" alt="plus"></a>
             </div>
 
                  <div class="discusiones">
+                     
+
                     <table class="encabezados">
                         <tr>
                            <td><h4>Nombre</h4></td>
                            <td><h4>Discusión</h4></td>
                         </tr>
                     </table>
+                <%
+                    int cont = 0;
+                    while(rs.next()) {
+                        String titulo = rs.getString("titulo_spoiler");
+                        String descripcion = rs.getString("descripcion_spoiler");
+                        cont = cont + 1;
+                    
+                 %>
                     <table class="tabla">
                            <tbody>
                                    <tr>
-                                           <td class="td1"><div class="act1"> <p>Jack Muere</p> </div></td>
-                                           <td class="td2"><div class="act2"><p>Al final de Titanic todos nos desilucionamos con el destino final que tuvo el personaje interpretado por Leonardo DiCaprio...</p></div></td>
-                                           <td class="td4"><button class="btn-del"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button></td>
+                                           <td class="td1"><div class="act1"> <p><%=titulo%></p> </div></td>
+                                           <td class="td2"><div class="act2"><p><%=descripcion%></p></div></td>
+                                           <td class="td4"><a href="elimar_spoiler.jsp"><button class="btn-del" name="eliminar" value="<%=cont%>"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button></a></td>
                                    </tr>
                            </tbody>
                     </table>
-                    <table class="tabla">
-                           <tbody>
-                                   <tr>
-                                           <td class="td1"><div class="act1"> <p>Bruce Willis era un fantasma</p></div></td>
-                                           <td class="td2"><div class="act2"><p>De lo mas emocionante del cine en las últimas 3 décadas fué enterarnos que al final, Bruce Willis estaba muerto...</p></div></td>
-                                           <td class="td4"><button class="btn-del"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button></td>
-                                   </tr>
-                           </tbody>
-                    </table>
-                    <table class="tabla">
-                           <tbody>
-                                   <tr>
-                                           <td class="td1"><div class="act1"><p> Snape era bueno</p></div></td>
-                                           <td class="td2"><div class="act2"><p>Después de la película del principe mestizo, la verdad sorpendió que las razones de Snape para hacer lo que hizo estaban justificadas...</p> </div></td>
-                                           <td class="td4"><button class="btn-del"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button></td>
-                                   </tr>
-                           </tbody>
-                    </table>
-
-
-                    <table class="tabla">
-                           <tbody>
-                                   <tr>
-                                           <td class="td1"><div class="act1"><p>Tyler Durden era una personalidad alterna</p></div></td>
-                                           <td class="td2"><div class="act2"><p>Muy pocos se dieron cuenta de los mensajes que nos daban alrededor de la película para descubrir la verdad...</p> </div></td>
-                                           <td class="td4"><button class="btn-del"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button></td>
-                                   </tr>
-                           </tbody>
-                    </table>
+                    <%}%>
+                    
                 </div>
         </div>
     </main>

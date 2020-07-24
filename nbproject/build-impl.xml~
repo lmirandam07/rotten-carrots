@@ -557,8 +557,26 @@ or ant -Dj2ee.platform.classpath=&lt;server_classpath&gt; (where no properties f
                     <formatter type="brief" usefile="false"/>
                     <formatter type="xml"/>
                     <jvmarg value="-ea"/>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    <jvmarg value="-agentlib:jdwp=transport=${debug-transport},address=${jpda.address}"/>
+=======
+<<<<<<< HEAD
+                    <jvmarg value="-agentlib:jdwp=transport=${debug-transport},address=${jpda.address}"/>
+=======
                     <jvmarg line="${debug-args-line}"/>
                     <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
+>>>>>>> d73ae1212d804f39752e816d94deb107a04fd1b4
+>>>>>>> 1774a27d6aa5f9d6bdc06c708b31731163bb66a3
+=======
+                    <jvmarg line="${debug-args-line}"/>
+                    <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
+>>>>>>> 3bc984ec0743d89470fdebfa6f9987226c90005f
+=======
+                    <jvmarg line="${debug-args-line}"/>
+                    <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
+>>>>>>> fba415c87165f5bb5ae7166f29615c99234c8a56
                     <customize/>
                 </junit>
             </sequential>
@@ -590,8 +608,26 @@ or ant -Dj2ee.platform.classpath=&lt;server_classpath&gt; (where no properties f
                     <formatter type="xml"/>
                     <jvmarg value="-ea"/>
                     <jvmarg line="${run.jvmargs.ide}"/>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    <jvmarg value="-agentlib:jdwp=transport=${debug-transport},address=${jpda.address}"/>
+=======
+<<<<<<< HEAD
+                    <jvmarg value="-agentlib:jdwp=transport=${debug-transport},address=${jpda.address}"/>
+=======
                     <jvmarg line="${debug-args-line}"/>
                     <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
+>>>>>>> d73ae1212d804f39752e816d94deb107a04fd1b4
+>>>>>>> 1774a27d6aa5f9d6bdc06c708b31731163bb66a3
+=======
+                    <jvmarg line="${debug-args-line}"/>
+                    <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
+>>>>>>> 3bc984ec0743d89470fdebfa6f9987226c90005f
+=======
+                    <jvmarg line="${debug-args-line}"/>
+                    <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
+>>>>>>> fba415c87165f5bb5ae7166f29615c99234c8a56
                     <customize/>
                 </junit>
             </sequential>
@@ -749,6 +785,16 @@ or ant -Dj2ee.platform.classpath=&lt;server_classpath&gt; (where no properties f
         </macrodef>
     </target>
     <target name="-init-debug-args">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 3bc984ec0743d89470fdebfa6f9987226c90005f
+=======
+>>>>>>> fba415c87165f5bb5ae7166f29615c99234c8a56
         <property name="version-output" value="java version &quot;${ant.java.version}"/>
         <condition property="have-jdk-older-than-1.4">
             <or>
@@ -761,6 +807,14 @@ or ant -Dj2ee.platform.classpath=&lt;server_classpath&gt; (where no properties f
         <condition else="-Xdebug" property="debug-args-line" value="-Xdebug -Xnoagent -Djava.compiler=none">
             <istrue value="${have-jdk-older-than-1.4}"/>
         </condition>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d73ae1212d804f39752e816d94deb107a04fd1b4
+>>>>>>> 1774a27d6aa5f9d6bdc06c708b31731163bb66a3
+=======
+>>>>>>> 3bc984ec0743d89470fdebfa6f9987226c90005f
+=======
+>>>>>>> fba415c87165f5bb5ae7166f29615c99234c8a56
         <condition else="dt_socket" property="debug-transport-by-os" value="dt_shmem">
             <os family="windows"/>
         </condition>
@@ -777,8 +831,26 @@ or ant -Dj2ee.platform.classpath=&lt;server_classpath&gt; (where no properties f
             <sequential>
                 <java classname="@{classname}" fork="true">
                     <jvmarg line="${endorsed.classpath.cmd.line.arg}"/>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    <jvmarg value="-agentlib:jdwp=transport=${debug-transport},address=${jpda.address}"/>
+=======
+<<<<<<< HEAD
+                    <jvmarg value="-agentlib:jdwp=transport=${debug-transport},address=${jpda.address}"/>
+=======
                     <jvmarg line="${debug-args-line}"/>
                     <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
+>>>>>>> d73ae1212d804f39752e816d94deb107a04fd1b4
+>>>>>>> 1774a27d6aa5f9d6bdc06c708b31731163bb66a3
+=======
+                    <jvmarg line="${debug-args-line}"/>
+                    <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
+>>>>>>> 3bc984ec0743d89470fdebfa6f9987226c90005f
+=======
+                    <jvmarg line="${debug-args-line}"/>
+                    <jvmarg value="-Xrunjdwp:transport=${debug-transport},address=${jpda.address}"/>
+>>>>>>> fba415c87165f5bb5ae7166f29615c99234c8a56
                     <jvmarg line="${runmain.jvmargs}"/>
                     <classpath>
                         <path path="@{classpath}"/>
@@ -999,26 +1071,48 @@ exists or setup the property manually. For example like this:
     <target depends="init" if="dist.ear.dir" name="library-inclusion-in-manifest">
 <<<<<<< HEAD
 <<<<<<< HEAD
-        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-5}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
-=======
+<<<<<<< HEAD
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-3}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
->>>>>>> 670258c6ad276e4fcc4f2f9126aa24ae20b1636c
+=======
+<<<<<<< HEAD
+        <copyfiles files="${file.reference.mariadb-java-client-2.6.1.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
 =======
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
->>>>>>> 18c4d7fecb392c76f4b7319fbc655e0e7e85c9de
+>>>>>>> d73ae1212d804f39752e816d94deb107a04fd1b4
+>>>>>>> 1774a27d6aa5f9d6bdc06c708b31731163bb66a3
+=======
+        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+>>>>>>> 3bc984ec0743d89470fdebfa6f9987226c90005f
+=======
+        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-5}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+=======
+        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-6}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+>>>>>>> 1d1f63c4fbb45e68ca6aaaebc5e540ded45afad1
+>>>>>>> fba415c87165f5bb5ae7166f29615c99234c8a56
         <mkdir dir="${build.web.dir}/META-INF"/>
         <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update"/>
     </target>
     <target depends="init" name="library-inclusion-in-archive" unless="dist.ear.dir">
 <<<<<<< HEAD
 <<<<<<< HEAD
-        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-5}" todir="${build.web.dir}/WEB-INF/lib"/>
-=======
+<<<<<<< HEAD
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-3}" todir="${build.web.dir}/WEB-INF/lib"/>
->>>>>>> 670258c6ad276e4fcc4f2f9126aa24ae20b1636c
+=======
+<<<<<<< HEAD
+        <copyfiles files="${file.reference.mariadb-java-client-2.6.1.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
 =======
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
->>>>>>> 18c4d7fecb392c76f4b7319fbc655e0e7e85c9de
+>>>>>>> d73ae1212d804f39752e816d94deb107a04fd1b4
+>>>>>>> 1774a27d6aa5f9d6bdc06c708b31731163bb66a3
+=======
+        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+>>>>>>> 3bc984ec0743d89470fdebfa6f9987226c90005f
+=======
+        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-5}" todir="${build.web.dir}/WEB-INF/lib"/>
+=======
+        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-6}" todir="${build.web.dir}/WEB-INF/lib"/>
+>>>>>>> 1d1f63c4fbb45e68ca6aaaebc5e540ded45afad1
+>>>>>>> fba415c87165f5bb5ae7166f29615c99234c8a56
     </target>
     <target depends="init" if="dist.ear.dir" name="-clean-webinf-lib">
         <delete dir="${build.web.dir}/WEB-INF/lib"/>

@@ -23,7 +23,13 @@ public class UsuarioProceso {
     public UsuarioProceso() {
         try {
             Class.forName("org.mariadb.jdbc.Driver");
+<<<<<<< HEAD
             this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+=======
+
+            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+
+>>>>>>> b63a6f8b6866cbd13062e709cadc5cf3e8a6de9c
         } catch(SQLException e) {
             System.out.println("Error al conectar: " + e);
         } catch(ClassNotFoundException ex) {
@@ -38,7 +44,7 @@ public class UsuarioProceso {
             Statement smtm = conn.createStatement();
             String query = "INSERT INTO usuario(nombre_usuario, email, contrasena, perfil_usuario)";
                    query += "VALUES('"+usuario.getNombre_usuario()+"','"+usuario.getEmail()+"',"
-                           + "'"+usuario.getContrasena()+"', '"+usuario.getPerfil_usuario()+"'";
+                           + "'"+usuario.getContrasena()+"', '"+usuario.getPerfil_usuario()+"');";
             resultado = smtm.executeUpdate(query);
             
             return resultado;

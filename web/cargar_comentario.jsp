@@ -23,6 +23,9 @@
             session.setAttribute("ejecucion", 0);
         }
     %>
+    
+    <%
+    int id_spoiler2 = Integer.parseInt(request.getParameter("id_spoiler2")); %>
     <main class="main-container">
         <br>
         <h2>Nuevo Comentario</h2>
@@ -32,6 +35,7 @@
             <br>
             <br><br>
             <form action="./cargar_comentario_guardar.jsp" method="POST"> 
+                <!--<input type="text" name="id_spoiler" value="" disabled></input>-->
                 <h3 class="opinion">Mi opinión sobre este spoiler es...</h3>
                 <br>
             <textarea name="cuerpo_comentario" rows="8" cols="80" placeholder="
@@ -40,8 +44,10 @@
                            Escribe tu opinión aquí"></textarea>
             <br><br>
             
+            
+            
                 
-            <button href="./cargar_comentario_guardar.jsp" type="submit" type="button" class="publicar" >Publicar</button>
+            <input type="submit" name="id_spoiler" class="publicar" value="<%=id_spoiler2%>" placeholder="Publicar"></input>
             <a href="./spoiler.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
             
             </form>

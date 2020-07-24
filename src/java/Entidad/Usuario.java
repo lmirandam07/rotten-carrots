@@ -6,7 +6,7 @@
 package Entidad;
 
 public class Usuario {
-    private int nombre_usuario;
+    private String nombre_usuario;
     private String email;
     private String contrasena;
     private String perfil_usuario;
@@ -14,14 +14,14 @@ public class Usuario {
     /**
      * @return the nombre_usuario
      */
-    public int getNombre_usuario() {
+    public String getNombre_usuario() {
         return nombre_usuario;
     }
 
     /**
      * @param nombre_usuario the nombre_usuario to set
      */
-    public void setNombre_usuario(int nombre_usuario) {
+    public void setNombre_usuario(String nombre_usuario) {
         this.nombre_usuario = nombre_usuario;
     }
 

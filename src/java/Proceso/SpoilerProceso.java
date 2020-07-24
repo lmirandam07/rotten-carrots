@@ -29,7 +29,13 @@ public class SpoilerProceso {
             
             /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
 
+<<<<<<< HEAD
             this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+=======
+
+            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+
+>>>>>>> b63a6f8b6866cbd13062e709cadc5cf3e8a6de9c
 
             /*  para tirar el error generico de que no se conecto a la base de datos   */
         }catch(SQLException e){
@@ -69,6 +75,34 @@ public class SpoilerProceso {
         
         return 0;
     }
+        public int EliminarSpoiler(Spoiler spoiler){
+        
+        /* Declarando variable con la que se va a ejecutar el resultado de esta clase */
+        int resultado = 0;
+        
+        try{
+            /* Se necesita hacer una instancia de la accion que se va a crear en ese momento   */
+            /* Java tiene una clase ya predefinida para BDD, llamada Statement */
+            /* De esta manera se crea una instancia a la accion en la base de datos. hay que importarla tambien */
+            Statement smtm = conn.createStatement();
+            
+            /* Se define el query que se va a ejecutar en la base de datos */
+            String query = "Delete From spoiler where id_usuario = "+spoiler.getId_usuario()+";";
+                    /* cadena concatenada para poner los VALUES que se van a insertar */
+                  
+            /* Se ejecuta el query con la variable que se habia declarado. entre parentesis ira el query que definimos aneriomente */
+            /* se le iguala a excecuteupdate, para hacer una insercion, actualizacion o borrado */
+            resultado = smtm.executeUpdate(query);
+            
+            return resultado;
+        }
+        catch(Exception w){
+            System.out.println("Error al insertar: " + w);
+        }
+        
+        return 0;
+    }
+    
     
     
 }

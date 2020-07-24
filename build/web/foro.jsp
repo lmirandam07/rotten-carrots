@@ -26,7 +26,12 @@
      Class.forName("org.mariadb.jdbc.Driver");
 
 
+<<<<<<< HEAD
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+=======
+
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+>>>>>>> b63a6f8b6866cbd13062e709cadc5cf3e8a6de9c
 
     Statement stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery("SELECT sp.id_spoiler, nombre_usuario, foto_pelicula, genero, titulo_spoiler, carrots, comentarios "
@@ -35,7 +40,7 @@
     
     %>
     <main class="main-container">
-        <div class="foro-container">
+        
             <section class="posts-container">
                 
                 <%
@@ -88,19 +93,30 @@
                  <%}%>
 
             </section>
-
+                
             <section class="trend-container">
+                
                 <div class="trend">
                     <h2>Top Tendencias</h2>
-
+                    <%
+                        Statement stmt2 = conn.createStatement();
+                        ResultSet rs2 = stmt2.executeQuery("SELECT nombre_peli, SUM(carrots) AS total_carrots FROM pelicula p, spoiler sp WHERE p.id_pelicula = sp.id_pelicula GROUP BY nombre_peli ORDER BY SUM(carrots) DESC LIMIT 3;");                       
+                    %>    
                     <ul>
-                        <li class="trend-movie">
-                            <h3>Inception</h3>
-                            <small>
-                                8995 zanahorias
-                            </small>
-                        </li>
-                        <li class="trend-movie">
+                        <%
+                            while(rs2.next()) {
+                                String top_pelicula = rs2.getString("nombre_peli");
+                                String total_carrots = rs2.getString("total_carrots");
+                            
+                        %>                                                   
+                            <li class="trend-movie">
+                                <p><%= top_pelicula %></p>
+                                <small>
+                                    <%= total_carrots %> zanahorias
+                                </small>
+                            </li>                        
+                        <%}%>
+                        <!--<li class="trend-movie">
                             <h3>Fight Club</h3>
                             <small>
                                 7456 zanahorias
@@ -117,7 +133,8 @@
                             <small>
                                 2105 zanahorias
                             </small>
-                        </li>
+                        </li>-->
+                        
                     </ul>
                     <hr class="divisor">
                     <div class="mostrar-mas-container">
@@ -127,7 +144,9 @@
                 </div>
 
             </section>
-        </div>
+            
+            
+        
     </main>
 
 </body>
