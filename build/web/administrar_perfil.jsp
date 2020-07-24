@@ -29,7 +29,7 @@
                     
                     Class.forName("org.mariadb.jdbc.Driver");
 
-                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, email, contrasena, perfil_usuario FROM usuario WHERE id_usuario = "+v_usuario+";");
                     while(rs.next()){
@@ -49,7 +49,7 @@
 
                 <div class="cont2">
                     <h3>Contraseña</h3>
-                    <input type="text" name ="contrasena" id= "contrase?a"class="textbox" value="<%=contrasena%>" placeholder="<%=contrasena%>">
+                    <input type="text" name ="contrasena" id= "contrasena"class="textbox" value="<%=contrasena%>" placeholder="<%=contrasena%>">
                     <button name="lapiz" type="button" class="btn-post" ><i class="fas fa-pencil-alt fa-2x"></i></button>
                 </div>
 
