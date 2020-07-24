@@ -48,7 +48,7 @@
             String comentarios = rs.getString("comentarios");
                     
         %>
-        <form class="post" action="comentarios.jsp" method="POST">
+        <form class="post" action="cargar_comentario.jsp" method="POST">
             
             <img src="<%=foto_pelicula%>" class="img_spoiler" alt="">
             

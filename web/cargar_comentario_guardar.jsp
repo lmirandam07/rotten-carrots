@@ -31,7 +31,7 @@
     %>
     <%
         int usuario=1;
-        int spoiler=1;
+        int spoiler=2;
         String cuerpo_comentario = request.getParameter("cuerpo_comentario");
         
         Comentario comentario = new Comentario();
