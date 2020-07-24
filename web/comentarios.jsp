@@ -27,24 +27,16 @@
     <%
     int id_spoiler = Integer.parseInt(request.getParameter("id_spoiler")); 
      Class.forName("org.mariadb.jdbc.Driver");
-<<<<<<< HEAD
 
-
-     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
-=======
->>>>>>> leo
 
 
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+
   
      Statement stmt = conn.createStatement();
      ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, cuerpo_comentario, carrots_comentario,spoiler.id_spoiler,comentario.id_spoiler, num_comentario "
              + "FROM comentario, usuario, spoiler  WHERE spoiler.id_spoiler="+id_spoiler+" AND comentario.id_spoiler="+id_spoiler+" AND usuario.id_usuario=comentario.id_usuario;");
 
-<<<<<<< HEAD
-=======
-
->>>>>>> leo
     
 
     %>
