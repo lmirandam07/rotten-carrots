@@ -77,6 +77,8 @@ body {
     cursor: pointer;
     float: right;
     position: relative;
+    width: 25px;
+    height: 22px;
 }
 
 .searchbar .search-btn:visited {

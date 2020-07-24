@@ -46,7 +46,7 @@
             
             
             
-            <input type="hidden" name="id_spoiler" value="<%=id_spoiler2%>"</input>
+            <input type="hidden" name="id_spoiler" value="<%=id_spoiler2%>"></input>
             
             <button href="./comentarios.jsp" type="submit" type="button" class="publicar" disable>Publicar</button>
             <a href="./foro.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>

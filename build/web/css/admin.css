@@ -199,3 +199,11 @@ p{
     transform: scale(1.1);
     cursor: pointer;
 }
+
+h4 {
+    text-shadow: 0px 4px 4px rgba(20, 20, 20, 0.637);
+}
+
+h5 {
+    text-shadow: 0px 4px 4px rgba(20, 20, 20, 0.637);
+}
