@@ -25,9 +25,17 @@
     <%
      Class.forName("org.mariadb.jdbc.Driver");
 
+<<<<<<< HEAD
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+=======
+<<<<<<< HEAD
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+=======
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+>>>>>>> f7b8581faf287ea4951643c33bcbe4b04472d883
 
 
+>>>>>>> 0ba939720393c2f7ff982cd1b05ed3b6311e193d
     Statement stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery("SELECT sp.id_spoiler, nombre_usuario, foto_pelicula, genero, titulo_spoiler, carrots, comentarios "
                                         + "FROM spoiler sp, pelicula p, usuario us "
@@ -95,7 +103,7 @@
                     <h2>Top Tendencias</h2>
                     <%
                         Statement stmt2 = conn.createStatement();
-                        ResultSet rs2 = stmt2.executeQuery("SELECT nombre_peli, SUM(carrots) AS total_carrots FROM pelicula p, spoiler sp WHERE p.id_pelicula = sp.id_pelicula GROUP BY nombre_peli ORDER BY SUM(carrots) DESC LIMIT 3;");                       
+                        ResultSet rs2 = stmt2.executeQuery("SELECT nombre_peli, SUM(carrots) AS total_carrots FROM pelicula p, spoiler sp WHERE p.id_pelicula = sp.id_pelicula GROUP BY nombre_peli ORDER BY SUM(carrots) DESC LIMIT 4;");                       
                     %>    
                     <ul>
                         <%
@@ -111,25 +119,7 @@
                                 </small>
                             </li>                        
                         <%}%>
-                        <!--<li class="trend-movie">
-                            <h3>Fight Club</h3>
-                            <small>
-                                7456 zanahorias
-                            </small>
-                        </li>
-                        <li class="trend-movie">
-                            <h3>After</h3>
-                            <small>
-                                4200 zanahorias
-                            </small>
-                        </li>
-                        <li class="trend-movie">
-                            <h3>Black Swan</h3>
-                            <small>
-                                2105 zanahorias
-                            </small>
-                        </li>-->
-                        
+      
                     </ul>
                     <hr class="divisor">
                     <div class="mostrar-mas-container">
