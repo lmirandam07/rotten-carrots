@@ -67,7 +67,7 @@
 
                 <%}%>
                 <div class="ContenedorBotonesAP">
-                    <input type="submit" class="guardar" value="Guardar" />
+                    <input type="submit" class="guardarb" value="Guardar" />
                     <button><a class="link" href="./foro.jsp">Cancelar</a></button>
                     <button class="cerrar"><a class="link cerrar" href="./index.jsp">Cerrar sesión</a></button>
                 </div>
