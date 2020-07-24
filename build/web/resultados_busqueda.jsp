@@ -4,6 +4,10 @@
     Author     : luyim
 --%>
 
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -19,6 +23,15 @@
 <body>
     <%@include file="templates/header.jsp" %>
     <main class="main-container">
+        <%
+            String busqueda = request.getParameter("busqueda");  
+            Class.forName("org.mariadb.jdbc.Driver");
+
+            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");    
+
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT sp.titulo_spoiler, sp.descripcion_spoiler FROM spoiler sp, pelicula p WHERE sp.id_pelicula = p.id_pelicula AND p.nombre_peli = ' "+busqueda+"';"); 
+        %>
         <div class="prueba">
 
 
@@ -73,4 +86,3 @@
 
 </body>
 </html>
->>>>>>> ce4cdb7379ae862263a53f068549cc2693e35cd8

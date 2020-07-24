@@ -7,8 +7,8 @@
         <nav class="navbar">
             <form class="searchbar-container" action="resultados_busqueda.jsp" method="POST">
                 <div class="searchbar">
-                    <input type="text" class="search-input" placeholder="Ingrese la pelicula a buscar" id="search">
-                     <button class="search-btn" name="id_spoiler" type="submit"><small class="comments"><i class="fas fa-search"></i></small></button> 
+                    <input type="text" name="busqueda" class="search-input" placeholder="Ingrese la pelicula a buscar" id="search">
+                     <input class="search-btn" type="submit"><small class="comments"><i class="fas fa-search"></i></small></input> 
                 </div>
             </form>
 
