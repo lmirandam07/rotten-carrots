@@ -32,7 +32,7 @@
             Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
             
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery( "SELECT sp.titulo_spoiler, sp.descripcion_spoiler FROM spoiler sp, pelicula p WHERE sp.id_pelicula = p.id_pelicula AND p.nombre_peli = ' " + textobusqueda + "';");
+            ResultSet result = stmt.executeQuery( "SELECT titulo_spoiler, descripcion_spoiler FROM spoiler, pelicula WHERE spoiler.id_pelicula = pelicula.id_pelicula AND pelicula.nombre_peli = '"+textobusqueda+"';");
     %>
     
     <main class="main-container">
@@ -42,7 +42,7 @@
                  <div class="discusiones">
                     <table class="encabezados">
                         <tr>
-                           <td><h4>Nombre<%=textobusqueda%></h4></td>
+                           <td><h4>Nombre</h4></td>
                            <td><h4>Discusión</h4></td>
                         </tr>
                     </table>
