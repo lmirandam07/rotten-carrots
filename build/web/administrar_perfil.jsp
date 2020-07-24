@@ -29,7 +29,7 @@
                     
                     Class.forName("org.mariadb.jdbc.Driver");
 
-                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, email, contrasena, perfil_usuario FROM usuario WHERE id_usuario = "+v_usuario+";");
                     while(rs.next()){
@@ -49,12 +49,12 @@
 
                 <div class="cont2">
                     <h3>Contraseña</h3>
-                    <input type="text" name ="contrasena" id= "contraseña"class="textbox" value="<%=contrasena%>" placeholder="<%=contrasena%>">
+                    <input type="text" name ="contrasena" id= "contrase?a"class="textbox" value="<%=contrasena%>" placeholder="<%=contrasena%>">
                     <button name="lapiz" type="button" class="btn-post" ><i class="fas fa-pencil-alt fa-2x"></i></button>
                 </div>
 
                 <div class="cont3">
-                    <h3>Correo electrónico</h3>
+                    <h3>Correo electronico</h3>
                     <input type="email" name ="email" id= "correo"class="textbox" value="<%=email%>" placeholder="<%=email%>">
                     <button name="lapiz" type="button" class="btn-post" ><i class="fas fa-pencil-alt fa-2x"></i></button>
                 </div>
@@ -69,7 +69,7 @@
                 <div class="ContenedorBotonesAP">
                     <input type="submit" class="guardarb" value="Guardar" />
                     <button><a class="link" href="./foro.jsp">Cancelar</a></button>
-                    <button class="cerrar"><a class="link cerrar" href="./index.jsp">Cerrar sesión</a></button>
+                    <button class="cerrar"><a class="link cerrar" href="./index.jsp">Cerrar sesion</a></button>
                 </div>
 
             </form>
