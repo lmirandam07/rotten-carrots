@@ -29,7 +29,7 @@
 
             
             /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
-            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
             
             Statement stmt = conn.createStatement();
             ResultSet result = stmt.executeQuery( "SELECT sp.titulo_spoiler, sp.descripcion_spoiler FROM spoiler sp, pelicula p WHERE sp.id_pelicula = p.id_pelicula AND p.nombre_peli = ' " + textobusqueda + "';");
