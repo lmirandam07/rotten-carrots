@@ -19,7 +19,7 @@
     <body>
     <%@include file="templates/header.jsp" %>
         <%
-        int usuario = 1;
+        int usuario = 3;
         String pelicula = request.getParameter("pelicula");
         String titulo = request.getParameter("tema");
         String cuerpo = request.getParameter("cuerpo");

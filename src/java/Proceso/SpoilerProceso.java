@@ -71,6 +71,34 @@ public class SpoilerProceso {
         
         return 0;
     }
+        public int EliminarSpoiler(Spoiler spoiler){
+        
+        /* Declarando variable con la que se va a ejecutar el resultado de esta clase */
+        int resultado = 0;
+        
+        try{
+            /* Se necesita hacer una instancia de la accion que se va a crear en ese momento   */
+            /* Java tiene una clase ya predefinida para BDD, llamada Statement */
+            /* De esta manera se crea una instancia a la accion en la base de datos. hay que importarla tambien */
+            Statement smtm = conn.createStatement();
+            
+            /* Se define el query que se va a ejecutar en la base de datos */
+            String query = "Delete From spoiler where id_usuario = "+spoiler.getId_usuario()+";";
+                    /* cadena concatenada para poner los VALUES que se van a insertar */
+                  
+            /* Se ejecuta el query con la variable que se habia declarado. entre parentesis ira el query que definimos aneriomente */
+            /* se le iguala a excecuteupdate, para hacer una insercion, actualizacion o borrado */
+            resultado = smtm.executeUpdate(query);
+            
+            return resultado;
+        }
+        catch(Exception w){
+            System.out.println("Error al insertar: " + w);
+        }
+        
+        return 0;
+    }
+    
     
     
 }
