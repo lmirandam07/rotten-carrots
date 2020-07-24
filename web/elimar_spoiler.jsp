@@ -28,17 +28,8 @@
             Class.forName("org.mariadb.jdbc.Driver");
 
             Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
-=======
-            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
->>>>>>> 0ba939720393c2f7ff982cd1b05ed3b6311e193d
->>>>>>> f7b8581faf287ea4951643c33bcbe4b04472d883
->>>>>>> 8f881971e5371bdb29d8dfc51d7fb80da2d7fd2a
 
+            Statement stmt = conn.createStatement();
 
             ResultSet rs = stmt.executeQuery("Select id_spoiler,titulo_spoiler,descripcion_spoiler from spoiler where id_usuario = "+usuario_prueba+";");
     

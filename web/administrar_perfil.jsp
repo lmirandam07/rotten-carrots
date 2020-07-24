@@ -69,7 +69,7 @@
                 <div class="ContenedorBotonesAP">
                     <input type="submit" class="guardarb" value="Guardar" />
                     <button type=button><a class="link" href="./foro.jsp">Cancelar</a></button>
-                    <button type="button" class="cerrar"><a class="link cerrar" href="./index.jsp">Cerrar sesion</a></button>
+                    <button type="button" class="cerrar"><a class="link cerrar" href="./sesion_cerrada.jsp">Cerrar sesion</a></button>
                 </div>
 
             </form>
