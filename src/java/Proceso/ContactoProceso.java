@@ -28,37 +28,9 @@ public class ContactoProceso {
             /*  esto necesita estad dentro de un try catch es para buscar ese archivo, para conectarse a una base de datos MySQL   */
             Class.forName("org.mariadb.jdbc.Driver");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            
-=======
->>>>>>> 1d1f63c4fbb45e68ca6aaaebc5e540ded45afad1
-
-this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
-=======
->>>>>>> leo
-
-
-            /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
-
-<<<<<<< HEAD
-            
-=======
 
 this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 
-
-<<<<<<< HEAD
->>>>>>> leo
-=======
-=======
-          
-            /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
-
-            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
-         
->>>>>>> kirsten
->>>>>>> 1d1f63c4fbb45e68ca6aaaebc5e540ded45afad1
             /*  para tirar el error generico de que no se conecto a la base de datos   */
         }catch(SQLException e){
             System.out.println("Error al conectar: " + e);
