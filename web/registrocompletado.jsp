@@ -19,10 +19,7 @@
 	<title>Rotten Carrots</title>
 </head>
 <a href="../../web/registrocompletado.jsp"></a>
-<body>
-  
-	<div class="containerRegistro">
-           <%
+<%
             String nombre_usuario = request.getParameter("usuario");
             String email = request.getParameter("email");
             String contrasena = request.getParameter("contra");
@@ -39,10 +36,52 @@
             
             usuariop.GuardarUsuario(usuario);
         %>
-
-                <h4 class="sub">MENSAJE ENVIADO CORRECTAMENTE</h4>
-                <a href="./index.jsp"><button class="Registro" >Aceptar</button></a>
-		</form>
+<body>
+  
+       
+<main class="containerRegistro">
+    <div class="hola">
+		<h2>Rotten Carrots</h2>
+		<form class="registrar" method="POST" action="registrocompletado.jsp">
+            <div class="forma">
+                <input type="Usuario" name= "usuario" id="usuario" class="textbox" placeholder="Usuario">
+                <br>
+                <input type="email" name ="email" id= "email" class="textbox" placeholder="Correo Electronico">
+			    <br>
             </div>
+            <div class="forma2">
+                <input type="password" name="contra" id="password" class="textbox" placeholder="Contraseña">
+                <br>
+                <input type="password" name="confirmarContra" id="confirmar" class="textbox" placeholder="Confirmar Contraseña">
+                <br>
+            </div>
+            <div class="checkboxes">
+                <input type="checkbox" name="terminos" id="terminos" class="terminos" placeholder="Terminos" disabled>
+                <label for="">Acepto los términos y condiciones</label>
+                <br>
+                <br>
+                <input type="checkbox" name="RecibirCorreo" id="terminos" class="terminos2" placeholder="RecibirCorreo">
+                <label for="">Deseo recibir correos acerca de los nuevos spoilers</label>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+            </div>
+            <button class="Registro" disabled>Registrarse</button>
+            <br>
+            <p>¿Ya tienes una cuenta? <a href="index.jsp">Inicia sesión aquí</a></p>
+            </form>
+            </div>
+
+
+		<div class="modal">
+                <h4 class="sub">REGISTRO COMPLETADO CORRECTAMENTE</h4>
+                <a href="./index.jsp"><button class="guardar" >Aceptar</button></a>
+                
+
+        </div>
+            </main>
 </body>
 </html>
