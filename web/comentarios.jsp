@@ -25,24 +25,26 @@
 <body>
     <%@include file="templates/header.jsp" %>
     <%
+    int id_spoiler = Integer.parseInt(request.getParameter("id_spoiler")); 
      Class.forName("org.mariadb.jdbc.Driver");
-<<<<<<< HEAD
 <<<<<<< HEAD
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
      
     Statement stmt = conn.createStatement();
-=======
-     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
-=======
-
-     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
->>>>>>> 94e30ca4a28aa15acdd087930d2e6c1a7abcc60c
-   Statement stmt = conn.createStatement();
-
     ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, cuerpo_comentario, carrots_comentario, genero "
                                         + "FROM spoiler sp, comentario c, usuario us, pelicula p "
                                         + "WHERE sp.id_spoiler = c.id_spoiler AND us.id_usuario = c.id_usuario AND sp.id_pelicula = p.id_pelicula; ");
+=======
+ 
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+
+     Statement stmt = conn.createStatement();
+     ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, cuerpo_comentario, carrots_comentario,spoiler.id_spoiler,comentario.id_spoiler, num_comentario "
+             + "FROM comentario, usuario, spoiler  WHERE spoiler.id_spoiler="+id_spoiler+" AND comentario.id_spoiler="+id_spoiler+" AND usuario.id_usuario=comentario.id_usuario;");
+
+>>>>>>> b63a6f8b6866cbd13062e709cadc5cf3e8a6de9c
     
+
     %>
     <div class="container my-5">
     
@@ -65,7 +67,7 @@
                         String usuarios = rs.getString("nombre_usuario");
                         String cuerpo_comment = rs.getString("cuerpo_comentario");
                         String zanahoria = rs.getString("carrots_comentario");
-                        String genero = rs.getString("genero");
+                        
                         
                         
                     
@@ -77,9 +79,6 @@
                         
                         <div class="comment-header">
                             <h4 class="comment-user"><%=usuarios%></h4>
-                            <div class="comment-tag">
-                                <h4 class="tag"><%=genero%></h4>
-                            </div>
                         </div>
 
                         <div class="comment-mensaje">

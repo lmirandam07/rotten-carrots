@@ -18,11 +18,11 @@
 <body>
 	<div class="containerRegistro">
 		<h2>Rotten Carrots</h2>
-		<form class="registrar" action="foro.jsp">
+		<form class="registrar" method="POST" action="registrocompletado.jsp">
             <div class="forma">
                 <input type="Usuario" name= "usuario" id="usuario" class="textbox" placeholder="Usuario">
                 <br>
-                <input type="email" name ="email" id= "correo"class="textbox" placeholder="Correo Electronico">
+                <input type="email" name ="email" id= "email" class="textbox" placeholder="Correo Electronico">
 			    <br>
             </div>
             <div class="forma2">
