@@ -998,9 +998,12 @@ exists or setup the property manually. For example like this:
     <target depends="init,compile,compile-jsps,-pre-dist,-do-dist-with-manifest,-do-dist-without-manifest" name="do-dist"/>
     <target depends="init" if="dist.ear.dir" name="library-inclusion-in-manifest">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-4}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 456e70a47998c6f68792a55e4ccab83272b7d18c
         <copyfiles files="${file.reference.mariadb-java-client-2.6.1.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
 =======
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-7}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
@@ -1011,9 +1014,12 @@ exists or setup the property manually. For example like this:
     </target>
     <target depends="init" name="library-inclusion-in-archive" unless="dist.ear.dir">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-4}" todir="${build.web.dir}/WEB-INF/lib"/>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 456e70a47998c6f68792a55e4ccab83272b7d18c
         <copyfiles files="${file.reference.mariadb-java-client-2.6.1.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
 =======
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-7}" todir="${build.web.dir}/WEB-INF/lib"/>

@@ -31,8 +31,8 @@
     color: var(--main-black);
     text-decoration: none;
     margin: 0 auto;
+    display: inline-block;
 }
-
 
 .ContenedorBotonesAP .cerrar{
     color: var(--main-orange);
