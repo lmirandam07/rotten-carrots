@@ -25,16 +25,14 @@
 <body>
     <%@include file="templates/header.jsp" %>
     <%
-            int id_spoiler = Integer.parseInt(request.getParameter("id_spoiler")); 
+    int id_spoiler = Integer.parseInt(request.getParameter("id_spoiler")); 
      Class.forName("org.mariadb.jdbc.Driver");
 
  
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 
-    ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, cuerpo_comentario, carrots_comentario, genero "
-                                        + "FROM spoiler sp, comentario c, usuario us, pelicula p "
-                                        + "WHERE sp.id_spoiler = c.id_spoiler AND  us.id_usuario = c.id_usuario AND sp.id_pelicula = p.id_pelicula; ");
-    
+    ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, cuerpo_comentario, carrots_comentario, spoiler.id_spoiler, num_comentario FROM comentario, usuario, spoiler WHERE spoiler.id_spoiler="+id_spoiler+" AND usuario.id_usuario=comentario.id_usuario;");
+
     %>
     <div class="container my-5">
     
@@ -57,7 +55,7 @@
                         String usuarios = rs.getString("nombre_usuario");
                         String cuerpo_comment = rs.getString("cuerpo_comentario");
                         String zanahoria = rs.getString("carrots_comentario");
-                        String genero = rs.getString("genero");
+                        
                         
                         
                     
@@ -69,9 +67,6 @@
                         
                         <div class="comment-header">
                             <h4 class="comment-user"><%=usuarios%></h4>
-                            <div class="comment-tag">
-                                <h4 class="tag"><%=genero%></h4>
-                            </div>
                         </div>
 
                         <div class="comment-mensaje">
