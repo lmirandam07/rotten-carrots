@@ -38,7 +38,7 @@ public class UsuarioProceso {
             Statement smtm = conn.createStatement();
             String query = "INSERT INTO usuario(nombre_usuario, email, contrasena, perfil_usuario)";
                    query += "VALUES('"+usuario.getNombre_usuario()+"','"+usuario.getEmail()+"',"
-                           + "'"+usuario.getContrasena()+"', '"+usuario.getPerfil_usuario()+"'";
+                           + "'"+usuario.getContrasena()+"', '"+usuario.getPerfil_usuario()+"');";
             resultado = smtm.executeUpdate(query);
             
             return resultado;
