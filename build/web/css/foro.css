@@ -31,10 +31,6 @@
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #333 var(--main-grey);
-<<<<<<< HEAD
-
-=======
->>>>>>> 94e30ca4a28aa15acdd087930d2e6c1a7abcc60c
 }
 
 .posts-container .post {
@@ -176,6 +172,9 @@
 
 
 .trend-container {
+    position: absolute;
+    top: 1%;
+    left: 70%;
     width: 30%;
     height: 100%;
     display: flex;

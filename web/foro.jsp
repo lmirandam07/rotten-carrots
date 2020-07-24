@@ -95,7 +95,7 @@
                     <h2>Top Tendencias</h2>
                     <%
                         Statement stmt2 = conn.createStatement();
-                        ResultSet rs2 = stmt2.executeQuery("SELECT nombre_peli, SUM(carrots) AS total_carrots FROM pelicula p, spoiler sp WHERE p.id_pelicula = sp.id_pelicula GROUP BY nombre_peli ORDER BY SUM(carrots) DESC LIMIT 4;");                       
+                        ResultSet rs2 = stmt2.executeQuery("SELECT nombre_peli, SUM(carrots) AS total_carrots FROM pelicula p, spoiler sp WHERE p.id_pelicula = sp.id_pelicula GROUP BY nombre_peli ORDER BY SUM(carrots) DESC LIMIT 3;");                       
                     %>    
                     <ul>
                         <%
@@ -105,7 +105,7 @@
                             
                         %>                                                   
                             <li class="trend-movie">
-                                <h3><%= top_pelicula %></h3>
+                                <p><%= top_pelicula %></p>
                                 <small>
                                     <%= total_carrots %> zanahorias
                                 </small>
