@@ -4,15 +4,9 @@
     Author     : luyim
 --%>
 
-<<<<<<< HEAD
-<%@page import="java.sql.DriverManager"%>
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.Statement"%>
-=======
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.DriverManager"%>
->>>>>>> 88c7a13d32e0481363969a307b8ff9c6f4250478
 <%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -31,26 +25,17 @@
     <%
         String textobusqueda = request.getParameter("barrabuscar");
         
-            Class.forName("org.mariadb.jdbc.Driver");
+        Class.forName("org.mariadb.jdbc.Driver");
 
-            
-            /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
-            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
-            
-            Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery( "SELECT titulo_spoiler, descripcion_spoiler FROM spoiler, pelicula WHERE spoiler.id_pelicula = pelicula.id_pelicula AND pelicula.nombre_peli = '"+textobusqueda+"';");
+
+        /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
+        Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+
+        Statement stmt = conn.createStatement();
+        ResultSet result = stmt.executeQuery( "SELECT titulo_spoiler, descripcion_spoiler FROM spoiler, pelicula WHERE spoiler.id_pelicula = pelicula.id_pelicula AND pelicula.nombre_peli = '"+textobusqueda+"';");
     %>
     
     <main class="main-container">
-        <%
-            String busqueda = request.getParameter("busqueda");  
-            Class.forName("org.mariadb.jdbc.Driver");
-
-            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");    
-
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT sp.titulo_spoiler, sp.descripcion_spoiler FROM spoiler sp, pelicula p WHERE sp.id_pelicula = p.id_pelicula AND p.nombre_peli = ' "+busqueda+"';"); 
-        %>
         <div class="prueba">
 
 
