@@ -40,7 +40,7 @@
         <div class="eliminar">
                 <form action="elimar_spoiler.jsp">
                    <button class="btn-del"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></button>
-                   <input type="text" name="id_spoiler" placeholder="Introduzca el cod del spoiler">
+                   <input type="text" name="id_spoiler" placeholder="Introduzca el cod del spoiler que desea eliminar">
                 </form>
                 
         </div>
