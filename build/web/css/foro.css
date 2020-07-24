@@ -31,10 +31,6 @@
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #333 var(--main-grey);
-<<<<<<< HEAD
-
-=======
->>>>>>> 293fddffdaa82b5ba39f73916285fed54653baad
 }
 
 .posts-container .post {
