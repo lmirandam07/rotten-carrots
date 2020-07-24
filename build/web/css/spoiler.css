@@ -17,6 +17,7 @@
     height: 42%;
     top: 5%;
     left: 2%;
+    border: 2px solid var(--main-grey);
 }
 
 .tag{
@@ -138,7 +139,7 @@
 
 .carrots{
     position: absolute;
-    width: 20%;
+    width: 15%;
     height: auto;
     left: 2%;
     top: 90%;
@@ -159,7 +160,7 @@
 
 .comments{
     position: absolute;
-    width: 20%;
+    width: 15%;
     height: auto;
     left: 15%;
     top: 90%;
@@ -212,8 +213,8 @@
 .more{
     display: flex;
     position: absolute;
-    top: 73%;
-    left: 37%;
+    top: 75%;
+    left: 45%;
 }
 
 .more:hover{
@@ -223,4 +224,37 @@
 a {
     text-decoration: none;
     color: var(--main-orange);
+}
+
+.comments .btn-post {
+    appearance: none;
+    border: none;
+    border-radius: 5px;
+    padding: .1rem .2rem;
+    background-color: var(--main-orange);
+    cursor: pointer;
+    width: 90px; 
+    height: 25px; 
+}
+
+.carrots .btn-post {
+    appearance: none;
+    border: none;
+    width: 75px; 
+    height: 25px; 
+    border-radius: 5px;
+    padding: .1rem .2rem;
+    background-color: var(--main-orange);
+    cursor: pointer;
+}
+
+.more .btn-post {
+    appearance: none;
+    border: none;
+    width: 150px; 
+    height: 25px; 
+    border-radius: 5px;
+    padding: .1rem .2rem;
+    background-color: var(--main-orange);
+    cursor: pointer;
 }

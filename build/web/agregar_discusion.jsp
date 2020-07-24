@@ -25,32 +25,38 @@
 
 
         <div class="discusion">
+            <form method="POST" action="./guardar_spoiler.jsp">
+            <br><br>
             <h3 class="name">Nombre del Tema</h3>
             <br>
-            <input type="name" name="tema" value="" placeholder=" " class="first" class="inputs">
-            <br>
-            <br>
-            <h3 class="name">Género: </h3>
-            <select class="drop">
+            <input type="text" name="tema" id="tema" value="" placeholder=" " class="first" class="inputs">
+            <br><br><br>
+            <h3 class="name">Película: </h3>
+            <select class="drop" name="pelicula">
                 <%
                     Class.forName("org.mariadb.jdbc.Driver");
-                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+
+
+                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery("SELECT * FROM pelicula");
+                    int contador = 0;
                     while(rs.next()){
-                        
-                    String genero2 = rs.getString("genero");
+                    contador = contador + 1;
+                    String pelicula = rs.getString("nombre_peli");
                 %>
-                <option name="<%=genero2%>"><%=genero2%></option>
+                <option value="<%=contador%>"><%=pelicula%></option>
                 <%}%>
             </select>
-            <br>
-            <br>
+            <br><br><br>
             <h3 class="disc">Discusión</h3>
-            <textarea name="name" rows="8" cols="80"></textarea>
+            <textarea name="cuerpo" id="cuerpo" rows="8" cols="80"></textarea>
+
             <br>
             <a href="./admin.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
-            <a href="./foro.jsp"><button type="button" name="button" class="publicar">Publicar</button></a>
+            <input type="submit" name="button" class="publicar" value="Publicar">
+            </form>
 
         </div>
 

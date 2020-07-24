@@ -1,3 +1,43 @@
+.ocultar{
+    opacity: 25%;
+}
+.modal{
+    position: absolute;
+    text-align: center;
+    padding: 2rem;
+    top: 25%;
+    left:30%;
+    width: 40%;
+    height: 35%;
+    background-color: #000000;
+    border-style: solid; 
+    z-index: 1;
+}
+.modal h4{
+    margin-top: 5%;
+}
+.modal .guardar{
+    appearance:none;
+    border-style: none;
+    position: relative;
+    width: 30%;
+    margin-top: 10%;
+    height: 25%;
+    background-color:  var(--main-orange);
+}
+.discusiones::-webkit-scrollbar{
+   width: 10px;
+   height: 10px;
+   background: #333;
+}
+.discusiones::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+.discusiones::-webkit-scrollbar-thumb{
+     background: var(--main-orange);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
 .discusiones{
     display: flex;
     flex-direction: column;
@@ -9,12 +49,14 @@
     overflow-x: hidden;
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: #333 var(--main-gvarrey);
+    scrollbar-color: #333 var(--main-orange);
+    scrollbar-color: #333 var(--main-grey);
     background: linear-gradient(180deg, #7A7A7A 0%, rgba(126, 126, 126, 0) 100%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 
 }
+
 .discusiones .encabezados{
     margin-left: 5%;
     width: 70%;
@@ -60,7 +102,7 @@ a .plus {
     height: 50%;
 }
 
-.primtabla {
+.tabla {
   position: relative;
   left: 2%;
   border-color: #FF9F1C;
@@ -69,40 +111,6 @@ a .plus {
   border-radius: 10%;
   border-collapse: collapse;
   margin-bottom: 1rem;
-}
-
-.segtabla {
-  position: relative;
-  left: 2%;
-  border-color: #FF9F1C;
-  border-width: thick;
-  border: 2px;
-  border-radius: 10%;
-  border-collapse: collapse;
-  margin-bottom: 1rem;
-
-}
-
-.tertabla {
-  position: relative;
-  left: 2%;
-  border-color: #FF9F1C;
-  border-width: thick;
-  border: 2px;
-  border-radius: 10%;
-  border-collapse: collapse;
-  margin-bottom: 1rem;
-}
-
-.cuartabla {
-  position: relative;
-  left: 2%;
-  border-color: #FF9F1C;
-  border-width: thick;
-  border: 2px;
-  border-radius: 10%;
-  border-collapse: collapse;
-
 }
 
 td {

@@ -23,7 +23,9 @@ public class ComentarioProceso {
    public ComentarioProceso(){
         try{
             Class.forName("org.mariadb.jdbc.Driver");
+
             this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+
         }catch(SQLException e){
              System.out.println("Error al conectar: " + e);
         }
@@ -38,8 +40,8 @@ public class ComentarioProceso {
         int resultado = 0;
         try{
             Statement smtm = conn.createStatement();
-            String query = "INSERT INTO comentarios(cuerpo_comentario, carrots_comentario)";
-                   query += "VALUES('"+comentario.getCuerpo_comentario()+"','"+0+"')";
+            String query = "INSERT INTO comentario(cuerpo_comentario, id_usuario, id_spoiler )";
+                   query += "VALUES('"+comentario.getCuerpo_comentario()+"','"+comentario.getId_usuario()+"','"+comentario.getId_spoiler()+"')";
            
             resultado = smtm.executeUpdate(query);
             

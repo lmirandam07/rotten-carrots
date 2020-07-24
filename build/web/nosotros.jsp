@@ -4,8 +4,6 @@
     Author     : luyim
 --%>
 
-<%@page import="Entidad.Contacto"%>
-<%@page import="Proceso.ContactoProceso"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,21 +16,6 @@
 </head>
 <body>
     <%@include file="templates/header.jsp" %>
-        <%
-            int usuario = 1;
-            String asunto = request.getParameter("i_asunto");
-            String consulta = request.getParameter("i_consulta");
-            
-            Contacto contacto = new Contacto();
-
-            contacto.setId_usuario(usuario);
-            contacto.setAsunto(asunto);
-            contacto.setConsulta(consulta);
-    
-            ContactoProceso contactop = new ContactoProceso();
-            
-            contactop.GuardarContacto(contacto);
-        %>
     <main class="main-container">
         <div class="nosotros">
 

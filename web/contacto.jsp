@@ -22,17 +22,17 @@
         <h2>Contacto</h2>
         
         <div class="contacto">
-            <form method="POST" action="nosotros.jsp">
+            <form method="POST" action="contactoenviado.jsp">
                 <br>
                 <h3 class="asunto">Asunto</h3>
                 <br>
-                <input type="name" name="i_asunto" value="" placeholder="   Asunto" class="i_asunto">
+                <input type="name" name="i_asunto" required value="" placeholder="   Asunto" class="i_asunto">
                 <br><br>
                 <h3 class="consulta">Consulta</h3>
-                <textarea name="i_consulta" rows="8" cols="80" placeholder="
+                <textarea required name="i_consulta" rows="8" cols="80" placeholder="
 
 
-                               Escriba aquí su consulta"></textarea>
+                          Escriba aquí su consulta"></textarea>
                 <br>
                 <a href="./contacto.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
                 <input type="submit" class="enviar" value="Enviar" />

@@ -1,5 +1,30 @@
-
-
+.mensaje{
+    opacity: 25%;
+}
+.modal{
+    position: absolute;
+    text-align: center;
+    padding: 2rem;
+    top: 25%;
+    left:30%;
+    width: 40%;
+    height: 35%;
+    background-color: #000000;
+    border-style: solid; 
+    z-index: 1;
+}
+.modal h4{
+    margin-top: 5%;
+}
+.modal .guardar{
+    appearance:none;
+    border-style: none;
+    position: relative;
+    width: 30%;
+    margin-top: 10%;
+    height: 25%;
+    background-color:  var(--main-orange);
+}
 h2 {
   text-align: center;
   padding-top: 0.7%;
@@ -12,6 +37,7 @@ font-family: 'Istok Web', sans-serif;
 
 h3{
   font-family: 'Istok Web', sans-serif;
+  color: #ffffff;
 }
 button{
   font-family: 'Montserrat', sans-serif;
@@ -31,11 +57,11 @@ button{
   left: 10%;
   top: 5%;
   position: relative;
-  color: #000000;
+  display: inline;
 }
 
 .drop{
-    left: 22%;
+    left: 13%;
     top: 6%;
     position: relative;
 }
@@ -82,7 +108,6 @@ textarea{
 .disc{
   left: 10%;
   position: relative;
-  color: #000000;
 }
 .cancelar{
   background-color: #FF9F1C;
