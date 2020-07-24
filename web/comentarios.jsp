@@ -27,19 +27,9 @@
     <%
     int id_spoiler = Integer.parseInt(request.getParameter("id_spoiler")); 
      Class.forName("org.mariadb.jdbc.Driver");
-<<<<<<< HEAD
-<<<<<<< HEAD
+
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
 
-=======
-<<<<<<< HEAD
->>>>>>> 81dbe858909040e7185b193220638bc053951508
-=======
->>>>>>> 0ba939720393c2f7ff982cd1b05ed3b6311e193d
-
-
-
-     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 
   
      Statement stmt = conn.createStatement();

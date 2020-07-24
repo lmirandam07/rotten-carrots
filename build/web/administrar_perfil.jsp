@@ -49,7 +49,7 @@
 
                 <div class="cont2">
                     <h3>Contraseña</h3>
-                    <input type="text" name ="contrasena" id= "contrase?a"class="textbox" value="<%=contrasena%>" placeholder="<%=contrasena%>">
+                    <input type="text" name ="contrasena" id= "contrasena"class="textbox" value="<%=contrasena%>" placeholder="<%=contrasena%>">
                     <button name="lapiz" type="button" class="btn-post" ><i class="fas fa-pencil-alt fa-2x"></i></button>
                 </div>
 
