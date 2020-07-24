@@ -213,8 +213,8 @@
 .more{
     display: flex;
     position: absolute;
-    top: 73%;
-    left: 37%;
+    top: 75%;
+    left: 45%;
 }
 
 .more:hover{
@@ -241,6 +241,17 @@ a {
     appearance: none;
     border: none;
     width: 75px; 
+    height: 25px; 
+    border-radius: 5px;
+    padding: .1rem .2rem;
+    background-color: var(--main-orange);
+    cursor: pointer;
+}
+
+.more .btn-post {
+    appearance: none;
+    border: none;
+    width: 150px; 
     height: 25px; 
     border-radius: 5px;
     padding: .1rem .2rem;
