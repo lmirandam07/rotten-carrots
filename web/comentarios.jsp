@@ -31,7 +31,7 @@
      
     Statement stmt = conn.createStatement();
 =======
-     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
    Statement stmt = conn.createStatement();
 >>>>>>> 293fddffdaa82b5ba39f73916285fed54653baad
     ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, cuerpo_comentario, carrots_comentario, genero "
