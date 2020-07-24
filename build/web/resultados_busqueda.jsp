@@ -32,7 +32,7 @@
             Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
             
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery( "SELECT titulo_spoiler, descripcion_spoiler FROM spoiler, pelicula WHERE spoiler.id_pelicula = pelicula.id_pelicula AND pelicula.nombre_peli = '"+textobusqueda+"';");
+            ResultSet result = stmt.executeQuery( "SELECT id_spoiler, titulo_spoiler, descripcion_spoiler FROM spoiler, pelicula WHERE spoiler.id_pelicula = pelicula.id_pelicula AND pelicula.nombre_peli = '"+textobusqueda+"';");
     %>
     
     <main class="main-container">
@@ -48,24 +48,24 @@
                     </table>
                      
                     <%
-                        while(result.next()){
+                       while(result.next()){
                        String titulo = result.getString("titulo_spoiler");
                        String descripcion = result.getString("descripcion_spoiler");
-                   
+                       int link = result.getInt("id_spoiler");
                     %>
                      
                     
-                    
-                    <table class="primtabla">
-                           <tbody>
-                                   <tr>
-                                           <td class="td1"><div class="act1"> <p><%=titulo%></p> </div></td>
-                                           <td class="td2"><div class="act2"><p><%=descripcion%>.</p></div></td>
-                                           <td class="td4"><button class="btn-del"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i></button></td>
-                                   </tr>
-                           </tbody>
-                    </table>
-                    
+                    <form action="spoiler.jsp" method="POST">
+                        <table class="primtabla">
+                               <tbody>
+                                       <tr>
+                                               <td class="td1"><div class="act1"> <p><%=titulo%></p> </div></td>
+                                               <td class="td2"><div class="act2"><p><%=descripcion%>.</p></div></td>
+                                               <td class="td4"><button class="btn-del"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i></button></td>
+                                       </tr>
+                               </tbody>
+                        </table>
+                    </form>
                     <%}%>
 
 
