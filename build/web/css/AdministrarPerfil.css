@@ -129,6 +129,10 @@
     padding-bottom: 1%;
 }
 
+.guardarb:hover{
+    cursor: pointer;
+}
+
 .fondo{
     opacity: 0.2;
 }
