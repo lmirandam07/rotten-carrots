@@ -31,23 +31,32 @@
 
             Statement stmt = conn.createStatement();
 
-            ResultSet rs = stmt.executeQuery("Select titulo_spoiler,descripcion_spoiler from spoiler where id_usuario = "+usuario_prueba+";");
+            ResultSet rs = stmt.executeQuery("Select id_spoiler,titulo_spoiler,descripcion_spoiler from spoiler where id_usuario = "+usuario_prueba+";");
     
         %>
         <main class="main-container">
         <div class="ocultar">
-            <div class="prueba">
-
-                <div class="crear">
+        <div class="eliminar">
+                <form action="elimar_spoiler.jsp">
+                   <button class="btn-del"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></button>
+                   <input type="text" name="id_spoiler" placeholder="Introduzca el cod del spoiler">
+                </form>
+                
+        </div>
+        
+        <div class="crear">
                    <h5 class="create">Crear Discusion</h5>
                    <a class="enlace" href="./agregar_discusion.jsp"><img class="plus" src="./img/plus.png" alt="plus"></a>
-                </div>
+        </div>
+        <div class="prueba">
+
 
                      <div class="discusiones">
 
 
                         <table class="encabezados">
                             <tr>
+                               <td><h4>Cod</h4></td>
                                <td><h4>Nombre</h4></td>
                                <td><h4>Discusión</h4></td>
                             </tr>
@@ -55,6 +64,7 @@
                     <%
                        
                         while(rs.next()) {
+                            String id = rs.getString("id_spoiler");
                             String titulo = rs.getString("titulo_spoiler");
                             String descripcion = rs.getString("descripcion_spoiler");
                        
@@ -63,9 +73,9 @@
                         <table class="tabla">
                                <tbody>
                                        <tr>
-                                               <td class="td1"><div class="act1"> <p><%=titulo%></p> </div></td>
-                                               <td class="td2"><div class="act2"><p><%=descripcion%></p></div></td>
-                                               <td class="td4"><button class="btn-del"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button></td>
+                                            <td class="td1"><div class="act1"><p><%=id%></p></div></td>
+                                            <td class="td1"><div class="act2"> <p><%=titulo%></p> </div></td>
+                                            <td class="td2"><div class="act3"><p><%=descripcion%></p></div></td>
                                        </tr>
                                </tbody>
                         </table>
@@ -76,9 +86,10 @@
            </div>
             <%
                 int usuario_eliminar = 3;
-                ResultSet ts = stmt.executeQuery("Select id_spoiler from spoiler where id_usuario = "+usuario_eliminar+";");
+                String id = request.getParameter("id_spoiler");
+                int id_spoiler = Integer.parseInt(id);
                 Spoiler spoiler = new Spoiler();
-                spoiler.setId_usuario(usuario_eliminar);
+                spoiler.setId_spoiler(id_spoiler);
                 
 
             %>

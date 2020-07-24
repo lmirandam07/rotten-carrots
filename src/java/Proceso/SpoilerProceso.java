@@ -81,7 +81,7 @@ public class SpoilerProceso {
             Statement smtm = conn.createStatement();
             
             /* Se define el query que se va a ejecutar en la base de datos */
-            String query = "Delete From spoiler where id_usuario = "+spoiler.getId_usuario()+";";
+            String query = "Delete From spoiler where id_spoiler = "+spoiler.getId_spoiler()+";";
                     /* cadena concatenada para poner los VALUES que se van a insertar */
                   
             /* Se ejecuta el query con la variable que se habia declarado. entre parentesis ira el query que definimos aneriomente */

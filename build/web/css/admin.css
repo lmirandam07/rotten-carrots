@@ -25,6 +25,10 @@
     height: 25%;
     background-color:  var(--main-orange);
 }
+.modal .guardar:hover{
+    cursor: pointer;
+   transform: scale(1.1);
+}
 .discusiones::-webkit-scrollbar{
    width: 10px;
    height: 10px;
@@ -44,7 +48,8 @@
     align-content: space-between;
     flex-wrap: nowrap;
     width: 90%;
-    margin-top: 3rem;
+    padding-right: 5%;
+    margin-top: 5%;
     margin-left: 4rem;
     overflow-x: hidden;
     overflow-y: auto;
@@ -131,11 +136,7 @@ td {
   width: 25em;
 }
 
-.td4 {
-  width: 10%;
-}
-
-.act1 {
+.act1{
   height: 100%;
   margin: 5px 0 0;
   border: 2px solid;
@@ -143,11 +144,17 @@ td {
   border-bottom-left-radius: 15px;
   padding-top: 5%;
 }
+.act2 {
+  height: 100%;
+  margin: 5px 0 0;
+  border: 2px solid;
+  padding-top: 5%;
+}
 p{
   color: #ffffff;
 }
 
-.act2 {
+.act3 {
   padding-left: 2%;
   padding-right: 2%;
   padding-top: 2%;
@@ -158,21 +165,35 @@ p{
   border-bottom-right-radius: 15px;
 }
 
-.act4 {
-  height: 100%;
-  margin: 5px 0 0;
-  border: 2px solid;
-  border-top-left-radius: 15%;
-  border-bottom-left-radius: 15%;
-  padding-top: 2%;
-}
 
+.eliminar{
+    position: absolute;
+    display: inline;
+    left: 8%;
+    top: 2%;
+    width: 35%;
+
+    
+}
+.eliminar input{
+    position: relative;
+    top: 0%;
+    padding: 1%;
+    width: 70%;
+    border-radius: 5px;
+    border-style: none;
+
+    
+}
 .btn-del{
+    padding: 2%;
+    position: relative;
     border-style: none;
     background-color:var(--main-orange);
     border-radius: 5px;
-    width: 45%;
-    height: 50%;
+    width: 15%;
+    height: 40%;
+    vertical-align: middle;
 }
 .btn-del:hover{
     transform: scale(1.1);
