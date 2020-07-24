@@ -32,7 +32,7 @@
             <input type="text" name="tema" id="tema" value="" placeholder=" " class="first" class="inputs">
             <br><br><br>
             <h3 class="name">Película: </h3>
-            <select class="drop">
+            <select class="drop" name="pelicula">
                 <%
                     Class.forName("org.mariadb.jdbc.Driver");
 
@@ -46,7 +46,7 @@
                     contador = contador + 1;
                     String pelicula = rs.getString("nombre_peli");
                 %>
-                <option name="pelicula" value="<%=contador%>"><%=pelicula%></option>
+                <option value="<%=contador%>"><%=pelicula%></option>
                 <%}%>
             </select>
             <br><br><br>

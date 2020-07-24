@@ -30,6 +30,7 @@
     flex-flow: wrap;
     overflow-y: auto;
     scrollbar-width: thin;
+<<<<<<< HEAD
 
     scrollbar-color: #333 var(--main-grey);
 }
@@ -40,6 +41,11 @@
 }
 
 
+=======
+
+}
+
+>>>>>>> leo
 .posts-container .post {
     position: relative;
     width: 80%;
