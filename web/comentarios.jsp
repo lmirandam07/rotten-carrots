@@ -35,7 +35,7 @@
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
 =======
 
-     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
 >>>>>>> 94e30ca4a28aa15acdd087930d2e6c1a7abcc60c
    Statement stmt = conn.createStatement();
 

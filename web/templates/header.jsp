@@ -5,17 +5,15 @@
 --%>
 <header class="wrapper">
         <nav class="navbar">
-            <div class="searchbar-container">
+            <form class="searchbar-container" action="resultados_busqueda.jsp" method="POST">
                 <div class="searchbar">
                     <input type="text" class="search-input" placeholder="Ingrese la pelicula a buscar" id="search">
-                    <a class="search-btn" href="./resultados_busqueda.jsp" id="search-btn">
-                        <i class="fas fa-search"></i>
-                    </a>
+                     <button class="search-btn" name="id_spoiler" type="submit"><small class="comments"><i class="fas fa-search"></i></small></button> 
                 </div>
-            </div>
+            </form>
 
             <div class="profile-container">
-                <div class="profile">
+                <div class="profile">                    
                     <a href="./administrar_perfil.jsp" class="user-img"><i class="far fa-user fa-2x"></i> </a>
                     <small class="user-name" id="user-name">Usuario</small>
                 </div>
