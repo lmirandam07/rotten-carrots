@@ -46,9 +46,10 @@
             
             
             
-                
-            <input type="submit" name="id_spoiler" class="publicar" value="<%=id_spoiler2%>" placeholder="Publicar"></input>
-            <a href="./spoiler.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
+            <input type="hidden" name="id_spoiler" value="<%=id_spoiler2%>"</input>
+            
+            <button href="./comentarios.jsp" type="submit" type="button" class="publicar" disable>Publicar</button>
+            <a href="./foro.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
             
             </form>
             
