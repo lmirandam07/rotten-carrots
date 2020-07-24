@@ -4,7 +4,12 @@
     Author     : luyim
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="Entidad.Usuario"%>
+<%@page import="Proceso.UsuarioProceso"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.DriverManager"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,45 +24,55 @@
     <%@include file="templates/header.jsp" %>
     <main class="main-container">
 
+        <%
+                    int v_usuario = 1;
+                    
+                    Class.forName("org.mariadb.jdbc.Driver");
 
-        <div class= cajaPadreAP>
+                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+                    Statement stmt = con.createStatement();
+                    ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, email, contrasena, perfil_usuario FROM usuario WHERE id_usuario = "+v_usuario+";");
+                    while(rs.next()){
+                        String usuario = rs.getString("nombre_usuario");
+                        String contrasena = rs.getString("contrasena");
+                        String email = rs.getString("email");
+                        String foto = rs.getString("perfil_usuario");
+        %>
+        <h2 class="titulo">Administrar Perfil</h2>
 
-            <h2>Administrar Perfil</h2>
-
-            <div class= ContenedorImagenAP>
-                <br>
-
-                <img src="https://icongr.am/fontawesome/user-circle.svg?size=250&color=FF9F1c" alt="Usuario" class="centrar">
-                <a href="#">Cambiar Foto de Perfil</a>
-            </div>
-
-            <div class= ContenedorCamposAP>
-                <br>
-
-
-                <div class="forma">
-                    <input type="Usuario" name= "usuario" id="usuario" class="textbox" placeholder="Usuario">
-                    <img src="https://icongr.am/clarity/edit.svg?size=20&color=FF9F1C" alt="lapicito">
-                    <br>
-
-                    <input type="contraseña" name ="contraseña" id= "contraseña"class="textbox" placeholder="Contraseña">
-                    <img src="https://icongr.am/clarity/edit.svg?size=20&color=FF9F1C" alt="lapicito">
-                    <br>
-
-                    <input type="email" name ="email" id= "correo"class="textbox" placeholder="Correo Electrónico">
-                    <img src="https://icongr.am/clarity/edit.svg?size=20&color=FF9F1C" alt="lapicito">
-                    <br>
+            <form class= "cajaPadreAP" method="POST" action="./perfilactualizado.jsp" >
+                <div class="cont1">
+                    <h3>Usuario</h3>
+                    <input type="text" name= "usuario" id="usuario" class="textbox" value="<%=usuario%>" placeholder="<%=usuario%>">
+                    <button name="lapiz" type="button" class="btn-post" ><i class="fas fa-pencil-alt fa-2x"></i></button>
                 </div>
-            </div>
 
-            <div class="ContenedorBotonesAP">
-                <button><a class="link" href="./foro.jsp">Guardar</a></button>
-                <button><a class="link" href="./foro.jsp">Cancelar</a></button>
-                <button class="cerrar"><a class="link cerrar" href="./index.jsp">Cerrar sesión</a></button>
-            </div>
+                <div class="cont2">
+                    <h3>Contrase�a</h3>
+                    <input type="text" name ="contrasena" id= "contrase�a"class="textbox" value="<%=contrasena%>" placeholder="<%=contrasena%>">
+                    <button name="lapiz" type="button" class="btn-post" ><i class="fas fa-pencil-alt fa-2x"></i></button>
+                </div>
 
-        </div>
+                <div class="cont3">
+                    <h3>Correo electr�nico</h3>
+                    <input type="email" name ="email" id= "correo"class="textbox" value="<%=email%>" placeholder="<%=email%>">
+                    <button name="lapiz" type="button" class="btn-post" ><i class="fas fa-pencil-alt fa-2x"></i></button>
+                </div>
 
+                <div class="cont4">
+                    <h3>Url de foto de perfil</h3>
+                    <input type="url" name ="url" id= "url"class="textbox" value="<%=foto%>" placeholder="<%=foto%>">
+                    <button name="lapiz" type="button" class="btn-post" ><i class="fas fa-pencil-alt fa-2x"></i></button>
+                </div>
+
+                <%}%>
+                <div class="ContenedorBotonesAP">
+                    <input type="submit" class="guardar" value="Guardar" />
+                    <button><a class="link" href="./foro.jsp">Cancelar</a></button>
+                    <button class="cerrar"><a class="link cerrar" href="./index.jsp">Cerrar sesi�n</a></button>
+                </div>
+
+            </form>
     </main>
 
 </body>

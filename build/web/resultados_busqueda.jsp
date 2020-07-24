@@ -4,9 +4,15 @@
     Author     : luyim
 --%>
 
+<<<<<<< HEAD
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
+=======
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.DriverManager"%>
+>>>>>>> 88c7a13d32e0481363969a307b8ff9c6f4250478
 <%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -22,6 +28,19 @@
 </head>
 <body>
     <%@include file="templates/header.jsp" %>
+    <%
+        String textobusqueda = request.getParameter("barrabuscar");
+        
+            Class.forName("org.mariadb.jdbc.Driver");
+
+            
+            /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
+            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+            
+            Statement stmt = conn.createStatement();
+            ResultSet result = stmt.executeQuery( "SELECT titulo_spoiler, descripcion_spoiler FROM spoiler, pelicula WHERE spoiler.id_pelicula = pelicula.id_pelicula AND pelicula.nombre_peli = '"+textobusqueda+"';");
+    %>
+    
     <main class="main-container">
         <%
             String busqueda = request.getParameter("busqueda");  
@@ -42,44 +61,30 @@
                            <td><h4>Discusión</h4></td>
                         </tr>
                     </table>
+                     
+                    <%
+                        while(result.next()){
+                       String titulo = result.getString("titulo_spoiler");
+                       String descripcion = result.getString("descripcion_spoiler");
+                   
+                    %>
+                     
+                    
+                    
                     <table class="primtabla">
                            <tbody>
                                    <tr>
-                                           <td class="td1"><div class="act1"> <p>Jack Muere</p> </div></td>
-                                           <td class="td2"><div class="act2"><p>Al final de Titanic todos nos desilucionamos con el destino final que tuvo el personaje interpretado por Leonardo DiCaprio...</p></div></td>
+                                           <td class="td1"><div class="act1"> <p><%=titulo%></p> </div></td>
+                                           <td class="td2"><div class="act2"><p><%=descripcion%>.</p></div></td>
                                            <td class="td4"><button class="btn-del"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i></button></td>
                                    </tr>
                            </tbody>
                     </table>
-                    <table class="segtabla">
-                           <tbody>
-                                   <tr>
-                                           <td class="td1"><div class="act1"> <p>Bruce Willis era un fantasma</p></div></td>
-                                           <td class="td2"><div class="act2"><p>De lo mas emocionante del cine en las últimas 3 décadas fué enterarnos que al final, Bruce Willis estaba muerto...</p></div></td>
-                                           <td class="td4"><button class="btn-del"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i></button></td>
-                                   </tr>
-                           </tbody>
-                    </table>
-                    <table class="tertabla">
-                           <tbody>
-                                   <tr>
-                                           <td class="td1"><div class="act1"><p> Snape era bueno</p></div></td>
-                                           <td class="td2"><div class="act2"><p>Después de la película del principe mestizo, la verdad sorpendió que las razones de Snape para hacer lo que hizo estaban justificadas...</p> </div></td>
-                                           <td class="td4"><button class="btn-del"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i></button></td>
-                                   </tr>
-                           </tbody>
-                    </table>
+                    
+                    <%}%>
 
 
-                    <table class="cuartabla">
-                           <tbody>
-                                   <tr>
-                                           <td class="td1"><div class="act1"><p>Tyler Durden era una personalidad alterna</p></div></td>
-                                           <td class="td2"><div class="act2"><p>Muy pocos se dieron cuenta de los mensajes que nos daban alrededor de la película para descubrir la verdad...</p> </div></td>
-                                           <td class="td4"><button class="btn-del"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i></button></td>
-                                   </tr>
-                           </tbody>
-                    </table>
+
                 </div>
         </div>
     </main>

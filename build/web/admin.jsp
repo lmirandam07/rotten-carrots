@@ -32,41 +32,52 @@
 
      Statement stmt = conn.createStatement();
 
-     ResultSet rs = stmt.executeQuery("Select titulo_spoiler,descripcion_spoiler from spoiler where id_usuario = "+usuario_prueba+";");
+     ResultSet rs = stmt.executeQuery("Select id_spoiler,titulo_spoiler,descripcion_spoiler from spoiler where id_usuario = "+usuario_prueba+";");
     
     %>
 
     <main class="main-container">
-        <div class="prueba">
-        
-            <div class="crear">
+        <div class="eliminar">
+                <form action="elimar_spoiler.jsp">
+                   <button class="btn-del"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></button>
+                   <input type="text" name="id_spoiler" placeholder="Introduzca el cod del spoiler que desea eliminar">
+                </form>
+                
+        </div>
+        <div class="crear">
                <h5 class="create">Crear Discusion</h5>
                <a class="enlace" href="./agregar_discusion.jsp"><img class="plus" src="./img/plus.png" alt="plus"></a>
-            </div>
+        </div>
+        <div class="prueba">
+            
+
 
                  <div class="discusiones">
                      
 
                     <table class="encabezados">
                         <tr>
+                            <td><h4>Cod</h4></td>
                            <td><h4>Nombre</h4></td>
                            <td><h4>Discusión</h4></td>
                         </tr>
                     </table>
                 <%
-                    int cont = 0;
+
                     while(rs.next()) {
+                        String id = rs.getString("id_spoiler");
                         String titulo = rs.getString("titulo_spoiler");
                         String descripcion = rs.getString("descripcion_spoiler");
-                        cont = cont + 1;
+
                     
                  %>
                     <table class="tabla">
                            <tbody>
                                    <tr>
-                                           <td class="td1"><div class="act1"> <p><%=titulo%></p> </div></td>
-                                           <td class="td2"><div class="act2"><p><%=descripcion%></p></div></td>
-                                           <td class="td4"><a href="elimar_spoiler.jsp"><button class="btn-del" name="eliminar" value="<%=cont%>"><i class="fa fa-trash-o fa-2x" aria-hidden="true"></i></button></a></td>
+                                       <td class="td1"><div class="act1"><p><%=id%></p></div></td>
+                                        <td class="td1"><div class="act2"> <p><%=titulo%></p> </div></td>
+                                        <td class="td2"><div class="act3"><p><%=descripcion%></p></div></td>
+
                                    </tr>
                            </tbody>
                     </table>
