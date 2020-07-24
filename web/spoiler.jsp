@@ -26,7 +26,11 @@
     int id_spoiler = Integer.parseInt(request.getParameter("id_spoiler"));  
     Class.forName("org.mariadb.jdbc.Driver");
 
+<<<<<<< HEAD
     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");    
+=======
+    Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");    
+>>>>>>> a2a1cbcacf6af6357158a7a68ca3ba0cb512440c
 
     Statement stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, foto_pelicula, genero, titulo_spoiler, descripcion_spoiler, carrots, comentarios "
@@ -89,13 +93,9 @@
         </form>
         <%}%>
 
-        <div class="more">
-            <a href="./comentarios.jsp">
-                    <h2 class="t_more">Cargar más comentarios</h2>
-            </a>
-            <i id="i_more" class="fas fa-chevron-circle-right"></i>
-            
-        </div>
+        <form class="more" action="comentarios.jsp" method="POST">
+            <button class="btn-post" name="id_spoiler" value="<%=id_spoiler%>" type="submit" class="btn-post"><i id="icono" class="fas fa-chevron-circle-right"></i> Ver comentarios</button>
+        </form>
     </main>
 
 </body>
