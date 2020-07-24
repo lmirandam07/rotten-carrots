@@ -69,6 +69,7 @@ a .plus {
   border-radius: 10%;
   border-collapse: collapse;
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 .segtabla {

@@ -31,6 +31,7 @@ public class SpoilerProceso {
 
             this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
 
+
             /*  para tirar el error generico de que no se conecto a la base de datos   */
         }catch(SQLException e){
             System.out.println("Error al conectar: " + e);

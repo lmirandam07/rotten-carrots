@@ -25,10 +25,18 @@
 <body>
     <%@include file="templates/header.jsp" %>
     <%
+<<<<<<< HEAD
     int usuario_prueba = 3;
     Class.forName("org.mariadb.jdbc.Driver");
     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
     Statement stmt = conn.createStatement();
+=======
+     int usuario_prueba = 3;
+     Class.forName("org.mariadb.jdbc.Driver");
+
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+     Statement stmt = conn.createStatement();
+>>>>>>> 456e70a47998c6f68792a55e4ccab83272b7d18c
 
      ResultSet rs = stmt.executeQuery("Select id_spoiler,titulo_spoiler,descripcion_spoiler from spoiler where id_usuario = "+usuario_prueba+";");
     
