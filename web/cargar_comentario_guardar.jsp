@@ -26,13 +26,16 @@
     <%
         Boolean guardado = (Boolean)session.getAttribute("guardado");
         int c = (Integer)session.getAttribute("ejecucion");
-        session.setAttribute("ejecucion", c + 1);
-        if(guardado){
-    %>
-    <%
+        session.setAttribute("ejecucion", c + 1);%>
+
+    <%@include file="templates/header.jsp" %>
+    <% 
+        
         int usuario=1;
-        int spoiler=2;
+        
         String cuerpo_comentario = request.getParameter("cuerpo_comentario");
+        
+        int spoiler = Integer.parseInt(request.getParameter("id_spoiler"));
         
         Comentario comentario = new Comentario();
         
@@ -40,29 +43,11 @@
         comentario.setId_usuario(usuario);
         comentario.setId_spoiler(spoiler);
         comentario.setCuerpo_comentario(cuerpo_comentario);
-        
- 
-       
+        ComentarioProceso pcomentario = new ComentarioProceso();
+        int isSaved = pcomentario.GuardarComentario(comentario);
           
        
     %>
-    
-    <%
-        
-        ComentarioProceso pcomentario = new ComentarioProceso();
-        int isSaved = pcomentario.GuardarComentario(comentario);
-        if(isSaved > 0){
-
-        }else{
-
-        }
-        
-       }
-     else{
-    %>
-
-    <%}%>
-    <%@include file="templates/header.jsp" %>
     
     <main class="main-container">
         <div class="hola" class="comentario">
