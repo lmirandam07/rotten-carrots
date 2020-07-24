@@ -28,23 +28,10 @@ public class SpoilerProceso {
 
             
             /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
-<<<<<<< HEAD
+
 
             this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
-=======
 
-            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
-
->>>>>>> leo
->>>>>>> 0ba939720393c2f7ff982cd1b05ed3b6311e193d
-
-            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
->>>>>>> f7b8581faf287ea4951643c33bcbe4b04472d883
 
             /*  para tirar el error generico de que no se conecto a la base de datos   */
         }catch(SQLException e){
