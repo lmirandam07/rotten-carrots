@@ -25,18 +25,18 @@
     <main class="main-container">
 
         <%
-                    int v_usuario = 1;
-                    
-                    Class.forName("org.mariadb.jdbc.Driver");
+            int v_usuario = 1;
 
-                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
-                    Statement stmt = con.createStatement();
-                    ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, email, contrasena, perfil_usuario FROM usuario WHERE id_usuario = "+v_usuario+";");
-                    while(rs.next()){
-                        String usuario = rs.getString("nombre_usuario");
-                        String contrasena = rs.getString("contrasena");
-                        String email = rs.getString("email");
-                        String foto = rs.getString("perfil_usuario");
+            Class.forName("org.mariadb.jdbc.Driver");
+
+            Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, email, contrasena, perfil_usuario FROM usuario WHERE id_usuario = "+v_usuario+";");
+            while(rs.next()){
+                String usuario = rs.getString("nombre_usuario");
+                String contrasena = rs.getString("contrasena");
+                String email = rs.getString("email");
+                String foto = rs.getString("perfil_usuario");
         %>
         <h2 class="titulo">Administrar Perfil</h2>
 
@@ -49,7 +49,7 @@
 
                 <div class="cont2">
                     <h3>Contraseña</h3>
-                    <input type="text" name ="contrasena" id= "contrase?a"class="textbox" value="<%=contrasena%>" placeholder="<%=contrasena%>">
+                    <input type="text" name ="contrasena" id= "contrasena"class="textbox" value="<%=contrasena%>" placeholder="<%=contrasena%>">
                     <button name="lapiz" type="button" class="btn-post" ><i class="fas fa-pencil-alt fa-2x"></i></button>
                 </div>
 
