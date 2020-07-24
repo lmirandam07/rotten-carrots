@@ -76,7 +76,7 @@ body {
     background-color: var(--main-white);
     cursor: pointer;
     float: right;
-
+    position: relative;
 }
 
 .searchbar .search-btn:visited {
