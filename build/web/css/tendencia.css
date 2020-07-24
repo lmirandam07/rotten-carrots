@@ -149,14 +149,15 @@
     height: 10%;
     top: 5%;
     left: 40%;
-    background-color: var(--main-orange);
-    color: var(--main-black);
-    border-color: aliceblue;
-    border-radius: 15px;
-    font-size: 13px;
     text-align: center;
-    -ms-word-break: break-all;
-    word-break: break-all;
+    font-weight: bold;
+    font-size: .8rem;
+    border-radius: 10px;
+    border: 1px solid var(--main-white);
+    color: var(--main-white);
+    background-color: var(--main-orange);
+    cursor: pointer;
+    margin-bottom: .5rem;
 }
 .tendencia1 .puntaje{
     position: absolute;
@@ -224,14 +225,15 @@
     height: 10%;
     top: 5%;
     left: 40%;
-    background-color: var(--main-orange);
-    color: var(--main-black);
-    border-color: aliceblue;
-    border-radius: 15px;
-    font-size: 13px;
     text-align: center;
-    -ms-word-break: break-all;
-    word-break: break-all;
+    font-weight: bold;
+    font-size: .8rem;
+    border-radius: 10px;
+    border: 1px solid var(--main-white);
+    color: var(--main-white);
+    background-color: var(--main-orange);
+    cursor: pointer;
+    margin-bottom: .5rem;
 }
 .tendencia2 .puntaje{
     position: absolute;
@@ -297,14 +299,15 @@
     height: 10%;
     top: 5%;
     left: 40%;
-    background-color: var(--main-orange);
-    color: var(--main-black);
-    border-color: aliceblue;
-    border-radius: 15px;
-    font-size: 13px;
     text-align: center;
-    -ms-word-break: break-all;
-    word-break: break-all;
+    font-weight: bold;
+    font-size: .8rem;
+    border-radius: 10px;
+    border: 1px solid var(--main-white);
+    color: var(--main-white);
+    background-color: var(--main-orange);
+    cursor: pointer;
+    margin-bottom: .5rem;
 }
 .tendencia3 .puntaje{
     position: absolute;
@@ -370,14 +373,15 @@
     height: 10%;
     top: 5%;
     left: 40%;
-    background-color: var(--main-orange);
-    color: var(--main-black);
-    border-color: aliceblue;
-    border-radius: 15px;
-    font-size: 13px;
     text-align: center;
-    -ms-word-break: break-all;
-    word-break: break-all;
+    font-weight: bold;
+    font-size: .8rem;
+    border-radius: 10px;
+    border: 1px solid var(--main-white);
+    color: var(--main-white);
+    background-color: var(--main-orange);
+    cursor: pointer;
+    margin-bottom: .5rem;
 }
 .tendencia4 .puntaje{
     position: absolute;

@@ -8,12 +8,13 @@
             <form class="searchbar-container" action="resultados_busqueda.jsp" method="POST">
                 <div class="searchbar">
                     <input type="text" name="barrabuscar" class="search-input" placeholder="Ingrese la pelicula a buscar" id="search">
-                     <button class="search-btn" name="id_spoiler" type="submit"><small class="comments"><i class="fas fa-search"></i></small></button> 
+                     <button class="search-btn" name="id_spoiler" type="submit"><i class="fas fa-search"></i></button> 
+
                 </div>
             </form>
 
             <div class="profile-container">
-                <div class="profile">
+                <div class="profile">                    
                     <a href="./administrar_perfil.jsp" class="user-img"><i class="far fa-user fa-2x"></i> </a>
                     <small class="user-name" id="user-name">Usuario</small>
                 </div>

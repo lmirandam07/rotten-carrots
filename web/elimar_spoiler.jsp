@@ -27,7 +27,15 @@
             int usuario_prueba = 3;
             Class.forName("org.mariadb.jdbc.Driver");
 
+<<<<<<< HEAD
             Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+=======
+<<<<<<< HEAD
+            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+=======
+            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+>>>>>>> 0ba939720393c2f7ff982cd1b05ed3b6311e193d
+>>>>>>> f7b8581faf287ea4951643c33bcbe4b04472d883
 
             Statement stmt = conn.createStatement();
 

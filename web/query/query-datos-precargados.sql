@@ -20,7 +20,7 @@ INSERT INTO pelicula (genero, nombre_peli, descripcion_peli, foto_pelicula, ano_
 -- Precargar usuarios en la tabla usuarios
 
 INSERT INTO usuario (nombre_usuario, email, contrasena, perfil_usuario) VALUES
-('kirsten_01', 'kcomentarioirsten2101@hotmail.com', '12345', 'https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2019/06/03/15595671589054.jpg'),
+('kirsten_01', 'kcomentarioirsten2101@hotmail.com', '"lionel"', 'https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2019/06/03/15595671589054.jpg'),
 ('javiersingh15','javiersingh@gmail.com','12qwas','https://cdn.shopify.com/s/files/1/2997/2714/products/14457_1_240x.jpg?v=1594675433'),
 ('leo_choco','lionelh@gmail.com','asqwzx', 'https://i.insider.com/5914ce0ee559f11b008b495b?width=1068&format=jpeg'),
 ('jose_sieiro','josesieiro@gmail.com', 'tyghbn21','https://hungarytoday.hu/wp-content/uploads/2020/06/Hide-the-Pain-Harold-prof..jpg');
@@ -39,9 +39,19 @@ INSERT INTO comentario (id_usuario, id_spoiler, cuerpo_comentario) VALUES
 
 
 -- Devuelve las 4 peliculas con mas zanahorias
-SELECT foto_pelicula, nombre_peli, SUM(carrots) AS total_carrots
-FROM pelicula p, spoiler sp
-WHERE p.id_pelicula = sp.id_pelicula
+SELECT foto_pelicula, nombre_peli, SUM(carrots) AS total_carrots 
+FROM pelicula p, spoiler sp 
+WHERE p.id_pelicula = sp.id_pelicula 
 GROUP BY nombre_peli
-ORDER BY SUM(carrots) DESC
-LIMIT 4;
+ORDER BY SUM(carrots) 
+DESC LIMIT 4;
+
+SELECT nombre_usuario, cuerpo_comentario, carrots_comentario, spoiler.id_spoiler, num_comentario FROM comentario, usuario, spoiler WHERE spoiler.id_spoiler = 3 AND comentario.id_usuario = usuario.id_usuario;
+
+SELECT sp.titulo_spoiler, sp.descripcion_spoiler 
+FROM spoiler sp, pelicula p 
+WHERE sp.id_pelicula = p.id_pelicula 
+AND p.nombre_peli = "El conjuro";
+
+
+

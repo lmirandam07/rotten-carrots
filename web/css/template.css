@@ -69,15 +69,14 @@ body {
 }
 
 .searchbar .search-btn {
-    height: 40%;
-    width: 10%;
     border: none;
+    margin-right: 10px;
     border-radius: 5px;
     padding: .1rem .2rem;
     background-color: var(--main-white);
     cursor: pointer;
     float: right;
-
+    position: relative;
 }
 
 .searchbar .search-btn:visited {
