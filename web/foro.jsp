@@ -24,17 +24,13 @@
     <%@include file="templates/header.jsp" %>
     <%
      Class.forName("org.mariadb.jdbc.Driver");
-<<<<<<< HEAD
 
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 
-
-=======
-     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
      
     /* Query para obtener datos necesarios para llenar el contenedor de spoiler */
     /* Basado en el id de la pelicula y el id del usuario  */
->>>>>>> 5bd7f8ee3d02cb54a1cac92e8100f55c68b409a1
+
     Statement stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery("SELECT sp.id_spoiler, nombre_usuario, foto_pelicula, genero, titulo_spoiler, carrots, comentarios "
                                         + "FROM spoiler sp, pelicula p, usuario us "
