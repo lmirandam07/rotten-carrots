@@ -9,6 +9,7 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="java.sql.DriverManager"%>
+
 <header class="wrapper">
     
         <nav class="navbar">

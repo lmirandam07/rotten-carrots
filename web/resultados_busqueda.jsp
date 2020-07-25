@@ -27,15 +27,24 @@
         
         Class.forName("org.mariadb.jdbc.Driver");
 
+<<<<<<< HEAD
             /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
 
             Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
             
             Statement stmt = conn.createStatement();
             ResultSet result = stmt.executeQuery( "SELECT titulo_spoiler, descripcion_spoiler FROM spoiler, pelicula WHERE spoiler.id_pelicula = pelicula.id_pelicula AND pelicula.nombre_peli = '"+textobusqueda+"';");
+=======
+>>>>>>> be8d3edaf93df6858b53f2819f93e3dcd386d9db
 
         /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
 
+<<<<<<< HEAD
+=======
+        Statement stmt = conn.createStatement();
+        ResultSet result = stmt.executeQuery( "SELECT titulo_spoiler, descripcion_spoiler, id_spoiler FROM spoiler, pelicula WHERE spoiler.id_pelicula = pelicula.id_pelicula AND pelicula.nombre_peli = '"+textobusqueda+"';");
+
+>>>>>>> be8d3edaf93df6858b53f2819f93e3dcd386d9db
     %>
     
     <main class="main-container">
@@ -54,7 +63,7 @@
                        while(result.next()){
                        String titulo = result.getString("titulo_spoiler");
                        String descripcion = result.getString("descripcion_spoiler");
-                       int link = result.getInt("id_spoiler");
+                       int id_spoiler = result.getInt("id_spoiler");
                     %>
                      
                     
@@ -64,7 +73,8 @@
                                        <tr>
                                                <td class="td1"><div class="act1"> <p><%=titulo%></p> </div></td>
                                                <td class="td2"><div class="act2"><p><%=descripcion%>.</p></div></td>
-                                               <td class="td4"><button class="btn-del"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i></button></td>
+                                               <td class="td4"><input class="btn-del" type="image"  src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-forward-512.png">
+                                               <input type="hidden"  value="<%=id_spoiler%>" name="id_spoiler" class="btn-del">
                                        </tr>
                                </tbody>
                         </table>
