@@ -93,6 +93,6 @@
         
         
     </main>
-
+    <script src="scripts/aumentar_like_comentario.js"></script>
 </body>
 </html>

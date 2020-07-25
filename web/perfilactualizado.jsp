@@ -78,7 +78,7 @@
         </form>
      </div>
     <div class="modal">
-                <h4 class="sub">MENSAJE ENVIADO CORRECTAMENTE</h4>
+                <h4 class="sub">Se ha actualizado el perfil correctamente</h4>
                 <a href="./foro.jsp"><button class="guardar" >Aceptar</button></a>
     </div>
     </main>

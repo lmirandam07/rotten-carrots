@@ -98,6 +98,4 @@ public class SpoilerProceso {
         return 0;
     }
     
-    
-    
 }
