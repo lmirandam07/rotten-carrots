@@ -31,8 +31,8 @@
 
 .posts-container {
     margin-left: 5%;
-    width: 70%;
-    height: 100%;
+    width: 80%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -44,11 +44,12 @@
     scrollbar-color: #333 var(--main-orange);
 }
 
-.posts-container .post {
+.posts-container .post{
     position: relative;
     width: 70%;
     height: 20%;
     display: flex;
+    flex-direction: row;
     background: linear-gradient(180deg, #7A7A7A 0%, rgba(126, 126, 126, 0) 100%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
@@ -89,7 +90,7 @@
 
 .post .post-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position: relative;
     width: 70%;
     height: 100%;
@@ -97,8 +98,9 @@
 }
 
 .post-content .post-tag {
-    width: 15%;
-    height: 15%;
+    width: 25%;
+    height: 25%;
+    align-content: center;
     text-align: center;
     font-weight: bold;
     font-size: .8rem;
@@ -107,7 +109,8 @@
     color: var(--main-white);
     background-color: var(--main-orange);
     cursor: pointer;
-    margin-bottom: .5rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
 }
 
 .post-content .post-user {
@@ -132,27 +135,56 @@
     color: var(--main-grey);
 }
 
+.post-title::-webkit-scrollbar
+{
+   width: 10px;
+   height: 10px;
+   background: #333;
+}
+
+.post-title::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+
+.post-title::-webkit-scrollbar-thumb {
+    background: var(--main-orange);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
 .post-content .post-title {
-    margin-top: 5%;
-    height: 25%;
+    width: 100%;
+    height: 100%;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
     color: var(--main-white);
     cursor: pointer;
     text-shadow: 1.5px 1.5px #333;
+    overflow-y: auto;
+    scrollbar-width: thin;
+
+}
+.post-title .descripcion{
+    position: relative;
+    text-align: justify;
+    font-size: 14px;
+    
+
 }
 
 .post-content .post-info {
     display: flex;
-    height: 15%;
-    width: 100%;
-    height: 100%;
-    align-items: flex-end;
-    transform: translateY(-25%);
+    
+    width: 10%;
+    height: 30%;
+    margin-left: 5rem;
+    margin-top: 2rem;
+
+
 
 }
 
-.post-info .post-carrots {
-    margin-right: 1rem;
-}
+
 
 .btn-post {
     appearance: none;
@@ -168,28 +200,19 @@
     transform: scale(1.1);
 }
 
-.post-info .post-comments {
-    margin-right: 1rem;
-}
 
-.post-info .post-comments:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
 
-.post-info .post-share:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-}
+
+
 .post-puesto{
     display: flex;
     justify-content: center;
     align-items:  center;
     position: relative;
     height: 12%;
-    width: 10%;
+    width: 9%;
     border: 2px solid var(--main-black);
-    margin-top:  7%;
+    margin-top:  5%;
     margin-right: 5%;
     margin-left: 2%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
