@@ -32,7 +32,7 @@ public class SpoilerProceso {
 
 <<<<<<< HEAD
 =======
-            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
 
 >>>>>>> leo
 

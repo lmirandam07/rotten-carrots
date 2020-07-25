@@ -36,7 +36,7 @@ public class ContactoProceso {
 
 =======
 >>>>>>> leo
-            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
 
 >>>>>>> 66a655cd8b43c029a5a342894c0acfe64227aaae
 
