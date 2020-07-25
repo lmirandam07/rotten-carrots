@@ -26,7 +26,6 @@
     <div class="fondo">
 
         <%
-            int v_usuario = 1;
             String pusuario = request.getParameter("usuario");
             String pcontrasena = request.getParameter("contrasena");
             String pemail = request.getParameter("email");
@@ -39,7 +38,7 @@
             Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 
             Statement stmt = con.createStatement();
-            stmt.executeQuery("UPDATE usuario SET nombre_usuario = '"+pusuario+"', email = '"+pemail+"', contrasena = '"+pcontrasena+"', perfil_usuario = '"+purl+"' WHERE id_usuario = '"+v_usuario+"';");
+            stmt.executeQuery("UPDATE usuario SET nombre_usuario = '"+pusuario+"', email = '"+pemail+"', contrasena = '"+pcontrasena+"', perfil_usuario = '"+purl+"' WHERE activo = 1;");
         %>
         <h2 class="titulo">Administrar Perfil</h2>
 
