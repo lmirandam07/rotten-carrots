@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `email` varchar(80) NOT NULL DEFAULT '0',
   `contrasena` varchar(30) NOT NULL DEFAULT '0',
   `perfil_usuario` varchar(500) NOT NULL DEFAULT '0',
+  `activo` int(11) NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id_usuario`),

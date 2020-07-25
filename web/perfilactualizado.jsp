@@ -36,7 +36,7 @@
             
 
 
-            Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+            Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
 
             Statement stmt = con.createStatement();
             stmt.executeQuery("UPDATE usuario SET nombre_usuario = '"+pusuario+"', email = '"+pemail+"', contrasena = '"+pcontrasena+"', perfil_usuario = '"+purl+"' WHERE id_usuario = '"+v_usuario+"';");
