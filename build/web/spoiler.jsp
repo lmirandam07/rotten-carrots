@@ -96,21 +96,6 @@
             <button class="btn-post" name="id_spoiler" value="<%=id_spoiler%>" type="submit"><i id="icono" class="fas fa-chevron-circle-right"></i> Ver comentarios</button>
         </form>
     </main>
-        <script>
-            $("#btn-carrots").click(function(){
-                let id_spoiler = $("#btn-comment").val();
-                +$("#btn-carrots")[0].childNodes[1].nodeValue++;
-                $("#btn-carrots")[0].disabled = true;
-                $.ajax({
-                        url: 'actualizar_like.jsp',
-                        type: 'POST',
-                        data: {id_spoiler: id_spoiler},
-                        success: function(msg) {
-                            console.log(msg);
-                        }
-                    }
-                );
-            });
-        </script>
+    <script src="scripts/aumentar_like.js"></script>
 </body>
 </html>
