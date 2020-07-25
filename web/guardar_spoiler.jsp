@@ -18,8 +18,13 @@
     </head>
     <body>
     <%@include file="templates/header.jsp" %>
-        <%
-        int usuario = 3;
+    <%
+        Class.forName("org.mariadb.jdbc.Driver");
+        Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
+        Statement stmt = conn.createStatement();
+        ResultSet rs = stmt.executeQuery("SELECT id_usuario FROM usuario WHERE activo = 1;");
+        while(rs.next()){
+        int usuario = rs.getInt("id_usuario");
         String pelicula = request.getParameter("pelicula");
         String titulo = request.getParameter("tema");
         String cuerpo = request.getParameter("cuerpo");
@@ -70,7 +75,7 @@
                 
 
         </div>
-        
+        <%}%>
     </main>
     </body>
 </html>

@@ -25,10 +25,6 @@
     <main class="main-container">
 
         <%
-<<<<<<< HEAD
-            int v_usuario = 1;
-=======
->>>>>>> 461e49a206ff2d61e32b50e4e26ff93f974a658b
             Class.forName("org.mariadb.jdbc.Driver");
 
             Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
@@ -39,10 +35,7 @@
                 String contrasena = rs.getString("contrasena");
                 String email = rs.getString("email");
                 String foto = rs.getString("perfil_usuario");
-<<<<<<< HEAD
 
-=======
->>>>>>> 461e49a206ff2d61e32b50e4e26ff93f974a658b
         %>
         <h2 class="titulo">Administrar Perfil</h2>
 

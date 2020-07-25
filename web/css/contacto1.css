@@ -73,9 +73,11 @@ textarea{
   width: 16%;
   height: 8%;
   margin-top: 2%;
+  border-radius: 10px;
 }
 
 .cancelar:hover{
+    transform: scale(1.1);
     cursor: pointer;
 }
 .enviar{
@@ -86,10 +88,12 @@ textarea{
   font-weight: 900;
   width: 16%;
   height: 8%;
-  margin-top: 2%;
+  margin-top: 2%; 
+  border-radius: 10px;
 }
 
 .enviar:hover{
+    transform: scale(1.1);
     cursor: pointer;
 }
 

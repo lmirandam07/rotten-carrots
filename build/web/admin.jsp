@@ -25,10 +25,7 @@
 <body>
     <%@include file="templates/header.jsp" %>
     <%
-<<<<<<< HEAD
-     int usuario_prueba = 3;
-=======
->>>>>>> 461e49a206ff2d61e32b50e4e26ff93f974a658b
+
      Class.forName("org.mariadb.jdbc.Driver");
 
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
