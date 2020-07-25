@@ -25,14 +25,17 @@
 <body>
     <%@include file="templates/header.jsp" %>
     <%
+<<<<<<< HEAD
      int usuario_prueba = 3;
+=======
+>>>>>>> 461e49a206ff2d61e32b50e4e26ff93f974a658b
      Class.forName("org.mariadb.jdbc.Driver");
 
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
 
      Statement stmt = conn.createStatement();
 
-     ResultSet rs = stmt.executeQuery("Select id_spoiler,titulo_spoiler,descripcion_spoiler from spoiler where id_usuario = "+usuario_prueba+";");
+     ResultSet rs = stmt.executeQuery("Select spoiler.id_spoiler,spoiler.titulo_spoiler,spoiler.descripcion_spoiler from spoiler, usuario where usuario.activo = 1 AND usuario.id_usuario = spoiler.id_usuario;");
     
     %>
 
