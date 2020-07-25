@@ -23,10 +23,7 @@
 	<title>Rotten Carrots</title>
 </head>
 <body>
-    <%
-        Boolean guardado = (Boolean)session.getAttribute("guardado");
-        int c = (Integer)session.getAttribute("ejecucion");
-        session.setAttribute("ejecucion", c + 1);%>
+
 
     <%@include file="templates/header.jsp" %>
    
@@ -37,11 +34,6 @@
         Class.forName("org.mariadb.jdbc.Driver");
 
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root","lionel");
-
-<<<<<<< HEAD
-=======
-     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root","12345");
->>>>>>> 67d0320662b4c7f7afee30e3542188b899a19ef8
 
      Statement stmt = conn.createStatement();
      ResultSet rs = stmt.executeQuery("SELECT id_usuario FROM usuario WHERE activo = 1;");

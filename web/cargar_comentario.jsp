@@ -17,12 +17,6 @@
 </head>
 <body>
     <%@include file="templates/header.jsp" %>
-     <% session.setAttribute("guardado", true);
-        
-        if(session.getAttribute("ejecucion") == null){
-            session.setAttribute("ejecucion", 0);
-        }
-    %>
     
     <%
     int id_spoiler2 = Integer.parseInt(request.getParameter("id_spoiler2")); %> 
