@@ -34,14 +34,8 @@
             String purl = request.getParameter("url");
             
             Class.forName("org.mariadb.jdbc.Driver");
-            
-<<<<<<< HEAD
+
             Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
-=======
-
-
-            Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
->>>>>>> 89b50ececd6216b0b04d42209bca3d7bd91ef39a
 
             Statement stmt = con.createStatement();
             /*Se realiza la actualización de los datos del usuario. Para realizar esto, se determina que los cambios solo se realizan a aquel usuario que tenga una sesión activa en el sistema.*/

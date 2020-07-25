@@ -28,7 +28,7 @@
         <%
             Class.forName("org.mariadb.jdbc.Driver");
 
-            Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+            Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
 
             Statement stmt = con.createStatement();
             /*Se selecciona el id del usuario que realizó el contacto, esto lo hacemos haciendo un query tomando como condición
