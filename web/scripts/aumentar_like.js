@@ -1,16 +1,14 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-$("#btn-carrots").click(function(){
-    let id_spoiler = $("#btn-comment").val();
-    +$("#btn-carrots")[0].childNodes[1].nodeValue++;
-    $("#btn-carrots")[0].disabled = true;
-    $.ajax({
+
+
+// Utilización de JQuery
+$("#btn-carrots").click(function(){ 
+    let id_spoiler = $("#btn-comment").val(); // Obtener el valor del input que será el id del spoiler
+    +$("#btn-carrots")[0].childNodes[1].nodeValue++; // Aumentar like en el sitio
+    $("#btn-carrots")[0].disabled = true; 
+    $.ajax({ // Uso del modulo de peticiones AJAX para enviar datos al servidor
             url: 'actualizar_like.jsp',
             type: 'POST',
-            data: {id_spoiler: id_spoiler},
+            data: {id_spoiler: id_spoiler}, // Se envian los datos al sevidor para actualizar like en la base de datos
             success: function(msg) {
                 console.log(msg);
             }

@@ -29,7 +29,11 @@
 
     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");    
 
+    /* Cargar datos del spoiler seleccionado en la pagina de foro
+      El query selecciona los datos necesarios a mostrarse mediante
+      el id del spoiler
     
+    */
 
     Statement stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, foto_pelicula, genero, titulo_spoiler, descripcion_spoiler, carrots, comentarios "
