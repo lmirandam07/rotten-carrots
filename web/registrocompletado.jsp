@@ -3,7 +3,7 @@
     Created on : 20-jul-2020, 15:39:56
     Author     : luyim
 --%>
-
+<%-- Se exportan la entidad y proceso utilizados para la creacion del usuario--%>
 <%@page import = "Entidad.Usuario"%>
 <%@page import = "Proceso.UsuarioProceso"%>
 <%@page import="java.sql.Connection"%>
@@ -19,6 +19,8 @@
 	<title>Rotten Carrots</title>
 </head>
 <a href="../../web/registrocompletado.jsp"></a>
+<%-- Se crean y se llenan las variables con los valores insertados en la pagina de registrase.jsp--%>
+<%-- Transferimos los valores de las variables para que se carguen en la BD llamando al proceso GuardarUsuario--%>
 <%
             String nombre_usuario = request.getParameter("usuario");
             String email = request.getParameter("email");
@@ -38,7 +40,7 @@
         %>
 <body>
   
-       
+ <%-- Se utiliza el template del formulario de la pagina registrarse.jsp como fondo--%>      
 <main class="containerRegistro">
     <div class="hola">
 		<h2>Rotten Carrots</h2>
@@ -75,7 +77,7 @@
             </form>
             </div>
 
-
+<%-- Ventana de confirmacion de registro --%>
 		<div class="modal">
                 <h4 class="sub">REGISTRO COMPLETADO CORRECTAMENTE</h4>
                 <a href="./index.jsp"><button class="guardar" >Aceptar</button></a>

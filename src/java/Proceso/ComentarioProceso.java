@@ -11,8 +11,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
+
 /**
  *
  * @author leo-h
@@ -24,9 +23,7 @@ public class ComentarioProceso {
         try{
             Class.forName("org.mariadb.jdbc.Driver");
 
-
-            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
-
+            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 
         }catch(SQLException e){
              System.out.println("Error al conectar: " + e);
@@ -55,38 +52,7 @@ public class ComentarioProceso {
         return 0;
     }
     
-    public List<Comentario> ConsultarDatos(){
-        List<Comentario> comentarios = new ArrayList<Comentario>();
-      
-        try{
-            Statement stmt = conn.createStatement();
-            String query = "SELECT * FROM comentario";
-            ResultSet result = stmt.executeQuery(query);
-            while(result.next()){
-                Comentario comentario = new Comentario();
-                
-                comentario.setNum_comentario(result.getInt("num_comentario"));
-                comentario.setId_usuario(result.getInt("id_usuario"));
-                comentario.setId_spoiler(result.getInt("id_spoiler"));
-                comentario.setCuerpo_comentario(result.getString("cuerpo_comentario"));
-                comentario.setCarrots_comentario(result.getInt("carrots_comentario"));
-                comentario.setCreated_at(result.getString("created_at"));
-                
-                
-                
-                comentarios.add(comentario);
-            }
-            result.close();
-            stmt.close();
-            conn.close();
-            
-            return comentarios;
-        }
-        catch(Exception e){
-            System.out.println("ERROR"+e.getMessage().toString());
-        }
-        return comentarios;
-    }
+
 }
     
     

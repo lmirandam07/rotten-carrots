@@ -23,20 +23,17 @@
 	<title>Rotten Carrots</title>
 </head>
 <body>
-    <%
-        Boolean guardado = (Boolean)session.getAttribute("guardado");
-        int c = (Integer)session.getAttribute("ejecucion");
-        session.setAttribute("ejecucion", c + 1);%>
+
 
     <%@include file="templates/header.jsp" %>
    
     
-    <main class="main-container">
+    <main class="main-container">      
          <% 
+             
         Class.forName("org.mariadb.jdbc.Driver");
 
-
-     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root","1014");
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root","lionel");
 
      Statement stmt = conn.createStatement();
      ResultSet rs = stmt.executeQuery("SELECT id_usuario FROM usuario WHERE activo = 1;");
@@ -57,6 +54,10 @@
           
        
     %>
+    <!-- Logramos conectarnos a la base de datos y creamos un metodo que nos permite utilizar un query, y mediante este query
+    podemos seleccionar el usuario que esta utilizando la pagina, a su vez agarra esa informacion al igual que la informacion 
+    que nos manda la pantalla anterior y se guarda mediante el proceso de guardar de la clase comentario.-->
+    
         <div class="hola" class="comentario">
         <br>
         <h2>Nuevo Comentario</h2>

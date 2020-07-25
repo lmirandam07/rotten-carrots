@@ -23,7 +23,7 @@
         <%
             Class.forName("org.mariadb.jdbc.Driver");
 
-            Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
+            Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 
             Statement stmt = con.createStatement();
             /*Al estar cerrando la sesión en el sistema, se debe resetear al usuario activo a "no activo".

@@ -17,15 +17,10 @@
 </head>
 <body>
     <%@include file="templates/header.jsp" %>
-     <% session.setAttribute("guardado", true);
-        
-        if(session.getAttribute("ejecucion") == null){
-            session.setAttribute("ejecucion", 0);
-        }
-    %>
     
     <%
-    int id_spoiler2 = Integer.parseInt(request.getParameter("id_spoiler2")); %>
+    int id_spoiler2 = Integer.parseInt(request.getParameter("id_spoiler2")); %> 
+    <!-- Este id_spoiler2 agarra el codigo de spoiler que se trae de la pantalla anterior spoiler y lo vuelve un entero -->
     <main class="main-container">
         <br>
         <h2>Nuevo Comentario</h2>
@@ -34,6 +29,7 @@
         <div class="comentario">
             <br>
             <br><br>
+            <!-- Mediante este form nosotros podemos almacenar toda la informacion que el usuario inserta y luego lo mandamos a la pantalla de guardado-->
             <form action="./cargar_comentario_guardar.jsp" method="POST"> 
                 <!--<input type="text" name="id_spoiler" value="" disabled></input>-->
                 <h3 class="opinion">Mi opinión sobre este spoiler es...</h3>
@@ -47,6 +43,7 @@
             
             
             <input type="hidden" name="id_spoiler" value="<%=id_spoiler2%>"></input>
+            <!--este input agarra el valor del id_spoiler2 que se manda a la siguiente pantalla para poder guardarse en la pantalla de guardado-->
             
             <button href="./comentarios.jsp" type="submit" type="button" class="publicar" disable>Publicar</button>
             <a href="./foro.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
