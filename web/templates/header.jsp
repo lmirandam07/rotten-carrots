@@ -3,8 +3,26 @@
     Created on : 22-jul-2020, 15:16:13
     Author     : luyim
 --%>
+<%@page import="Entidad.Usuario"%>
+<%@page import="Proceso.UsuarioProceso"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.DriverManager"%>
+
 <header class="wrapper">
+    
         <nav class="navbar">
+            <%
+                    
+                    Class.forName("org.mariadb.jdbc.Driver");
+
+                    Connection con1 = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+                    Statement stmt1 = con1.createStatement();
+                    ResultSet rs1 = stmt1.executeQuery("SELECT nombre_usuario FROM usuario WHERE activo = 1;");
+                    while(rs1.next()){
+                        String usuario = rs1.getString("nombre_usuario");
+            %>
             <form class="searchbar-container" action="resultados_busqueda.jsp" method="POST">
                 <div class="searchbar">
                     <input type="text" name="barrabuscar" class="search-input" placeholder="Ingrese la pelicula a buscar" id="search">
@@ -16,10 +34,10 @@
             <div class="profile-container">
                 <div class="profile">                    
                     <a href="./administrar_perfil.jsp" class="user-img"><i class="far fa-user fa-2x"></i> </a>
-                    <small class="user-name" id="user-name">Usuario</small>
+                    <small id="user-name"><%=usuario%></small>
                 </div>
             </div>
-
+            <%}%>
         </nav>
 
         <aside class="sidebar">

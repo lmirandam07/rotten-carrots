@@ -7,6 +7,12 @@
 <!DOCTYPE html>
 <%@page import="Entidad.Contacto"%>
 <%@page import="Proceso.ContactoProceso"%>
+<%@page import="Entidad.Usuario"%>
+<%@page import="Proceso.UsuarioProceso"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.DriverManager"%>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
@@ -20,7 +26,14 @@
     <%@include file="templates/header.jsp" %>
     <main class="main-container">
         <%
-            int usuario = 1;
+            Class.forName("org.mariadb.jdbc.Driver");
+
+            Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT id_usuario FROM usuario WHERE activo = 1;");
+            while(rs.next()){
+            int usuario = rs.getInt("id_usuario");
             String asunto = request.getParameter("i_asunto");
             String consulta = request.getParameter("i_consulta");
             
@@ -63,7 +76,7 @@
             </div>
         </div>
         
-        
+        <%}%>
     </main>
 </body>
 </html>

@@ -25,11 +25,17 @@
     <main class="main-container">
 
         <%
+<<<<<<< HEAD
             int v_usuario = 1;
 
             Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+=======
+            Class.forName("org.mariadb.jdbc.Driver");
+
+            Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+>>>>>>> 66a655cd8b43c029a5a342894c0acfe64227aaae
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, email, contrasena, perfil_usuario FROM usuario WHERE id_usuario = "+v_usuario+";");
+            ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, email, contrasena, perfil_usuario FROM usuario WHERE activo = 1;");
             while(rs.next()){
                 String usuario = rs.getString("nombre_usuario");
                 String contrasena = rs.getString("contrasena");
@@ -67,7 +73,7 @@
                 <div class="ContenedorBotonesAP">
                     <input type="submit" class="guardarb" value="Guardar" />
                     <button type=button><a class="link" href="./foro.jsp">Cancelar</a></button>
-                    <button type="button" class="cerrar"><a class="link cerrar" href="./index.jsp">Cerrar sesion</a></button>
+                    <button type="button" class="cerrar"><a class="link cerrar" href="./sesion_cerrada.jsp">Cerrar sesion</a></button>
                 </div>
 
             </form>
