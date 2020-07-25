@@ -27,25 +27,8 @@
     <%
 
      Class.forName("org.mariadb.jdbc.Driver");
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> be8d3edaf93df6858b53f2819f93e3dcd386d9db
-
-<<<<<<< HEAD
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
-=======
-
-<<<<<<< HEAD
-     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
->>>>>>> 111b6201994fad5a95c2639738ff03fd9e60b778
-=======
-     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
->>>>>>> 06853d4c166df8acdf5e9db5fa9b752e0db73184
-=======
-     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
->>>>>>> f41272bcc0ea1b30618b532a5b61f5744ebc8beb
 
      Statement stmt = conn.createStatement();
 

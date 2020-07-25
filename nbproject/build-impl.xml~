@@ -998,25 +998,12 @@ exists or setup the property manually. For example like this:
     <target depends="init,compile,compile-jsps,-pre-dist,-do-dist-with-manifest,-do-dist-without-manifest" name="do-dist"/>
     <target depends="init" if="dist.ear.dir" name="library-inclusion-in-manifest">
 <<<<<<< HEAD
-<<<<<<< HEAD
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-8}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
 =======
-        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-7}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
->>>>>>> 06853d4c166df8acdf5e9db5fa9b752e0db73184
-=======
 <<<<<<< HEAD
-=======
-        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-4}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
-=======
-<<<<<<< HEAD
->>>>>>> 54f62fa7c24e5173abb8b07fc11c6684d8c77d29
         <copyfiles files="${file.reference.mariadb-java-client-2.6.1.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
 =======
-        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-7}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
->>>>>>> 06853d4c166df8acdf5e9db5fa9b752e0db73184
-<<<<<<< HEAD
-=======
->>>>>>> ad2df6b0d07778a6688e2f9c208822645a23f8bc
+        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-4}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
 >>>>>>> 54f62fa7c24e5173abb8b07fc11c6684d8c77d29
 >>>>>>> f41272bcc0ea1b30618b532a5b61f5744ebc8beb
         <mkdir dir="${build.web.dir}/META-INF"/>
@@ -1024,25 +1011,12 @@ exists or setup the property manually. For example like this:
     </target>
     <target depends="init" name="library-inclusion-in-archive" unless="dist.ear.dir">
 <<<<<<< HEAD
-<<<<<<< HEAD
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-8}" todir="${build.web.dir}/WEB-INF/lib"/>
 =======
-        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-7}" todir="${build.web.dir}/WEB-INF/lib"/>
->>>>>>> 06853d4c166df8acdf5e9db5fa9b752e0db73184
-=======
 <<<<<<< HEAD
-=======
-        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-4}" todir="${build.web.dir}/WEB-INF/lib"/>
-=======
-<<<<<<< HEAD
->>>>>>> 54f62fa7c24e5173abb8b07fc11c6684d8c77d29
         <copyfiles files="${file.reference.mariadb-java-client-2.6.1.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
 =======
-        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-7}" todir="${build.web.dir}/WEB-INF/lib"/>
->>>>>>> 06853d4c166df8acdf5e9db5fa9b752e0db73184
-<<<<<<< HEAD
-=======
->>>>>>> ad2df6b0d07778a6688e2f9c208822645a23f8bc
+        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-4}" todir="${build.web.dir}/WEB-INF/lib"/>
 >>>>>>> 54f62fa7c24e5173abb8b07fc11c6684d8c77d29
 >>>>>>> f41272bcc0ea1b30618b532a5b61f5744ebc8beb
     </target>
