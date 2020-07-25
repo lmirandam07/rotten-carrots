@@ -3,8 +3,7 @@
     Created on : 20-jul-2020, 15:39:56
     Author     : luyim
 --%>
-<%@page import="java.util.List"%>
-<%@page import="java.util.ArrayList"%>
+
 <%@page import="Entidad.Comentario"%>
 <%@page import="Proceso.ComentarioProceso"%>
 <%@page import="java.sql.ResultSet"%>
