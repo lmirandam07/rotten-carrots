@@ -38,6 +38,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 =======
                     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
@@ -47,6 +48,9 @@
 =======
                     Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
 >>>>>>> f41272bcc0ea1b30618b532a5b61f5744ebc8beb
+=======
+                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+>>>>>>> 67d0320662b4c7f7afee30e3542188b899a19ef8
 
 >>>>>>> 111b6201994fad5a95c2639738ff03fd9e60b778
                     Statement stmt = con.createStatement();

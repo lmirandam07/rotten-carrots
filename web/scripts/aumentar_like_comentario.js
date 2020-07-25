@@ -4,12 +4,19 @@
  * and open the template in the editor.
  */
 
-let carrotsLike = document.getElementsByClassName("btn-carrots");
-
-for (const button of carrotsLike) {
-    button.addEventListener("click", () => {
-        +button.childNodes[0].childNodes[1].nodeValue ++
-        button.disabled = true;
-
-    });
-}
+btn = $(".btn-carrots");
+btn.each(function(i){
+    $(this).on('click', function() {
+        let num_comment = this.value;
+        +this.childNodes[0].childNodes[1].nodeValue++;
+        this.disabled = true;
+        $.ajax({
+            url: 'actualizar_like_comentario.jsp',
+            type: 'POST',
+            data: {num_comment: num_comment},
+            success: function(msg) {
+                console.log(msg);
+            }
+        });
+    })
+});

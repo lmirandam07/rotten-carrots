@@ -21,10 +21,14 @@
     <%
         Class.forName("org.mariadb.jdbc.Driver");
 <<<<<<< HEAD
+<<<<<<< HEAD
         Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 =======
         Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
 >>>>>>> f41272bcc0ea1b30618b532a5b61f5744ebc8beb
+=======
+        Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+>>>>>>> 67d0320662b4c7f7afee30e3542188b899a19ef8
         Statement stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT id_usuario FROM usuario WHERE activo = 1;");
         while(rs.next()){

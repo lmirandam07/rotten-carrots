@@ -3,11 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-let carrotsLike = document.getElementById("btn-carrots");
-
-carrotsLike.addEventListener("click", () => {
-    +carrotsLike.childNodes[1].nodeValue ++
-    carrotsLike.disabled = !carrotsLike.disabled;
-    
-    
+$("#btn-carrots").click(function(){
+    let id_spoiler = $("#btn-comment").val();
+    +$("#btn-carrots")[0].childNodes[1].nodeValue++;
+    $("#btn-carrots")[0].disabled = true;
+    $.ajax({
+            url: 'actualizar_like.jsp',
+            type: 'POST',
+            data: {id_spoiler: id_spoiler},
+            success: function(msg) {
+                console.log(msg);
+            }
+        }
+    );
 });
