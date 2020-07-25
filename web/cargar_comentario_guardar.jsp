@@ -29,27 +29,34 @@
         session.setAttribute("ejecucion", c + 1);%>
 
     <%@include file="templates/header.jsp" %>
-    <% 
-        
-        int usuario=1;
-        
+   
+    
+    <main class="main-container">
+         <% 
+        Class.forName("org.mariadb.jdbc.Driver");
+
+
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root","lionel");
+
+     Statement stmt = conn.createStatement();
+     ResultSet rs = stmt.executeQuery("SELECT id_usuario FROM usuario WHERE activo = 1;");
+        while(rs.next()){
+        int usuario = rs.getInt("id_usuario");
         String cuerpo_comentario = request.getParameter("cuerpo_comentario");
-        
         int spoiler = Integer.parseInt(request.getParameter("id_spoiler"));
+
         
         Comentario comentario = new Comentario();
         
         
+        comentario.setCuerpo_comentario(cuerpo_comentario);
         comentario.setId_usuario(usuario);
         comentario.setId_spoiler(spoiler);
-        comentario.setCuerpo_comentario(cuerpo_comentario);
         ComentarioProceso pcomentario = new ComentarioProceso();
-        int isSaved = pcomentario.GuardarComentario(comentario);
+        pcomentario.GuardarComentario(comentario);
           
        
     %>
-    
-    <main class="main-container">
         <div class="hola" class="comentario">
         <br>
         <h2>Nuevo Comentario</h2>
@@ -82,6 +89,7 @@
                 
 
         </div>
+        <%}%>
         </main>
      
 </body>

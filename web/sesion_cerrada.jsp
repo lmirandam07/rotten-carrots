@@ -27,7 +27,7 @@
             
             Class.forName("org.mariadb.jdbc.Driver");
 
-            Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+            Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 
             Statement stmt = con.createStatement();
             stmt.executeQuery("UPDATE usuario SET activo = 0 WHERE activo = 1;");
