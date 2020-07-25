@@ -14,7 +14,7 @@
     try {
         int num_comment = Integer.parseInt(request.getParameter("num_comment"));
         Class.forName("org.mariadb.jdbc.Driver");
-        Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+        Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
         
         /* Actualizar zanahoria de comentario basado en el num de comentari ocuando el usuario le hace click */
         

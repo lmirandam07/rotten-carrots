@@ -25,7 +25,8 @@
     <%
      Class.forName("org.mariadb.jdbc.Driver");
 
-     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
+
 
      
     /* Query para obtener datos necesarios para llenar el contenedor de spoiler */
