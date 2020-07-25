@@ -28,6 +28,7 @@
     Class.forName("org.mariadb.jdbc.Driver");
 
     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");    
+ 
 
     /* Cargar datos del spoiler seleccionado en la pagina de foro
       El query selecciona los datos necesarios a mostrarse mediante

@@ -21,17 +21,16 @@
 </head>
 <body>
         <%
-            String pemail = request.getParameter("email");
-            String pcontrasena = request.getParameter("contra"); 
-            String activo = "0";
-            
             Class.forName("org.mariadb.jdbc.Driver");
 
             Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
 
             Statement stmt = con.createStatement();
+            /*Al estar cerrando la sesión en el sistema, se debe resetear al usuario activo a "no activo".
+            Para hacer esto, ejecutamos un query que actualice el campo activo a 0 de todos los usuarios cuyo campo activo es 1 actualmente.*/
             stmt.executeQuery("UPDATE usuario SET activo = 0 WHERE activo = 1;");
         %>
+                    <!--Este mensaje para dar un tipo de feedback al usuario sobre el cierre de sesión y nos redirecciona al inicio de sesión nuevamente.-->
                     <div class="modal">
                         <h4 class="sub">RUEDA PS</h4>
                         <a href="./index.jsp"><button class="guardar" >Aceptar</button></a>
