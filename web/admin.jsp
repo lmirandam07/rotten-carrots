@@ -29,8 +29,12 @@
 
      Class.forName("org.mariadb.jdbc.Driver");
 
+<<<<<<< HEAD
      /*Conexion con la base de datos de rotten_carrots*/
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
+=======
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+>>>>>>> e2992d0f38735cc794476d7bc7c44dfbc0206078
 
      Statement stmt = conn.createStatement();
      /*Query con el que se obtienen los datos de la base de datos*/

@@ -25,11 +25,15 @@
     <%
      Class.forName("org.mariadb.jdbc.Driver");
 
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
 
-     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
+
+     
+    /* Query para obtener datos necesarios para llenar el contenedor de spoiler */
+    /* Basado en el id de la pelicula y el id del usuario  */
 
     Statement stmt = conn.createStatement();
-    ResultSet rs = stmt.executeQuery("SELECT sp.id_spoiler, nombre_usuario, foto_pelicula, genero, titulo_spoiler, carrots, comentarios "
+    ResultSet rs = stmt.executeQuery("SELECT nombre_peli, sp.id_spoiler, nombre_usuario, foto_pelicula, genero, titulo_spoiler, carrots, comentarios "
                                         + "FROM spoiler sp, pelicula p, usuario us "
                                         + "WHERE sp.id_pelicula = p.id_pelicula AND sp.id_usuario = us.id_usuario; ");
     
@@ -39,8 +43,10 @@
             <section class="posts-container">
                 
                 <%
+                    /* Imprimir todos los spoilers en la base de datos con los datos del query*/
                     while(rs.next()) {
                         String usuario = rs.getString("nombre_usuario");
+                        String nombre_peli = rs.getString("nombre_peli");
                         String foto_pelicula = rs.getString("foto_pelicula");
                         String titulo = rs.getString("titulo_spoiler");
                         String genero = rs.getString("genero");
@@ -52,7 +58,10 @@
                  
                  <form class="post" method="POST" action="spoiler.jsp">
                     <div class="post-img">
-                        <img src="<%=foto_pelicula%>" class="img-spoiler" alt="">
+                        <img src="<%=foto_pelicula%>" class="img-spoiler">
+                        <div class="overlay">
+                            <small class="post-nombre-peli"><%=nombre_peli%></small>
+                        </div>
                     </div>
 
                     <div class= "post-content">
@@ -94,6 +103,7 @@
                 <div class="trend">
                     <h2>Top Tendencias</h2>
                     <%
+                        /* Obtener películas con mayor cantidad de zanahorias totales por spoiler */
                         Statement stmt2 = conn.createStatement();
                         ResultSet rs2 = stmt2.executeQuery("SELECT nombre_peli, SUM(carrots) AS total_carrots FROM pelicula p, spoiler sp WHERE p.id_pelicula = sp.id_pelicula GROUP BY nombre_peli ORDER BY SUM(carrots) DESC LIMIT 4;");                       
                     %>    

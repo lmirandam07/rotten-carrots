@@ -24,9 +24,15 @@ public class UsuarioProceso {
         try {
             Class.forName("org.mariadb.jdbc.Driver");
 
+            // Realizar conexión a la base de datos
 
 
-            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
+<<<<<<< HEAD
+            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+
+=======
+           this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+>>>>>>> 4d4dd71c57a47431bf94b9989b6747de6cf280ae
 
 
         } catch(SQLException e) {
@@ -40,6 +46,8 @@ public class UsuarioProceso {
         int resultado = 0;
         
         try {
+            
+            // Ingresar nuevo usuario a la base de datos
             Statement smtm = conn.createStatement();
             String query = "INSERT INTO usuario(nombre_usuario, email, contrasena, perfil_usuario)";
                    query += "VALUES('"+usuario.getNombre_usuario()+"','"+usuario.getEmail()+"',"

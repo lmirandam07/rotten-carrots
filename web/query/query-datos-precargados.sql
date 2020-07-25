@@ -53,7 +53,7 @@ INSERT INTO usuario (nombre_usuario, email, contrasena, perfil_usuario) VALUES
 INSERT INTO spoiler (id_usuario, id_pelicula, titulo_spoiler, descripcion_spoiler, carrots) VALUES
 ('1', '2', 'El discurso de Rosie en la boda de Alex', 'Prácticamente confesó que Alex era el amor de su vida ahí merengues, en frente de todos, el día que este men se estaba casando... con Bethany Williams.','155'),
 ('1', '3', 'Andy consigue el trabajo que queria', 'Alfinal de la pelicula Miranda la recomiendad y asi obtiene el trabajo','200'),
-('3','5', 'Rosie y Alex terminan juntos', 'La verdad no hay mucho que comentar al respecto, es como dice el titulo','671'),
+('3','2', 'Rosie y Alex terminan juntos', 'La verdad no hay mucho que comentar al respecto, es como dice el titulo','671'),
 ('5','8', 'Toda la familia muere', 'Bien creepy como se tasajean a toda la familia :(','123'),
 ('4','6', 'Se muere Spiderman', 'El man dq no me quiero ir Sr Stark','301');
 -- Precargar comentario 

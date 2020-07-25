@@ -31,20 +31,30 @@
             Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
 
             Statement stmt = con.createStatement();
+            /*Se selecciona el id del usuario que realizó el contacto, esto lo hacemos haciendo un query tomando como condición
+            que el usuario debe tener una sesión acitva, es decir, que su campo "activo" debe ser 1.*/
             ResultSet rs = stmt.executeQuery("SELECT id_usuario FROM usuario WHERE activo = 1;");
+            /*Al solo tener un usuario activo en la base de datos, podemos utilizar el while para que solo se imprima el mensaje una vez
+            y así, también, poder acceder a la información recopilada en en el query*/
             while(rs.next()){
+            /*Asignamos la información recopilada en el query a una variable local*/
             int usuario = rs.getInt("id_usuario");
+            /*Obtenemos la información del formulario que llenó el usuario para que esta se guarde en la base de datos.*/
             String asunto = request.getParameter("i_asunto");
             String consulta = request.getParameter("i_consulta");
             
+            /*Creamos un nuevo objeto contacto utilizando el constructor de la entidad*/
             Contacto contacto = new Contacto();
 
+            /*Asignamos los valores de nuestras variables a los atributos del nuevo objeto creado*/
             contacto.setId_usuario(usuario);
             contacto.setAsunto(asunto);
             contacto.setConsulta(consulta);
     
+            /*Creamos un nuevo proceso de Contacto, con este guardaremos la información referente al contacto en la base de datos.*/
             ContactoProceso contactop = new ContactoProceso();
             
+            /*Se guarda el contacto en la base de datos haciendo uso del proceso de GuardarContacto.*/
             contactop.GuardarContacto(contacto);
         %>
         <div class="mensaje">  

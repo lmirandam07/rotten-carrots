@@ -22,6 +22,7 @@
         <h2>Contacto</h2>
         
         <div class="contacto">
+            <!--Formulario con el que el usuario se contacta con el servicio de atención al cliente del sitio.-->
             <form method="POST" action="contactoenviado.jsp">
                 <br>
                 <h3 class="asunto">Asunto</h3>
@@ -35,6 +36,7 @@
                           Escriba aquí su consulta"></textarea>
                 <br>
                 <a href="./contacto.jsp"><button type="button" name="button" class="cancelar">Cancelar</button></a>
+                <!--Botón que controla el formulario de contacto; etse, nos envia a la página en la que se guarda el contacto en la base de datos.-->
                 <input type="submit" class="enviar" value="Enviar" />
             </form>
         </div>
