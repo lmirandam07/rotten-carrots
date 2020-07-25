@@ -28,11 +28,9 @@
             Class.forName("org.mariadb.jdbc.Driver");
 
 
-<<<<<<< HEAD:web/elimar_spoiler.jsp
+
             Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
-=======
-            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
->>>>>>> be8d3edaf93df6858b53f2819f93e3dcd386d9db:web/eliminar_spoiler.jsp
+
 
 
             Statement stmt = conn.createStatement();

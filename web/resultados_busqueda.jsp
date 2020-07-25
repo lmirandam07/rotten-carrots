@@ -27,26 +27,18 @@
         
         Class.forName("org.mariadb.jdbc.Driver");
 
-<<<<<<< HEAD
+
             /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
 
             Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
             
             Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery( "SELECT titulo_spoiler, descripcion_spoiler FROM spoiler, pelicula WHERE spoiler.id_pelicula = pelicula.id_pelicula AND pelicula.nombre_peli = '"+textobusqueda+"';");
-=======
->>>>>>> be8d3edaf93df6858b53f2819f93e3dcd386d9db
+            ResultSet result = stmt.executeQuery( "SELECT titulo_spoiler, descripcion_spoiler,id_spoiler FROM spoiler, pelicula WHERE spoiler.id_pelicula = pelicula.id_pelicula AND pelicula.nombre_peli = '"+textobusqueda+"';");
 
         /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
 
-<<<<<<< HEAD
-=======
-        Statement stmt = conn.createStatement();
-        ResultSet result = stmt.executeQuery( "SELECT titulo_spoiler, descripcion_spoiler, id_spoiler FROM spoiler, pelicula WHERE spoiler.id_pelicula = pelicula.id_pelicula AND pelicula.nombre_peli = '"+textobusqueda+"';");
 
->>>>>>> be8d3edaf93df6858b53f2819f93e3dcd386d9db
     %>
-    
     <main class="main-container">
         <div class="prueba">
 

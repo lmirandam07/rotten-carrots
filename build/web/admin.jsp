@@ -28,11 +28,8 @@
 
      Class.forName("org.mariadb.jdbc.Driver");
 
-<<<<<<< HEAD
+
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
-=======
-     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
->>>>>>> be8d3edaf93df6858b53f2819f93e3dcd386d9db
 
      Statement stmt = conn.createStatement();
 
@@ -42,7 +39,7 @@
 
     <main class="main-container">
         <div class="eliminar">
-                <form action="elimar_spoiler.jsp">
+                <form action="eliminar_spoiler.jsp">
                    <button class="btn-del"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></button>
                    <input type="text" name="id_spoiler" placeholder="Introduzca el cod del spoiler ha eliminar">
                 </form>
