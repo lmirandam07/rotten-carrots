@@ -30,10 +30,7 @@
             Class.forName("org.mariadb.jdbc.Driver");
 
             Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
-<<<<<<< HEAD
-=======
 
->>>>>>> 4d4dd71c57a47431bf94b9989b6747de6cf280ae
             Statement stmt = con.createStatement();
             /*Con este query, seleccionamos la información referente al usuario que tiene una sesión activa en el sistema.
             Esto se hace para poder mostrar en el formulario la información respectiva del usuario, para así, poder editar

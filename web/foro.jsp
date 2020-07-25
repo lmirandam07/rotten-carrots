@@ -27,13 +27,10 @@
 
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
 
-<<<<<<< HEAD
-     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
-=======
+
      
     /* Query para obtener datos necesarios para llenar el contenedor de spoiler */
     /* Basado en el id de la pelicula y el id del usuario  */
->>>>>>> 4d4dd71c57a47431bf94b9989b6747de6cf280ae
 
     Statement stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery("SELECT nombre_peli, sp.id_spoiler, nombre_usuario, foto_pelicula, genero, titulo_spoiler, carrots, comentarios "

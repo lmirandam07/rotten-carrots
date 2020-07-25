@@ -32,10 +32,7 @@
             Class.forName("org.mariadb.jdbc.Driver");
 
             Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
-<<<<<<< HEAD
-=======
 
->>>>>>> 4d4dd71c57a47431bf94b9989b6747de6cf280ae
 
             Statement stmt = con.createStatement();
             /*Se realiza el query de actualización en el campo activo para indicar que dicho usuario está utilizando el sistema.

@@ -28,10 +28,6 @@
 
      Class.forName("org.mariadb.jdbc.Driver");
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 4d4dd71c57a47431bf94b9989b6747de6cf280ae
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
 
      Statement stmt = conn.createStatement();

@@ -18,12 +18,9 @@
                     /* estableciendo la coneccion con la base de datos  */
                     Class.forName("org.mariadb.jdbc.Driver");
                     Connection con1 = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
-<<<<<<< HEAD
-                    
+      
                     /* creando la instancia para este procedimiento */
-=======
 
->>>>>>> 4d4dd71c57a47431bf94b9989b6747de6cf280ae
                     Statement stmt1 = con1.createStatement();
                     
                     /* se ejecuta la consulta para seleccionar el usuario que esté activo en ese momento */

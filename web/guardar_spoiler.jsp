@@ -20,13 +20,10 @@
     <%@include file="templates/header.jsp" %>
     <%
         Class.forName("org.mariadb.jdbc.Driver");
-<<<<<<< HEAD
-        Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
-=======
 
         Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
 
->>>>>>> 4d4dd71c57a47431bf94b9989b6747de6cf280ae
+
         Statement stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT id_usuario FROM usuario WHERE activo = 1;");
         while(rs.next()){

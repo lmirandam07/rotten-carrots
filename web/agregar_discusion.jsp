@@ -44,14 +44,12 @@
                 <%
                     /* establecienco la coneccion con la base de datos  */
                     Class.forName("org.mariadb.jdbc.Driver");
-<<<<<<< HEAD
-                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
                     
                     /* creando la instancia para este procedimiento */
-=======
-       Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
 
->>>>>>> 4d4dd71c57a47431bf94b9989b6747de6cf280ae
+                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+
+
                     Statement stmt = con.createStatement();
                     
                     /* consulta para seleccionar todo en la tabla pelicula en la base de datos */
