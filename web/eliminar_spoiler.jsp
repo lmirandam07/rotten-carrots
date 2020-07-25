@@ -27,18 +27,15 @@
             Class.forName("org.mariadb.jdbc.Driver");
 
 
-
+            /*Conexion con la base de datos de rotten_carrots*/
             Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
-
-            
-
             Statement stmt = conn.createStatement();
-            
+            /*Query con el que se obtienen los datos de la base de datos*/
             ResultSet rs = stmt.executeQuery("Select spoiler.id_spoiler,spoiler.titulo_spoiler,spoiler.descripcion_spoiler from spoiler, usuario where usuario.activo = 1 AND usuario.id_usuario = spoiler.id_usuario;");
     
         %>
-        <main class="main-container">
-        <div class="ocultar">
+        <main class="main-container"><!--Contenedor padre-->
+        <div class="ocultar"><!--Contenedor con todas las discusiones de admin para poder ocultarlo-->
         <div class="eliminar">
                 <form action="elimar_spoiler.jsp">
                    <button class="btn-del"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></button>
@@ -65,7 +62,7 @@
                             </tr>
                         </table>
                     <%
-                       
+                       /*Ciclo while por el cual se obtienen todos los datos del query anterior y se guardan en variables.*/
                         while(rs.next()) {
                             String id = rs.getString("id_spoiler");
                             String titulo = rs.getString("titulo_spoiler");
@@ -88,18 +85,23 @@
             </div>
            </div>
             <%
+                /*Se obtiene el id del spoiler de la tabla*/
                 String id = request.getParameter("id_spoiler");
                 int id_spoiler = Integer.parseInt(id);
+                /*Creando el objeto de la entidad Spoiler*/
                 Spoiler spoiler = new Spoiler();
+                /*Guardando el id del spoiler mediante el metodo set de la entidad Spoiler*/
                 spoiler.setId_spoiler(id_spoiler);
                 
 
             %>
             <%
+                /*Creando el objeto del proceso SppoilerProceso*/
                 SpoilerProceso pspoiler = new SpoilerProceso();
+                /*Se utliza el metodo EliminarSpoiler del Proceso SpoilerProceso en el cual se eliminan los datos en la base de datos*/
                 pspoiler.EliminarSpoiler(spoiler);
             %>
-           <div class="modal">
+           <div class="modal"><!--Contenedor creado como modal para mostrar el registro del spoiler exitoso-->
                 <h4 class="sub">SPOILER ELIMINADO CORRECTAMENTE</h4>
                 <a href="./admin.jsp"><button class="guardar" >Aceptar</button></a>
                 

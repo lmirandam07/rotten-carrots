@@ -19,30 +19,37 @@
     <body>
     <%@include file="templates/header.jsp" %>
     <%
+        /*Conexion con la base de datos de rotten_carrots*/
         Class.forName("org.mariadb.jdbc.Driver");
         Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
         Statement stmt = conn.createStatement();
+        /*Query con el que se obtienen los datos de la base de datos*/
         ResultSet rs = stmt.executeQuery("SELECT id_usuario FROM usuario WHERE activo = 1;");
+        /*Ciclo while por el cual se obtienen todos los datos del query anterior y se guardan en variables.*/
         while(rs.next()){
         int usuario = rs.getInt("id_usuario");
+        /*Obteniendo el los datos del formulario de agregar_discusion.jsp*/
         String pelicula = request.getParameter("pelicula");
         String titulo = request.getParameter("tema");
         String cuerpo = request.getParameter("cuerpo");
         int id_pelicula = Integer.parseInt(pelicula);
-        
+        /*Creando el objeto de la entidad Spoiler*/
         Spoiler spoiler = new Spoiler();
+        /*Utilizando el metodo Set para guardar los datos obtenidos del formulario en el objeto spoiler*/
         spoiler.setId_usuario(usuario);
         spoiler.setId_pelicula(id_pelicula);
         spoiler.setTitulo_spoiler(titulo);
         spoiler.setDescripcion_spoiler(cuerpo);
     %>
     <%
+        /*Creando el objeto del proceso SppoilerProceso*/
         SpoilerProceso pspoiler = new SpoilerProceso();
+        /*Se utliza el metodo GuardarSpoiler del Proceso SpoilerProceso en el cual se guardan los datos en la base de datos*/
         pspoiler.GuardarSpoiler(spoiler);
        
     %>
-    <main class="main-container">
-        <div class="mensaje">
+    <main class="main-container"><!--Contenedor Padre-->
+        <div class="mensaje"><!--Contenedor con todo el formulario de agregar_discusion para poder ocultarlo-->
            <h2>Agregar Discusión</h2>
 
 
@@ -69,7 +76,7 @@
             </div>
             
         </div>
-        <div class="modal">
+        <div class="modal"><!--Contenedor creado como modal para mostrar el registro del spoiler exitoso-->
                 <h4 class="sub">SPOILER GUARDADO CORRECTAMENTE</h4>
                 <a href="./admin.jsp"><button class="guardar" >Aceptar</button></a>
                 
