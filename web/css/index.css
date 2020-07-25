@@ -211,6 +211,10 @@ body{
     height: 25%;
     background-color:  var(--main-orange);
 }
+
+.guardar:hover{
+    cursor: pointer;
+}
 .hola{
     opacity:0.2
 }
