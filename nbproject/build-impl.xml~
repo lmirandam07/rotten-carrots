@@ -985,8 +985,12 @@ exists or setup the property manually. For example like this:
 <<<<<<< HEAD
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-4}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
 =======
+<<<<<<< HEAD
         <copyfiles files="${file.reference.mariadb-java-client-2.6.1.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
->>>>>>> be8d3edaf93df6858b53f2819f93e3dcd386d9db
+=======
+        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-7}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+>>>>>>> 06853d4c166df8acdf5e9db5fa9b752e0db73184
+>>>>>>> ad2df6b0d07778a6688e2f9c208822645a23f8bc
         <mkdir dir="${build.web.dir}/META-INF"/>
         <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update"/>
     </target>
@@ -994,8 +998,12 @@ exists or setup the property manually. For example like this:
 <<<<<<< HEAD
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-4}" todir="${build.web.dir}/WEB-INF/lib"/>
 =======
+<<<<<<< HEAD
         <copyfiles files="${file.reference.mariadb-java-client-2.6.1.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
->>>>>>> be8d3edaf93df6858b53f2819f93e3dcd386d9db
+=======
+        <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-7}" todir="${build.web.dir}/WEB-INF/lib"/>
+>>>>>>> 06853d4c166df8acdf5e9db5fa9b752e0db73184
+>>>>>>> ad2df6b0d07778a6688e2f9c208822645a23f8bc
     </target>
     <target depends="init" if="dist.ear.dir" name="-clean-webinf-lib">
         <delete dir="${build.web.dir}/WEB-INF/lib"/>
