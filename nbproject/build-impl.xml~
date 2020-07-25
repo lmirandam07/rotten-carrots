@@ -1001,7 +1001,7 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${file.reference.mariadb-java-client-2.6.1.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
 =======
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-7}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
->>>>>>> 0ba939720393c2f7ff982cd1b05ed3b6311e193d
+>>>>>>> 456e70a47998c6f68792a55e4ccab83272b7d18c
         <mkdir dir="${build.web.dir}/META-INF"/>
         <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update"/>
     </target>
@@ -1010,7 +1010,7 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${file.reference.mariadb-java-client-2.6.1.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
 =======
         <copyfiles files="${file.reference.mariadb-java-client-2.2.5.jar-7}" todir="${build.web.dir}/WEB-INF/lib"/>
->>>>>>> 0ba939720393c2f7ff982cd1b05ed3b6311e193d
+>>>>>>> 456e70a47998c6f68792a55e4ccab83272b7d18c
     </target>
     <target depends="init" if="dist.ear.dir" name="-clean-webinf-lib">
         <delete dir="${build.web.dir}/WEB-INF/lib"/>
