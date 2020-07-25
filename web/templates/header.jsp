@@ -17,7 +17,7 @@
                     
                     Class.forName("org.mariadb.jdbc.Driver");
 
-                    Connection con1 = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+                    Connection con1 = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
                     Statement stmt1 = con1.createStatement();
                     ResultSet rs1 = stmt1.executeQuery("SELECT nombre_usuario FROM usuario WHERE activo = 1;");
                     while(rs1.next()){

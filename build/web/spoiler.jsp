@@ -26,7 +26,7 @@
     int id_spoiler = Integer.parseInt(request.getParameter("id_spoiler"));  
     Class.forName("org.mariadb.jdbc.Driver");
 
-    Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");    
+    Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");    
 
     
 
