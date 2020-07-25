@@ -26,16 +26,9 @@
         <%
             Class.forName("org.mariadb.jdbc.Driver");
 
-            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
-
-<<<<<<< HEAD
             /*Conexion con la base de datos de rotten_carrots*/
             Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
-=======
 
-            
-
->>>>>>> e2992d0f38735cc794476d7bc7c44dfbc0206078
             Statement stmt = conn.createStatement();
             /*Query con el que se obtienen los datos de la base de datos*/
             ResultSet rs = stmt.executeQuery("Select spoiler.id_spoiler,spoiler.titulo_spoiler,spoiler.descripcion_spoiler from spoiler, usuario where usuario.activo = 1 AND usuario.id_usuario = spoiler.id_usuario;");

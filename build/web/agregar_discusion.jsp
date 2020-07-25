@@ -47,7 +47,7 @@
                     
                     /* creando la instancia para este procedimiento */
 
-                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+                    Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
 
 
                     Statement stmt = con.createStatement();
