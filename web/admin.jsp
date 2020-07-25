@@ -25,24 +25,12 @@
 <body>
     <%@include file="templates/header.jsp" %>
     <%
-<<<<<<< HEAD
-    int usuario_prueba = 3;
-    Class.forName("org.mariadb.jdbc.Driver");
-    Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
-    Statement stmt = conn.createStatement();
-=======
      int usuario_prueba = 3;
      Class.forName("org.mariadb.jdbc.Driver");
-<<<<<<< HEAD
-    
 
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
-=======
->>>>>>> 456e70a47998c6f68792a55e4ccab83272b7d18c
 
-     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
      Statement stmt = conn.createStatement();
->>>>>>> 456e70a47998c6f68792a55e4ccab83272b7d18c
 
      ResultSet rs = stmt.executeQuery("Select id_spoiler,titulo_spoiler,descripcion_spoiler from spoiler where id_usuario = "+usuario_prueba+";");
     
@@ -52,13 +40,13 @@
         <div class="eliminar">
                 <form action="elimar_spoiler.jsp">
                    <button class="btn-del"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></button>
-                   <input type="text" name="id_spoiler" placeholder="Introduzca el cod del spoiler que desea eliminar">
+                   <input type="text" name="id_spoiler" placeholder="Introduzca el cod del spoiler ha eliminar">
                 </form>
                 
         </div>
         <div class="crear">
                <h5 class="create">Crear Discusion</h5>
-               <a class="enlace" href="./agregar_discusion.jsp"><img class="plus" src="./img/plus.png" alt="plus"></a>
+               <a class="enlace" href="./agregar_discusion.jsp"><i class="fas fa-plus x4"></i></a>
         </div>
         <div class="prueba">
             
