@@ -25,11 +25,8 @@ public class ComentarioProceso {
             Class.forName("org.mariadb.jdbc.Driver");
 
 
-<<<<<<< HEAD
+
             this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
-=======
-            this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
->>>>>>> 06853d4c166df8acdf5e9db5fa9b752e0db73184
 
 
         }catch(SQLException e){
