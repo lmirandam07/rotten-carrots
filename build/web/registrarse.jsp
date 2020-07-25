@@ -16,6 +16,7 @@
 </head>
 <a href="../../web/registrarse.jsp"></a>
 <body>
+   <%-- Se crea un formulario donde la persona a registrarse elige su nombre de usuario, coloca su email y su contrasena--%>
 	<div class="containerRegistro">
 		<h2>Rotten Carrots</h2>
 		<form class="registrar" method="POST" action="registrocompletado.jsp">
@@ -45,6 +46,7 @@
                 <br>
 
             </div>
+       <%-- El boton de registrarse nos llevara a la pagina de registrocompletado.jsp--%>
             <button class="Registro">Registrarse</button>
             <br>
             <p>¿Ya tienes una cuenta? <a href="index.jsp">Inicia sesión aquí</a></p>

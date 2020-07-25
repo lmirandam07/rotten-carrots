@@ -16,6 +16,9 @@
         Class.forName("org.mariadb.jdbc.Driver");
         Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
         Statement stmt = conn.createStatement();
+        
+        /* Actualizar zanahoria de spoiler basado en el id del spoiler al que se le dio like*/
+        
         int status = stmt.executeUpdate("UPDATE spoiler SET carrots = carrots + 1 WHERE id_spoiler = "+id_spoiler+";"); 
         if(status > 0) {
             out.println("Nice");

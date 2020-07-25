@@ -24,10 +24,17 @@
     <%@include file="templates/header.jsp" %>
     <%
      Class.forName("org.mariadb.jdbc.Driver");
+<<<<<<< HEAD
 
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 
 
+=======
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+     
+    /* Query para obtener datos necesarios para llenar el contenedor de spoiler */
+    /* Basado en el id de la pelicula y el id del usuario  */
+>>>>>>> 5bd7f8ee3d02cb54a1cac92e8100f55c68b409a1
     Statement stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery("SELECT sp.id_spoiler, nombre_usuario, foto_pelicula, genero, titulo_spoiler, carrots, comentarios "
                                         + "FROM spoiler sp, pelicula p, usuario us "
@@ -39,6 +46,7 @@
             <section class="posts-container">
                 
                 <%
+                    /* Imprimir todos los spoilers en la base de datos con los datos del query*/
                     while(rs.next()) {
                         String usuario = rs.getString("nombre_usuario");
                         String foto_pelicula = rs.getString("foto_pelicula");
@@ -94,6 +102,7 @@
                 <div class="trend">
                     <h2>Top Tendencias</h2>
                     <%
+                        /* Obtener películas con mayor cantidad de zanahorias totales por spoiler */
                         Statement stmt2 = conn.createStatement();
                         ResultSet rs2 = stmt2.executeQuery("SELECT nombre_peli, SUM(carrots) AS total_carrots FROM pelicula p, spoiler sp WHERE p.id_pelicula = sp.id_pelicula GROUP BY nombre_peli ORDER BY SUM(carrots) DESC LIMIT 4;");                       
                     %>    
