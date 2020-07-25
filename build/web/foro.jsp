@@ -24,12 +24,9 @@
     <%@include file="templates/header.jsp" %>
     <%
      Class.forName("org.mariadb.jdbc.Driver");
-<<<<<<< HEAD
+
 
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
-=======
-     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
->>>>>>> be8d3edaf93df6858b53f2819f93e3dcd386d9db
 
     Statement stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery("SELECT sp.id_spoiler, nombre_usuario, foto_pelicula, genero, titulo_spoiler, carrots, comentarios "

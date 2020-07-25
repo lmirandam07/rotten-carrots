@@ -7,11 +7,7 @@
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <web-module-libraries>
                 <library dirs="200">
-<<<<<<< HEAD
-                    <file>${file.reference.mariadb-java-client-2.2.5.jar-8}</file>
-=======
-                    <file>${file.reference.mariadb-java-client-2.6.1.jar}</file>
->>>>>>> be8d3edaf93df6858b53f2819f93e3dcd386d9db
+                    <file>${file.reference.mariadb-java-client-2.2.5.jar-7}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
             </web-module-libraries>
