@@ -27,12 +27,6 @@
         
         Class.forName("org.mariadb.jdbc.Driver");
 
-<<<<<<< HEAD
-        Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
-
-        Statement stmt = conn.createStatement();
-        ResultSet result = stmt.executeQuery( "SELECT titulo_spoiler, descripcion_spoiler FROM spoiler, pelicula WHERE spoiler.id_pelicula = pelicula.id_pelicula AND pelicula.nombre_peli = '"+textobusqueda+"';");
-=======
 
             
             /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
@@ -43,7 +37,7 @@
 
 
         /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
->>>>>>> 66a655cd8b43c029a5a342894c0acfe64227aaae
+
 
     %>
     
