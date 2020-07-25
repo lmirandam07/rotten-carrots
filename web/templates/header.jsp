@@ -17,7 +17,7 @@
             <%
                     /* estableciendo la coneccion con la base de datos  */
                     Class.forName("org.mariadb.jdbc.Driver");
-                    Connection con1 = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+                    Connection con1 = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
       
                     /* creando la instancia para este procedimiento */
 
