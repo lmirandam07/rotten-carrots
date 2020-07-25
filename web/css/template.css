@@ -147,7 +147,7 @@ body {
     margin: .8rem;
     padding: .8rem;
 }
-.sb-item.active{
+.active{
     background-color: var(--main-orange);
 }
 .sb-item.active i{

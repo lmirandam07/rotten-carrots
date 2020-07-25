@@ -33,8 +33,12 @@
             Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 =======
 
+<<<<<<< HEAD
             Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 >>>>>>> 06853d4c166df8acdf5e9db5fa9b752e0db73184
+=======
+            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
+>>>>>>> f41272bcc0ea1b30618b532a5b61f5744ebc8beb
             
             Statement stmt = conn.createStatement();
             ResultSet result = stmt.executeQuery( "SELECT titulo_spoiler, descripcion_spoiler, id_spoiler FROM spoiler, pelicula WHERE spoiler.id_pelicula = pelicula.id_pelicula AND pelicula.nombre_peli = '"+textobusqueda+"';");

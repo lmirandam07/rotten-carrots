@@ -29,6 +29,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 =======
             Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
@@ -36,6 +37,9 @@
 =======
             Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 >>>>>>> 06853d4c166df8acdf5e9db5fa9b752e0db73184
+=======
+            Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
+>>>>>>> f41272bcc0ea1b30618b532a5b61f5744ebc8beb
 
             Statement stmt = con.createStatement();
             stmt.executeQuery("UPDATE usuario SET activo = 0 WHERE activo = 1;");

@@ -24,7 +24,6 @@
     <body>
         <%@include file="templates/header.jsp" %>
         <%
-            int usuario_prueba = 3;
             Class.forName("org.mariadb.jdbc.Driver");
 
 
@@ -32,14 +31,19 @@
             Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 =======
 
+<<<<<<< HEAD
             Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
 
 >>>>>>> 111b6201994fad5a95c2639738ff03fd9e60b778
+=======
+            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
+>>>>>>> f41272bcc0ea1b30618b532a5b61f5744ebc8beb
 
+            
 
             Statement stmt = conn.createStatement();
-
-            ResultSet rs = stmt.executeQuery("Select id_spoiler,titulo_spoiler,descripcion_spoiler from spoiler where id_usuario = "+usuario_prueba+";");
+            
+            ResultSet rs = stmt.executeQuery("Select spoiler.id_spoiler,spoiler.titulo_spoiler,spoiler.descripcion_spoiler from spoiler, usuario where usuario.activo = 1 AND usuario.id_usuario = spoiler.id_usuario;");
     
         %>
         <main class="main-container">
@@ -54,7 +58,7 @@
         
         <div class="crear">
                    <h5 class="create">Crear Discusion</h5>
-                   <a class="enlace" href="./agregar_discusion.jsp"><img class="plus" src="./img/plus.png" alt="plus"></a>
+                   <a class="enlace" ><i class="fas fa-plus x4"></i></a>
         </div>
         <div class="prueba">
 
@@ -93,7 +97,6 @@
             </div>
            </div>
             <%
-                int usuario_eliminar = 3;
                 String id = request.getParameter("id_spoiler");
                 int id_spoiler = Integer.parseInt(id);
                 Spoiler spoiler = new Spoiler();

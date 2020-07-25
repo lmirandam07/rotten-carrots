@@ -26,7 +26,11 @@
      Class.forName("org.mariadb.jdbc.Driver");
 
 
+<<<<<<< HEAD
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+=======
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
+>>>>>>> f41272bcc0ea1b30618b532a5b61f5744ebc8beb
 
     Statement stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery("SELECT p.nombre_peli, p.genero,p.foto_pelicula, SUM(sp.carrots) AS total_carrots FROM pelicula p, spoiler sp WHERE p.id_pelicula = sp.id_pelicula GROUP BY nombre_peli ORDER BY SUM(carrots) DESC LIMIT 4;");                       
@@ -76,6 +80,6 @@
                  <%}%>
         </section>>
     </main>
-
+<script src="scripts/active_toggle.js"></script>
 </body>
 </html>
