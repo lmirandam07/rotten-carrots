@@ -47,6 +47,7 @@
     flex-direction: column;
     align-content: space-between;
     flex-wrap: nowrap;
+    height: 80%;
     width: 90%;
     padding-right: 5%;
     margin-top: 5%;

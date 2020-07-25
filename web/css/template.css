@@ -63,7 +63,10 @@ body {
     border-radius: 10px;
 
 }
-
+.searchbar .search-input:focus{
+    outline: none;
+    border: none;
+}
 .searchbar .search-input:hover {
     outline: none;
 }

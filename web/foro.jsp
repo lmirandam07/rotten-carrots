@@ -71,7 +71,7 @@
 
                     <div class="post-user">
                         <i class="fas fa-user"></i>
-                        <a href="./administrar_perfil.jsp" class="user-name"><small>@<%= usuario %></small></a>
+                        <a href="#" class="user-name"><small>@<%= usuario %></small></a>
                     </div>
 
                     <div class="post-title">

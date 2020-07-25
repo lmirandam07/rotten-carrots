@@ -52,9 +52,6 @@
                <h5 class="create">Crear Discusion</h5>
                <a class="enlace" href="./agregar_discusion.jsp"><i class="fas fa-plus x4"></i></a>
         </div>
-        <div class="prueba">
-            
-
 
                  <div class="discusiones"><!--Contenedor que posee los encabezados y todas las discuciones o spoilers del usuario-->
                      
@@ -88,7 +85,7 @@
                     <%}%>
                     
                 </div>
-        </div>
+
     </main>
     <script src="scripts/active_toggle.js"></script><!--Script el cual activa el color de la pagina actual en el sidebar-->
 </body>
