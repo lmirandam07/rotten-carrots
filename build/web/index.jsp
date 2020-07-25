@@ -3,8 +3,6 @@
     Created on : 20-jul-2020, 15:39:56
     Author     : luyim
 --%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,16 +15,15 @@
 <body>
 	<div class="container">
 		<h2>Rotten Carrots</h2>
-		<form class="iniciar" action="./foro.jsp">
+		<form class="iniciar" action="./sesion_iniciada.jsp">
 			<input type="email" name ="email" id= "email"class="email" placeholder="Correo Electronico" autofocus required>
 			<br>
-			<input type="password" name="contra" id="contra" class="contra" placeholder="ContraseÃ±a" required>
+			<input type="password" name="contra" id="contra" class="contra" placeholder="Contraseña" required>
 			<br>
-			<button class="inciarSesion">Iniciar SesiÃ³n</button>
+			<button class="inciarSesion">Iniciar Sesión</button>
 			<br>
-			<p>Â¿No tienes una cuenta? <a href="registrarse.jsp">  RegÃ­strate aquÃ­</a></p>
-		</form>
-
+			<p>¿No tienes una cuenta? <a href="registrarse.jsp">  Regístrate aquí</a></p>
+                </form>
 	</div>
 </body>
 </html>

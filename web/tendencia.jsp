@@ -18,15 +18,6 @@
 <body>
         <%@include file="templates/header.jsp" %>
     <main class="main-container">
-        <div class="escoger">
-            <select name="categorias" id="categorias">
-                <option value="Accion">Acción</option>
-                <option value="Romance">Romance</option>
-                <option value="Suspenso">Suspenso</option>
-                <option value="Terror">Terror</option>
-            </select>
-
-        </div>
         <div class="puesto1">
             <p>1</p>
         </div>

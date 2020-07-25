@@ -26,7 +26,10 @@ public class UsuarioProceso {
 
 
             this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+<<<<<<< HEAD
 
+=======
+>>>>>>> leo
 
         } catch(SQLException e) {
             System.out.println("Error al conectar: " + e);
