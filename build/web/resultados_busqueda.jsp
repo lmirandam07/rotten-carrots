@@ -34,10 +34,20 @@
             Statement stmt = conn.createStatement();
             ResultSet result = stmt.executeQuery( "SELECT titulo_spoiler, descripcion_spoiler, id_spoiler FROM spoiler, pelicula WHERE spoiler.id_pelicula = pelicula.id_pelicula AND pelicula.nombre_peli = '"+textobusqueda+"';");
 
+<<<<<<< HEAD
+=======
+            /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
+
+            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
+            
+            Statement stmt = conn.createStatement();
+            ResultSet result = stmt.executeQuery( "SELECT titulo_spoiler, descripcion_spoiler,id_spoiler FROM spoiler, pelicula WHERE spoiler.id_pelicula = pelicula.id_pelicula AND pelicula.nombre_peli = '"+textobusqueda+"';");
+
+        /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
+>>>>>>> 111b6201994fad5a95c2639738ff03fd9e60b778
 
 
     %>
-    
     <main class="main-container">
         <div class="prueba">
 

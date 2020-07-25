@@ -25,13 +25,19 @@
 <body>
     <%@include file="templates/header.jsp" %>
     <%
+
      Class.forName("org.mariadb.jdbc.Driver");
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> be8d3edaf93df6858b53f2819f93e3dcd386d9db
 
      Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "lionel");
+=======
+
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
+>>>>>>> 111b6201994fad5a95c2639738ff03fd9e60b778
 
      Statement stmt = conn.createStatement();
 
@@ -41,15 +47,15 @@
 
     <main class="main-container">
         <div class="eliminar">
-                <form action="elimar_spoiler.jsp">
+                <form action="eliminar_spoiler.jsp">
                    <button class="btn-del"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></button>
-                   <input type="text" name="id_spoiler" placeholder="Introduzca el cod del spoiler que desea eliminar">
+                   <input type="text" name="id_spoiler" placeholder="Introduzca el cod del spoiler ha eliminar">
                 </form>
                 
         </div>
         <div class="crear">
                <h5 class="create">Crear Discusion</h5>
-               <a class="enlace" href="./agregar_discusion.jsp"><img class="plus" src="./img/plus.png" alt="plus"></a>
+               <a class="enlace" href="./agregar_discusion.jsp"><i class="fas fa-plus x4"></i></a>
         </div>
         <div class="prueba">
             
