@@ -181,10 +181,12 @@ body {
 }
 
 .profile {
-    width: 30%;
+    width: 20%;
     vertical-align: top;
-    display: inline-block;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
     border: 1px solid var(--main-orange);
     border-radius: 2.5rem;
     padding: .5rem;
@@ -216,5 +218,5 @@ body {
     color: #333 !important;
     font-weight:bold;
     width: 75px;
-    margin-left: 4%;
+    align-self: center;
 }
