@@ -39,101 +39,98 @@
     
     %>
     <main class="main-container">
-        
-            <section class="posts-container">
-                
-                <%
-                    /* Imprimir todos los spoilers en la base de datos con los datos del query*/
-                    while(rs.next()) {
-                        String usuario = rs.getString("nombre_usuario");
-                        String nombre_peli = rs.getString("nombre_peli");
-                        String foto_pelicula = rs.getString("foto_pelicula");
-                        String titulo = rs.getString("titulo_spoiler");
-                        String genero = rs.getString("genero");
-                        String carrots = rs.getString("carrots");
-                        String comentarios = rs.getString("comentarios");
-                        String id_spoiler = rs.getString("id_spoiler");
-                    
-                 %>
-                 
-                 <form class="post" method="POST" action="spoiler.jsp">
-                    <div class="post-img">
-                        <img src="<%=foto_pelicula%>" class="img-spoiler">
-                        <div class="overlay">
-                            <small class="post-nombre-peli"><%=nombre_peli%></small>
-                        </div>
-                    </div>
+            
+        <section class="posts-container">
 
-                    <div class= "post-content">
-                        <div class="post-tag">
-                            <small class="tag"><%= genero %></small>
-                        </div>
+            <%
+                /* Imprimir todos los spoilers en la base de datos con los datos del query*/
+                while(rs.next()) {
+                    String usuario = rs.getString("nombre_usuario");
+                    String nombre_peli = rs.getString("nombre_peli");
+                    String foto_pelicula = rs.getString("foto_pelicula");
+                    String titulo = rs.getString("titulo_spoiler");
+                    String genero = rs.getString("genero");
+                    String carrots = rs.getString("carrots");
+                    String comentarios = rs.getString("comentarios");
+                    String id_spoiler = rs.getString("id_spoiler");
 
-                        <div class="post-user">
-                            <i class="fas fa-user"></i>
-                            <a href="./administrar_perfil.jsp" class="user-name"><small>@<%= usuario %></small></a>
-                        </div>
+             %>
 
-                        <div class="post-title">
-                            <h3><%= titulo %></h3>
-                        </div>
-
-                        <div class="post-info">
-                            <div class="post-carrots">
-                                <button name="carrots" value="<%=carrots%>" type="button" class="btn-post" ><small class="carrots"><i class="fas fa-carrot"></i><%= carrots %></small></button>
-                            </div>
-                            <div class="post-comments">
-                                <button name="comentarios" value="<%=comentarios%>" type="button" class="btn-post" ><small class="comments"><i id="icono" class="fas fa-comment-dots"></i> <%= comentarios %></small></button>
-                            </div>
-                            <div class="post-comments">
-                                <button  name="id_spoiler" value="<%=id_spoiler%>" type="submit" class="btn-post"><small class="comments"><i id="icono" class="fas fa-share"></i> Ver spoiler</small></button>
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                </form>
-                 
-                 <%}%>
-
-            </section>
-                
-            <section class="trend-container">
-                
-                <div class="trend">
-                    <h2>Top Tendencias</h2>
-                    <%
-                        /* Obtener películas con mayor cantidad de zanahorias totales por spoiler */
-                        Statement stmt2 = conn.createStatement();
-                        ResultSet rs2 = stmt2.executeQuery("SELECT nombre_peli, SUM(carrots) AS total_carrots FROM pelicula p, spoiler sp WHERE p.id_pelicula = sp.id_pelicula GROUP BY nombre_peli ORDER BY SUM(carrots) DESC LIMIT 4;");                       
-                    %>    
-                    <ul>
-                        <%
-                            while(rs2.next()) {
-                                String top_pelicula = rs2.getString("nombre_peli");
-                                String total_carrots = rs2.getString("total_carrots");
-                            
-                        %>                                                   
-                            <li class="trend-movie">
-                                <p><%= top_pelicula %></p>
-                                <small>
-                                    <%= total_carrots %> zanahorias
-                                </small>
-                            </li>                        
-                        <%}%>
-      
-                    </ul>
-                    <hr class="divisor">
-                    <div class="mostrar-mas-container">
-                        <a href="./tendencia.jsp" class="mostrar-mas">Mostrar más</a>
-                        <i class="fas fa-arrow-circle-right"></i>
+             <form class="post" method="POST" action="spoiler.jsp">
+                <div class="post-img">
+                    <img src="<%=foto_pelicula%>" class="img-spoiler">
+                    <div class="overlay">
+                        <small class="post-nombre-peli"><%=nombre_peli%></small>
                     </div>
                 </div>
 
-            </section>
-            
-            
-        
+                <div class= "post-content">
+                    <div class="post-tag">
+                        <small class="tag"><%= genero %></small>
+                    </div>
+
+                    <div class="post-user">
+                        <i class="fas fa-user"></i>
+                        <a href="./administrar_perfil.jsp" class="user-name"><small>@<%= usuario %></small></a>
+                    </div>
+
+                    <div class="post-title">
+                        <h3><%= titulo %></h3>
+                    </div>
+
+                    <div class="post-info">
+                        <div class="post-carrots">
+                            <button name="carrots" value="<%=carrots%>" type="button" class="btn-post" ><small class="carrots"><i class="fas fa-carrot"></i><%= carrots %></small></button>
+                        </div>
+                        <div class="post-comments">
+                            <button name="comentarios" value="<%=comentarios%>" type="button" class="btn-post" ><small class="comments"><i id="icono" class="fas fa-comment-dots"></i> <%= comentarios %></small></button>
+                        </div>
+                        <div class="post-comments">
+                            <button  name="id_spoiler" value="<%=id_spoiler%>" type="submit" class="btn-post"><small class="comments"><i id="icono" class="fas fa-share"></i> Ver spoiler</small></button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </form>
+
+             <%}%>
+
+        </section>
+
+        <section class="trend-container">
+
+            <div class="trend">
+                <h2>Top Tendencias</h2>
+                <%
+                    /* Obtener películas con mayor cantidad de zanahorias totales por spoiler */
+                    Statement stmt2 = conn.createStatement();
+                    ResultSet rs2 = stmt2.executeQuery("SELECT nombre_peli, SUM(carrots) AS total_carrots FROM pelicula p, spoiler sp WHERE p.id_pelicula = sp.id_pelicula GROUP BY nombre_peli ORDER BY SUM(carrots) DESC LIMIT 4;");                       
+                %>    
+                <ul>
+                    <%
+                        while(rs2.next()) {
+                            String top_pelicula = rs2.getString("nombre_peli");
+                            String total_carrots = rs2.getString("total_carrots");
+
+                    %>                                                   
+                        <li class="trend-movie">
+                            <p><%= top_pelicula %></p>
+                            <small>
+                                <%= total_carrots %> zanahorias
+                            </small>
+                        </li>                        
+                    <%}%>
+
+                </ul>
+                <hr class="divisor">
+                <div class="mostrar-mas-container">
+                    <a href="./tendencia.jsp" class="mostrar-mas">Mostrar más</a>
+                    <i class="fas fa-arrow-circle-right"></i>
+                </div>
+            </div>
+
+        </section>    
     </main>
     <script src="scripts/active_toggle.js"></script>
 </body>
