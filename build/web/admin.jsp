@@ -4,6 +4,7 @@
     Created on : 20-jul-2020, 15:39:56
     Author     : luyim
 --%>
+<!--Recursos importados-->
 <%@page import="Entidad.Spoiler"%>
 <%@page import="Proceso.SpoilerProceso"%>
 <%@page import="java.sql.ResultSet"%>
@@ -64,7 +65,7 @@
                         </tr>
                     </table>
                 <%
-                    
+                    /*Ciclo while por el cual se obtienen todos los datos del query anterior y se guardan en variables.*/
                     while(rs.next()) {
                         String id = rs.getString("id_spoiler");
                         String titulo = rs.getString("titulo_spoiler");
@@ -87,6 +88,6 @@
                 </div>
         </div>
     </main>
-    <script src="scripts/active_toggle.js"></script>
+    <script src="scripts/active_toggle.js"></script><!--Script el cual activa el color de la pagina actual en el sidebar-->
 </body>
 </html>
