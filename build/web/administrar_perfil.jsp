@@ -27,7 +27,7 @@
         <%
             Class.forName("org.mariadb.jdbc.Driver");
 
-            Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+            Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, email, contrasena, perfil_usuario FROM usuario WHERE activo = 1;");
             while(rs.next()){
@@ -35,6 +35,7 @@
                 String contrasena = rs.getString("contrasena");
                 String email = rs.getString("email");
                 String foto = rs.getString("perfil_usuario");
+
         %>
         <h2 class="titulo">Administrar Perfil</h2>
 

@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `email` varchar(80) NOT NULL DEFAULT '0',
   `contrasena` varchar(30) NOT NULL DEFAULT '0',
   `perfil_usuario` varchar(500) NOT NULL DEFAULT '0',
+  `activo` int(11) NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`id_usuario`),
@@ -112,3 +113,4 @@ CREATE TABLE IF NOT EXISTS `pelicula` (
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+pelicula

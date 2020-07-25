@@ -66,6 +66,11 @@ textarea{
   width: 16%;
   height: 8%;
   margin-top: 2%;
+  border-radius: 10px;
+}
+.cancelar:hover{
+  transform: scale(1.1);
+  cursor: pointer;
 }
 .publicar{
   background-color: #FF9F1C;
@@ -76,4 +81,9 @@ textarea{
   width: 16%;
   height: 50%;
   margin-top: 2%;
+  border-radius: 10px;
+}
+.publicar:hover{
+  transform: scale(1.1);
+  cursor: pointer;
 }

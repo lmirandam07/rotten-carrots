@@ -4,6 +4,10 @@
     Author     : luyim
 --%>
 
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.DriverManager"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -17,115 +21,61 @@
 </head>
 <body>
         <%@include file="templates/header.jsp" %>
+        
+        <%
+     Class.forName("org.mariadb.jdbc.Driver");
+
+
+     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "1014");
+
+    Statement stmt = conn.createStatement();
+    ResultSet rs = stmt.executeQuery("SELECT p.nombre_peli, p.genero,p.foto_pelicula, SUM(sp.carrots) AS total_carrots FROM pelicula p, spoiler sp WHERE p.id_pelicula = sp.id_pelicula GROUP BY nombre_peli ORDER BY SUM(carrots) DESC LIMIT 4;");                       
+
+    
+    %>
     <main class="main-container">
-        <div class="puesto1">
-            <p>1</p>
-        </div>
-        <div class="puesto2">
-            <p>2</p>
-        </div>
-        <div class="puesto3">
-            <p>3</p>
-        </div>
-        <div class="puesto4">
-            <p>4</p>
-        </div>
-        <div class="tendencia1">
-            <div class="titulo">
-                <h2>Inception<h2>
-            </div>
-            <div class="imagen">
-            </div>
-            <div class="categoria">
-                <p>Categoria</p>
-            </div>
-            <div class="puntaje">
-                <div class="carrot">
-                    <i class="fas fa-carrot"></i>
+        <section class="posts-container">
+            <%
+                    int cont =0;
+                    while(rs.next()) {
+                        cont = cont+1;
+                        String titulo = rs.getString("nombre_peli");
+                        String foto = rs.getString("foto_pelicula");
+                        String genero = rs.getString("genero");
+                        String carrots = rs.getString("total_carrots");
+                    
+            %>
+                <div class="post-puesto">
+                    <h1><%=cont%></h1>
                 </div>
-                <div class="puntos">
-                    <p>8995</p>
-                </div>
-            </div>
-            <div class="trend">
-                <i class="fas fa-fire-alt"></i>
-            </div>
-        </div>
+                  <form class="post" method="POST" action="spoiler.jsp">
+                    <div class="post-img">
+                        <img src="<%=foto%>" class="img-spoiler" alt="">
+                    </div>
 
-
-        <div class="tendencia2">
-            <div class="titulo">
-                <h2>Fight Club<h2>
-            </div>
-            <div class="imagen">
-                
-            </div>
-            <div class="categoria">
-                <p>Categoria</p>
-            </div>
-            <div class="puntaje">
-                <div class="carrot">
-                    <i class="fas fa-carrot"></i>
-                </div>
-                <div class="puntos">
-                    <p>7456</p>
-                </div>
-            </div>
-            <div class="trend">
-                <i class="fas fa-fire-alt"></i>
-            </div>
-        </div>
+                    <div class= "post-content">
+                        <div class="post-tag">
+                            <small class="tag"><%=genero%></small>
+                        </div>
 
 
 
-        <div class="tendencia3">
-            <div class="titulo">
-                <h2>After<h2>
-            </div>
-            <div class="imagen">
-                
-            </div>
-            <div class="categoria">
-                <p>Categoria</p>
-            </div>
-            <div class="puntaje">
-                <div class="carrot">
-                    <i class="fas fa-carrot"></i>
-                </div>
-                <div class="puntos">
-                    <p>4200</p>
-                </div>
-            </div>
-            <div class="trend">
-                <i class="fas fa-fire-alt"></i>
-            </div>
-        </div>
+                        <div class="post-title">
+                            <h3><%=titulo%></h3>
+                        </div>
 
+                        <div class="post-info">
+                            <div class="post-carrots">
+                                <button name="carrots" value="x" type="button" class="btn-post" ><small class="carrots"><i class="fas fa-carrot"></i><%=carrots%></small></button>
+                            </div>
+                        </div>
 
-        <div class="tendencia4">
-            <div class="titulo">
-                <h2>Black Swan<h2>
-            </div>
-            <div class="imagen">
-            </div>
-            <div class="categoria">
-                <p>Categoria</p>
-            </div>
-            <div class="puntaje">
-                <div class="carrot">
-                    <i class="fas fa-carrot"></i>
-                </div>
-                <div class="puntos">
-                    <p>2105</p>
-                </div>
-            </div>
-            <div class="trend">
-                <i class="fas fa-fire-alt"></i>
-            </div>
-        </div>
+                    </div>
 
-
+                </form>
+                 <%}%>
+        </section>>
     </main>
-
+<script src="scripts/active_toggle.js"></script>
 </body>
 </html>

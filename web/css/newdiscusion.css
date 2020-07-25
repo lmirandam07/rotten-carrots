@@ -118,6 +118,7 @@ textarea{
   font-weight: 900;
   width: 16%;
   height: 8%;
+  border-radius: 10px;
   margin-top: 2%;
 }
 .publicar{
@@ -127,6 +128,12 @@ textarea{
   position: relative;
   font-weight: 900;
   width: 16%;
-  height: 8%;
+  height: 50%;
   margin-top: 2%;
+  border-radius: 10px;
 }
+.publicar:hover{
+      transform: scale(1.1);
+      cursor: pointer;
+}
+
