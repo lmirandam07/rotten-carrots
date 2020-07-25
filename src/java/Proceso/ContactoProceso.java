@@ -31,7 +31,10 @@ public class ContactoProceso {
             /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
 
             this.conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4d4dd71c57a47431bf94b9989b6747de6cf280ae
 
             /*  para tirar el error generico de que no se conecto a la base de datos   */
         }catch(SQLException e){

@@ -8,6 +8,12 @@
             <web-module-libraries>
                 <library dirs="200">
                     <file>${file.reference.mariadb-java-client-2.6.1.jar}</file>
+<<<<<<< HEAD
+=======
+=======
+                    <file>${file.reference.mariadb-java-client-2.2.5.jar-7}</file>
+>>>>>>> 2ac80efff77ac76a5358af6f837b1d47faad89e1
+>>>>>>> 4d4dd71c57a47431bf94b9989b6747de6cf280ae
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
             </web-module-libraries>

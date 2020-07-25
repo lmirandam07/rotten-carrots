@@ -23,21 +23,22 @@
 <body>
     <%@include file="templates/header.jsp" %>
     <main class="main-container">
+    <!--División utilizada para que la página se vea opaca en el fondo mientras se nos muestra un mensaje de confirmación para dar feedback al usuario sobre las acciones realizadas.-->
     <div class="fondo">
 
         <%
+            /*Se obtienen los valores de los inputs de la página de administrar perfil, para realizar la actualización en la base de datos*/
             String pusuario = request.getParameter("usuario");
             String pcontrasena = request.getParameter("contrasena");
             String pemail = request.getParameter("email");
             String purl = request.getParameter("url");
             
             Class.forName("org.mariadb.jdbc.Driver");
-            
-
 
             Connection con = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
 
             Statement stmt = con.createStatement();
+            /*Se realiza la actualización de los datos del usuario. Para realizar esto, se determina que los cambios solo se realizan a aquel usuario que tenga una sesión activa en el sistema.*/
             stmt.executeQuery("UPDATE usuario SET nombre_usuario = '"+pusuario+"', email = '"+pemail+"', contrasena = '"+pcontrasena+"', perfil_usuario = '"+purl+"' WHERE activo = 1;");
         %>
         <h2 class="titulo">Administrar Perfil</h2>
@@ -76,6 +77,8 @@
             </div>
         </form>
      </div>
+    <!--Mensaje con el que se ofrece una retroalimentación al usuario sobre los campos que fueron actualizados. 
+        Luego de este mensaje, se redirecciona la usuario a la página de foro. -->
     <div class="modal">
                 <h4 class="sub">Se ha actualizado el perfil correctamente</h4>
                 <a href="./foro.jsp"><button class="guardar" >Aceptar</button></a>

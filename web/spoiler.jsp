@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./css/spoiler.css">
     <link rel="stylesheet" href="./css/template.css">
     <script src="https://kit.fontawesome.com/e9fad0131d.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<title>Rotten Carrots - Spoiler</title>
 </head>
 <body>
@@ -27,8 +28,16 @@
     Class.forName("org.mariadb.jdbc.Driver");
 
     Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");    
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> 4d4dd71c57a47431bf94b9989b6747de6cf280ae
 
+    /* Cargar datos del spoiler seleccionado en la pagina de foro
+      El query selecciona los datos necesarios a mostrarse mediante
+      el id del spoiler
     
+    */
 
     Statement stmt = conn.createStatement();
     ResultSet rs = stmt.executeQuery("SELECT nombre_usuario, foto_pelicula, genero, titulo_spoiler, descripcion_spoiler, carrots, comentarios "
@@ -80,19 +89,19 @@
             </div>
 
             <div class="carrots">
-                <button class="btn-post" id="btn-carrots" type="button" class="btn-post"><i class="fas fa-carrot"></i> <%=carrots%></button>
+                <button class="btn-post" id="btn-carrots" type="button"><i class="fas fa-carrot"></i> <%=carrots%></button>
                 
             </div>
 
             <div class="comments">
-                <button class="btn-post" name="id_spoiler2" value="<%=id_spoiler%>" type="submit" class="btn-post"><i class="fas fa-comment-dots"></i> Comentar</button>
+                <button class="btn-post" id="btn-comment" name="id_spoiler2" value="<%=id_spoiler%>" type="submit"><i class="fas fa-comment-dots"></i> Comentar</button>
             </div>
 
         </form>
         <%}%>
 
         <form class="more" action="comentarios.jsp" method="POST">
-            <button class="btn-post" name="id_spoiler" value="<%=id_spoiler%>" type="submit" class="btn-post"><i id="icono" class="fas fa-chevron-circle-right"></i> Ver comentarios</button>
+            <button class="btn-post" name="id_spoiler" value="<%=id_spoiler%>" type="submit"><i id="icono" class="fas fa-chevron-circle-right"></i> Ver comentarios</button>
         </form>
     </main>
     <script src="scripts/aumentar_like.js"></script>

@@ -30,6 +30,7 @@
         /* Obteniendo el parámetro de lo obtenido en el recuadro de texto de busqueda */
         String textobusqueda = request.getParameter("barrabuscar");
         
+<<<<<<< HEAD
             /* estableciendo la coneccion con la base de datos  */
             Class.forName("org.mariadb.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
@@ -40,6 +41,20 @@
             /* se ejecuta la consulta para seleccionar la información de los spoilers sobre la película de la que se ha ingresado la busqueda */
             ResultSet result = stmt.executeQuery( "SELECT titulo_spoiler, descripcion_spoiler,id_spoiler FROM spoiler, pelicula WHERE spoiler.id_pelicula = pelicula.id_pelicula AND pelicula.nombre_peli = '"+textobusqueda+"';");
 
+=======
+        Class.forName("org.mariadb.jdbc.Driver");
+
+            
+            /*  Es para igualar la variable conn, con los datos de la base de datos a la que nos estamos conectando, necesita 3 parametros: ruta, usuario y contraseña   */
+
+            Connection conn = DriverManager.getConnection("jdbc:mariadb://localhost:3306/rotten_carrots", "root", "12345");
+
+            Statement stmt = conn.createStatement();
+            ResultSet result = stmt.executeQuery( "SELECT titulo_spoiler, descripcion_spoiler, id_spoiler FROM spoiler, pelicula WHERE spoiler.id_pelicula = pelicula.id_pelicula AND pelicula.nombre_peli = '"+textobusqueda+"';");
+
+
+
+>>>>>>> 4d4dd71c57a47431bf94b9989b6747de6cf280ae
     %>
     <main class="main-container">
         <div class="prueba">
